@@ -1,4 +1,10 @@
-@use "./variables";
+@use "./variables" as *;
+
+body {
+    background-color: pink;
+    margin: 0;
+    padding: 0;
+}
 
 .wrapper {
     max-width: 1200px;
@@ -6,3 +12,21 @@
     margin: 0 auto;
 }
 
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}

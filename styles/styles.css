@@ -1,3 +1,5 @@
+/* Site Colours */
+/* Site Fonts */
 html {
   line-height: 1.15;
   -ms-text-size-adjust: 100%;
@@ -235,8 +237,37 @@ html {
   overflow: hidden;
 }
 
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: pink;
+  margin: 0;
+  padding: 0;
+}
+
 .wrapper {
   max-width: 1200px;
   width: 90%;
   margin: 0 auto;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
