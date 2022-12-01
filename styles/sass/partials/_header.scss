@@ -1,1 +1,58 @@
 @use "./variables" as *;
+
+// there is a wrapper on nav or .header-nav
+// edited wrapper down to 75% width
+
+* {
+    border: 1px solid pink;
+}
+
+.header-nav {
+    display: flex;
+    flex-basis: 100%;
+    justify-content: space-between;
+    align-items: center;
+
+    h1 {
+        text-align: center;
+    }
+}
+
+/* Right Side Shop Nav Bar */
+.home-menu {
+    display: flex;
+    flex-basis: 40%;
+
+    a {
+        padding: 10px 15px;
+    }
+}
+
+
+/* Right Side Shop Nav Bar */
+.shop-menu {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-basis: 40%;
+
+    a {
+        padding: 10px 15px;
+    }
+
+    button {
+        border: 1px solid purple;
+        background-color: white;
+        i {
+            padding: 5px 5px;
+        }
+    }
+
+        .cart-number {
+            display: inline;
+            position: absolute;
+            background-color: $lightSage;
+            border-radius: 50%;
+            padding: 2px 5px;
+        }
+}
