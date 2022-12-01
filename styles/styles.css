@@ -242,14 +242,13 @@ html {
 }
 
 body {
-  background-color: pink;
   margin: 0;
   padding: 0;
 }
 
 .wrapper {
   max-width: 1200px;
-  width: 90%;
+  width: 75%;
   margin: 0 auto;
 }
 
@@ -264,10 +263,77 @@ li {
 
 a {
   text-decoration: none;
+  padding: 0;
+  margin: 0;
 }
 
 img {
   max-width: 100%;
   height: auto;
   display: block;
+}
+
+* {
+  border: 1px solid pink;
+}
+
+.header-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.header-nav h1 {
+  text-align: center;
+}
+
+/* Right Side Shop Nav Bar */
+.home-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-preferred-size: 40%;
+      flex-basis: 40%;
+}
+.home-menu a {
+  padding: 10px 15px;
+}
+
+/* Right Side Shop Nav Bar */
+.shop-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-preferred-size: 40%;
+      flex-basis: 40%;
+}
+.shop-menu a {
+  padding: 10px 15px;
+}
+.shop-menu button {
+  border: 1px solid purple;
+  background-color: white;
+}
+.shop-menu button i {
+  padding: 5px 5px;
+}
+.shop-menu .cart-number {
+  display: inline;
+  position: absolute;
+  background-color: #C3DAB7;
+  border-radius: 50%;
+  padding: 2px 5px;
 }
