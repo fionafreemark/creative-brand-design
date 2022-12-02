@@ -338,6 +338,23 @@ img {
   display: block;
 }
 
+header {
+  background-color: pink;
+  background-image: url(/users/fionafreemark/websites/juno/projects/project-1/assets/home-1.jpeg);
+  background-size: cover;
+  height: 100vh;
+  background-position: bottom;
+  position: relative;
+}
+header .vertical-line {
+  border-left: 0.5px solid #333333;
+  display: block;
+  height: 110px;
+  position: absolute;
+  bottom: -50px;
+  left: 50%;
+}
+
 .header-nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -350,7 +367,7 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 20px;
+  padding-top: 20px;
 }
 .header-nav h1 {
   text-align: center;
@@ -362,7 +379,7 @@ img {
 }
 .header-nav a,
 .header-nav button {
-  border: 1px #FFFFFF solid;
+  border: 1px rgba(0, 0, 0, 0) solid;
   -webkit-transition: 500ms;
   transition: 500ms;
 }
@@ -397,7 +414,7 @@ img {
       flex-basis: 40%;
 }
 .shop-menu button {
-  background-color: white;
+  background-color: rgba(0, 0, 0, 0);
   border: none;
   cursor: pointer;
 }
