@@ -4,7 +4,7 @@
 // edited wrapper down to 75% width
 
 * {
-    border: 1px solid pink;
+    // border: 1px solid pink;
 }
 
 .header-nav {
@@ -12,9 +12,27 @@
     flex-basis: 100%;
     justify-content: space-between;
     align-items: center;
+    margin-top: 20px;
 
     h1 {
         text-align: center;
+        margin: 0;
+    }
+
+    a {
+        padding: 10px 15px;
+        display: inline-block;
+    }
+
+    a,
+    button {
+        border: 1px $pureWhite solid;
+        transition: 500ms;
+
+        &:hover {
+            border: 1px $black solid;
+            transform: scale(0.9);
+        }
     }
 }
 
@@ -23,9 +41,7 @@
     display: flex;
     flex-basis: 40%;
 
-    a {
-        padding: 10px 15px;
-    }
+
 }
 
 
@@ -36,23 +52,27 @@
     align-items: center;
     flex-basis: 40%;
 
-    a {
-        padding: 10px 15px;
-    }
-
     button {
-        border: 1px solid purple;
         background-color: white;
+        border: none;
+        cursor: pointer;
+
         i {
             padding: 5px 5px;
         }
     }
 
-        .cart-number {
-            display: inline;
-            position: absolute;
-            background-color: $lightSage;
-            border-radius: 50%;
-            padding: 2px 5px;
-        }
+    .shop-bag {
+        position: relative;
+    }
+
+    .cart-number {
+        display: inline;
+        position: absolute;
+        background-color: $lightSage;
+        border-radius: 50%;
+        padding: 3px 5px;
+        top: 1.2rem;
+        right: 0;
+    }
 }

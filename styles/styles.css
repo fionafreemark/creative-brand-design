@@ -288,7 +288,7 @@ nav, .creative-container {
 }
 
 i {
-  font-size: 1.8rem;
+  font-size: 1.9rem;
 }
 
 .section-icon-gallery i {
@@ -299,6 +299,11 @@ button {
   font-weight: 700;
   font-size: 1.4rem;
   letter-spacing: 0.07rem;
+}
+
+.cart-number {
+  font-size: 0.8rem;
+  line-height: 0.8rem;
 }
 
 body {
@@ -333,10 +338,6 @@ img {
   display: block;
 }
 
-* {
-  border: 1px solid pink;
-}
-
 .header-nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -349,9 +350,27 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-top: 20px;
 }
 .header-nav h1 {
   text-align: center;
+  margin: 0;
+}
+.header-nav a {
+  padding: 10px 15px;
+  display: inline-block;
+}
+.header-nav a,
+.header-nav button {
+  border: 1px #FFFFFF solid;
+  -webkit-transition: 500ms;
+  transition: 500ms;
+}
+.header-nav a:hover,
+.header-nav button:hover {
+  border: 1px #333333 solid;
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
 }
 
 /* Right Side Shop Nav Bar */
@@ -361,9 +380,6 @@ img {
   display: flex;
   -ms-flex-preferred-size: 40%;
       flex-basis: 40%;
-}
-.home-menu a {
-  padding: 10px 15px;
 }
 
 /* Right Side Shop Nav Bar */
@@ -380,20 +396,23 @@ img {
   -ms-flex-preferred-size: 40%;
       flex-basis: 40%;
 }
-.shop-menu a {
-  padding: 10px 15px;
-}
 .shop-menu button {
-  border: 1px solid purple;
   background-color: white;
+  border: none;
+  cursor: pointer;
 }
 .shop-menu button i {
   padding: 5px 5px;
+}
+.shop-menu .shop-bag {
+  position: relative;
 }
 .shop-menu .cart-number {
   display: inline;
   position: absolute;
   background-color: #C3DAB7;
   border-radius: 50%;
-  padding: 2px 5px;
+  padding: 3px 5px;
+  top: 1.2rem;
+  right: 0;
 }
