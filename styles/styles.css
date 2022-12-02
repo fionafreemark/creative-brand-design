@@ -291,6 +291,16 @@ i {
   font-size: 1.9rem;
 }
 
+.left-scroll-icon,
+.right-scroll-icon {
+  font-size: 3rem;
+  font-weight: bolder;
+}
+
+.section-gallery p {
+  font-style: italic;
+}
+
 .section-icon-gallery i {
   font-size: 3.6rem;
 }
@@ -336,6 +346,16 @@ img {
   max-width: 100%;
   height: auto;
   display: block;
+}
+
+button {
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  cursor: pointer;
+}
+
+i {
+  padding: 5px 5px;
 }
 
 header {
@@ -413,14 +433,6 @@ header .vertical-line {
   -ms-flex-preferred-size: 40%;
       flex-basis: 40%;
 }
-.shop-menu button {
-  background-color: rgba(0, 0, 0, 0);
-  border: none;
-  cursor: pointer;
-}
-.shop-menu button i {
-  padding: 5px 5px;
-}
 .shop-menu .shop-bag {
   position: relative;
 }
@@ -475,5 +487,57 @@ header .vertical-line {
   display: -ms-flexbox;
   display: flex;
   text-align: center;
+  margin-top: 5%;
+}
+
+* {
+  border: 1px solid navy;
+}
+
+.section-gallery {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 12% 0 10% 0;
+}
+.section-gallery .left-scroll-icon {
+  color: #333333;
+}
+.section-gallery .right-scroll-icon {
+  color: rgb(93, 91, 91);
+}
+.section-gallery .left-scroll-icon,
+.section-gallery .right-scroll-icon {
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+.section-gallery .left-scroll-icon:hover,
+.section-gallery .right-scroll-icon:hover {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+}
+.section-gallery .container-circle-gallery {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-preferred-size: 60%;
+      flex-basis: 60%;
+  margin: 0 auto;
+  text-align: center;
+}
+.section-gallery .container-circle-gallery .magazine-img {
+  -ms-flex-item-align: center;
+      align-self: center;
+  width: 35%;
+  border-radius: 50%;
+}
+.section-gallery .container-circle-gallery p {
   margin-top: 5%;
 }
