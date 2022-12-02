@@ -433,3 +433,47 @@ header .vertical-line {
   top: 1.2rem;
   right: 0;
 }
+
+.section-branding {
+  background-color: #C3DAB7;
+  padding: 12% 0 10% 0;
+}
+.section-branding .section-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.section-branding .desk-img-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+}
+.section-branding .desk-img-container .desk-img {
+  margin: 0 60%;
+}
+.section-branding .desk-img-container .circular-text {
+  position: absolute;
+  left: -18%;
+  top: -28%;
+  width: 40%;
+  height: auto;
+  z-index: 10;
+}
+.section-branding .branding-text-container {
+  -ms-flex-preferred-size: 70%;
+      flex-basis: 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  margin-top: 5%;
+}

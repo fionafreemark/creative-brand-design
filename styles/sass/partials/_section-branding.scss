@@ -1,0 +1,50 @@
+@use "./variables" as *;
+
+// SECTION ONE: BRANDING
+
+// * {
+//     border: 1px solid navy;
+// }
+
+.section-branding {
+    background-color: $lightSage;
+    padding: 12% 0 10% 0;
+
+    .section-container {
+        display: flex;
+        justify-content: center;
+        // flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    .desk-img-container {
+        display: flex;
+        justify-content: center;
+        position: relative;
+
+        .desk-img {
+            // This margin is to make sure the text below doesn't flex wrap up onto the same line. Could perhaps also make it fd column instead.
+            margin: 0 60%;
+        }
+
+        .circular-text {
+            position: absolute;
+            left: -18%;
+            top: -28%;
+            width: 40%;
+            height: auto;
+            z-index: 10;
+            // transition: 3s;
+            // &:hover {
+            //     transform: rotate(360deg);
+            // }    
+
+        }
+    }
+    .branding-text-container {
+        flex-basis: 70%;
+        display: flex;
+        text-align: center;
+        margin-top: 5%;
+    }
+}
