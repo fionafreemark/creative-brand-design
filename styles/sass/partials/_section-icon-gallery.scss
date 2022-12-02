@@ -1,0 +1,65 @@
+@use "./variables" as *;
+
+// SECTION THREE: ICON GALLERY
+
+// * {
+//     border: 1px solid navy;
+// }
+
+.section-icon-gallery {
+    background-image: url(/users/fionafreemark/websites/juno/projects/project-1/assets/home-4.jpeg);
+    background-size: cover;
+    padding: 8% 0;
+
+    .icon-gallery-container {
+        display: flex;
+        margin-left: 50%;
+        margin-right: 8%;
+    }
+
+}
+
+.section-icon-gallery ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    li {
+        display: flex;
+        flex-basis: 48%;
+
+        button {
+            align-self: center;
+            justify-self: center;
+
+            i {
+                border: 2px solid $black;
+                font-size: 2.6rem;
+                width: 6rem;
+                height: 6rem;
+                line-height: 4.4rem;
+                text-align: center;
+                border-radius: 50%;
+                transition: 300ms;
+                &:hover {
+                    color: $lightGrey;
+                    background-color: $black;
+                    scale: 95%;
+                }
+            }
+        }
+
+
+
+        .gallery-text-container {
+            flex-basis: 90%;
+            margin-left: 5%;
+            margin-top: 5%;
+
+            p {
+                font-size: 1.1rem;
+            }
+        }
+    }
+
+}

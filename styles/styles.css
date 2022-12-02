@@ -291,20 +291,6 @@ i {
   font-size: 1.9rem;
 }
 
-.left-scroll-icon,
-.right-scroll-icon {
-  font-size: 3rem;
-  font-weight: bolder;
-}
-
-.section-gallery p {
-  font-style: italic;
-}
-
-.section-icon-gallery i {
-  font-size: 3.6rem;
-}
-
 button {
   font-weight: 700;
   font-size: 1.4rem;
@@ -490,10 +476,6 @@ header .vertical-line {
   margin-top: 5%;
 }
 
-* {
-  border: 1px solid navy;
-}
-
 .section-gallery {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -511,6 +493,8 @@ header .vertical-line {
 }
 .section-gallery .left-scroll-icon,
 .section-gallery .right-scroll-icon {
+  font-size: 3rem;
+  font-weight: bolder;
   -webkit-transition: 300ms;
   transition: 300ms;
 }
@@ -540,4 +524,66 @@ header .vertical-line {
 }
 .section-gallery .container-circle-gallery p {
   margin-top: 5%;
+  font-style: italic;
+}
+
+.section-icon-gallery {
+  background-image: url(/users/fionafreemark/websites/juno/projects/project-1/assets/home-4.jpeg);
+  background-size: cover;
+  padding: 8% 0;
+}
+.section-icon-gallery .icon-gallery-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 50%;
+  margin-right: 8%;
+}
+
+.section-icon-gallery ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.section-icon-gallery ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-preferred-size: 48%;
+      flex-basis: 48%;
+}
+.section-icon-gallery ul li button {
+  -ms-flex-item-align: center;
+      align-self: center;
+  justify-self: center;
+}
+.section-icon-gallery ul li button i {
+  border: 2px solid #333333;
+  font-size: 2.6rem;
+  width: 6rem;
+  height: 6rem;
+  line-height: 4.4rem;
+  text-align: center;
+  border-radius: 50%;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+.section-icon-gallery ul li button i:hover {
+  color: #F6F6F6;
+  background-color: #333333;
+  scale: 95%;
+}
+.section-icon-gallery ul li .gallery-text-container {
+  -ms-flex-preferred-size: 90%;
+      flex-basis: 90%;
+  margin-left: 5%;
+  margin-top: 5%;
+}
+.section-icon-gallery ul li .gallery-text-container p {
+  font-size: 1.1rem;
 }

@@ -1,8 +1,8 @@
 @use "./variables" as *;
 
-* {
-    border: 1px solid navy;
-}
+// * {
+//     border: 1px solid navy;
+// }
 
 .section-gallery {
     display: flex;
@@ -19,7 +19,10 @@
 
     .left-scroll-icon,
     .right-scroll-icon {
+        font-size: 3rem;
+        font-weight: bolder;
         transition: 300ms;
+
         &:hover {
             transform: scale(1.5)
         }
@@ -37,8 +40,10 @@
             width: 35%;
             border-radius: 50%;
         }
+
         p {
             margin-top: 5%;
+            font-style: italic;
         }
     }
 }
