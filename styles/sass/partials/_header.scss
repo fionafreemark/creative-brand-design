@@ -23,6 +23,9 @@ header {
         bottom: -60px;
         left: 50%;
     }
+
+
+
 }
 
 .header-nav {
@@ -31,6 +34,9 @@ header {
     justify-content: space-between;
     align-items: center;
     padding-top: 20px;
+    position: relative;
+
+
 
     h1 {
         text-align: center;
@@ -62,9 +68,6 @@ header {
 .home-menu {
     display: flex;
     flex-basis: 40%;
-    
-
-
 }
 
 

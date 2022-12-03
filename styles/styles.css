@@ -403,6 +403,7 @@ header .vertical-line {
       -ms-flex-align: center;
           align-items: center;
   padding-top: 20px;
+  position: relative;
 }
 .header-nav h1 {
   text-align: center;
@@ -859,13 +860,78 @@ footer .creative-container p {
   letter-spacing: 0.6rem;
 }
 
+/* Icon gallery began to scroll overtop of the dark part of the image so I've added a translucent background so the text is legible. */
 @media (max-width: 1150px) {
+  /* Icon Gallery Styles */
   .section-icon-gallery .icon-gallery-container {
     margin-left: 8%;
-    background-color: rgba(241, 239, 239, 0.278);
+    background-color: rgba(241, 239, 239, 0.785);
+  }
+}
+@media (max-width: 1000px) {
+  /* Header Styles */
+  h1 {
+    font-size: 2.8rem;
+  }
+  /* Footer Styles */
+  .footer-container {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .footer-container .contact-us-container {
+    min-width: 40%;
+  }
+  .footer-container .recent-posts-container {
+    min-width: 40%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+  .footer-container .twitter-container {
+    width: 100%;
+    margin-top: 30px;
+  }
+  .footer-container .twitter-container h4 {
+    text-align: center;
+  }
+  .footer-container .twitter-container label {
+    text-align: center;
+  }
+  .footer-container .twitter-container .email-container {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .footer-container .twitter-container .email-container button {
+    padding: 2.25%;
   }
 }
 @media (max-width: 800px) {
+  /* Header Styles */
+  .header-nav {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-transition: 500ms;
+    transition: 500ms;
+  }
+  .header-nav .creative-logo {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  /* Icon Gallery Styles Styles */
   .section-icon-gallery .icon-gallery-container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -873,10 +939,49 @@ footer .creative-container p {
             flex-direction: column;
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .section-icon-gallery .icon-gallery-container li {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
     padding: 0 15%;
+  }
+  /* Footer Styles */
+  .footer-container {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .footer-container .contact-us-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    min-width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .footer-container .recent-posts-container {
+    min-width: 100%;
+    margin-top: 30px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+@media (max-width: 800px) and (max-width: 500px) {
+  .wrapper {
+    width: 95%;
   }
 }

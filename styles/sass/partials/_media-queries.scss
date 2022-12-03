@@ -2,25 +2,115 @@
 
 // Use 1000px 800px & 500px
 
+/* Icon gallery began to scroll overtop of the dark part of the image so I've added a translucent background so the text is legible. */
+
 @media (max-width: 1150px) {
+
+    /* Icon Gallery Styles */
     .section-icon-gallery {
         .icon-gallery-container {
             margin-left: 8%;
-            background-color: rgba(241, 239, 239, 0.278);
+            background-color: rgba(241, 239, 239, 0.785);
+        }
+    }
+}
+
+@media (max-width: 1000px) {
+    /* Header Styles */
+    h1 {
+        font-size: 2.8rem;
+    }
+
+    /* Footer Styles */
+    .footer-container {
+        flex-wrap: wrap;
+
+        .contact-us-container {
+            min-width: 40%;
+        }
+
+        .recent-posts-container {
+            min-width: 40%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+
+        .twitter-container {
+            width: 100%;
+            margin-top: 30px;
+
+            h4 {
+                text-align: center;
+            }
+
+            label {
+                text-align: center;
+            }
+
+            .email-container {
+                justify-content: center;
+                align-items: center;
+
+                button {
+                    padding: 2.25%;
+                }
+            }
         }
     }
 }
 
 
 @media (max-width: 800px) {
+
+    /* Header Styles */
+.header-nav {
+    flex-wrap: wrap;
+    transition: 500ms;
+    .creative-logo {      
+        flex-basis: 100%;
+        order: 2;
+    }
+}
+
+    /* Icon Gallery Styles Styles */
     .section-icon-gallery {
         .icon-gallery-container {
             flex-direction: column;
             flex-basis: 100%;
+            justify-content: center;
+            align-items: center;
+
             li {
                 flex-basis: 100%;
                 padding: 0 15%;
             }
         }
     }
+
+    /* Footer Styles */
+    .footer-container {
+        flex-wrap: wrap;
+
+        .contact-us-container {
+            display: flex;
+            flex-direction: column;
+            min-width: 100%;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .recent-posts-container {
+            min-width: 100%;
+            margin-top: 30px;
+            align-items: center;
+        }
+    }
+
+
+@media (max-width: 500px) {
+    .wrapper {
+        width: 95%;
+    }
+}
 }
