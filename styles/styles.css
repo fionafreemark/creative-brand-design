@@ -405,6 +405,11 @@ header .vertical-line {
   padding-top: 20px;
   position: relative;
 }
+.header-nav .creative-logo {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+}
 .header-nav h1 {
   text-align: center;
   margin: 0;
@@ -436,6 +441,9 @@ header .vertical-line {
   display: flex;
   -ms-flex-preferred-size: 40%;
       flex-basis: 40%;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
 }
 
 /* Right Side Shop Nav Bar */
@@ -451,6 +459,9 @@ header .vertical-line {
           align-items: center;
   -ms-flex-preferred-size: 40%;
       flex-basis: 40%;
+  -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
+          order: 3;
 }
 .shop-menu .shop-bag {
   position: relative;
@@ -761,6 +772,11 @@ header .vertical-line {
   -ms-flex-preferred-size: 50%;
       flex-basis: 50%;
 }
+.section-drop-a-line .container-drop-img img {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 
 footer {
   background-color: #333333;
@@ -871,7 +887,7 @@ footer .creative-container p {
 @media (max-width: 1000px) {
   /* Header Styles */
   h1 {
-    font-size: 2.8rem;
+    font-size: 2.6rem;
   }
   /* Footer Styles */
   .footer-container {
@@ -917,19 +933,36 @@ footer .creative-container p {
   }
 }
 @media (max-width: 800px) {
+  .wrapper {
+    width: 95%;
+  }
   /* Header Styles */
   .header-nav {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     -webkit-transition: 500ms;
     transition: 500ms;
   }
-  .header-nav .creative-logo {
-    -ms-flex-preferred-size: 100%;
-        flex-basis: 100%;
+  .header-nav .home-menu,
+.header-nav .shop-menu {
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2;
+    -ms-flex-preferred-size: auto;
+        flex-basis: auto;
+  }
+  .header-nav .creative-logo {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .header-nav .creative-logo h1 {
+    text-align: left;
   }
   /* Icon Gallery Styles Styles */
   .section-icon-gallery .icon-gallery-container {
@@ -978,10 +1011,5 @@ footer .creative-container p {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-  }
-}
-@media (max-width: 800px) and (max-width: 500px) {
-  .wrapper {
-    width: 95%;
   }
 }

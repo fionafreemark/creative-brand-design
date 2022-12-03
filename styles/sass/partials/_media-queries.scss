@@ -18,7 +18,7 @@
 @media (max-width: 1000px) {
     /* Header Styles */
     h1 {
-        font-size: 2.8rem;
+        font-size: 2.6rem;
     }
 
     /* Footer Styles */
@@ -63,13 +63,27 @@
 
 @media (max-width: 800px) {
 
+.wrapper {
+        width: 95%;
+    }
+
     /* Header Styles */
 .header-nav {
+    justify-content: flex-start;
     flex-wrap: wrap;
     transition: 500ms;
+    
+    .home-menu,
+    .shop-menu {
+        order: 2;
+        flex-basis: auto;
+    }
     .creative-logo {      
         flex-basis: 100%;
-        order: 2;
+        order: 1;
+        h1 {
+            text-align: left;
+        }
     }
 }
 
@@ -107,10 +121,4 @@
         }
     }
 
-
-@media (max-width: 500px) {
-    .wrapper {
-        width: 95%;
-    }
-}
 }
