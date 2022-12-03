@@ -33,14 +33,6 @@ header {
     padding-top: 20px;
     position: relative;
 
-    .creative-logo {
-        order: 2;
-    }
-    h1 {
-        text-align: center;
-        margin: 0;
-    }
-
     a {
         padding: 10px 15px;
         display: inline-block;
@@ -56,39 +48,73 @@ header {
         }
     }
 
-    .creative-logo:hover {
-        opacity: 0.5;
-        scale: 0.9;
-    }
-}
-
-/* Right Side Shop Nav Bar */
-.home-menu {
-    display: flex;
-    flex-basis: 40%;
-    order: 1;
-}
-
-
-/* Right Side Shop Nav Bar */
-.shop-menu {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    flex-basis: 40%;
-    order: 3;
-
-    .shop-bag {
+    .creative-logo {
+        order: 2;
         position: relative;
+        display: flex;
+
+        h1 {
+            transition: 400ms;
+            text-align: center;
+            margin: 0;
+
+            &:hover {
+                opacity: 0.5;
+            }
+        }
+
+        .menu-button,
+        #toggle {
+            display: none;
+            color: $black;
+
+
+            i {
+                font-size: 2.6rem;
+                margin-left: 20px;
+                padding: 1px;
+            }
+
+            #toggle {
+                display: none;
+            }
+        }
     }
 
-    .cart-number {
-        display: inline;
-        position: absolute;
-        background-color: $lightSage;
-        border-radius: 50%;
-        padding: 3px 5px;
-        top: 1.2rem;
-        right: 0;
+    /* Right Side Shop Nav Bar */
+    .home-menu {
+        display: flex;
+        flex-basis: 40%;
+        order: 1;
+    }
+
+
+    /* Right Side Shop Nav Bar */
+    .shop-menu {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        flex-basis: 40%;
+        order: 3;
+        transition: 500ms;
+
+        .shop-bag {
+            position: relative;
+        }
+
+        .cart-number {
+            display: inline;
+            position: absolute;
+            background-color: $lightSage;
+            border-radius: 50%;
+            padding: 3px 5px;
+            top: 1.2rem;
+            right: 0;
+        }
+
+        i:hover {
+            scale: 0.9;
+            opacity: 0.5;
+        }
     }
 }

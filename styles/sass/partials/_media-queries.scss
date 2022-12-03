@@ -16,10 +16,50 @@
 }
 
 @media (max-width: 1000px) {
+
     /* Header Styles */
-    h1 {
-        font-size: 2.6rem;
+
+
+    .header-nav {
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        transition: 500ms;
+
+        .home-menu,
+        .shop-menu {
+            order: 2;
+            flex-basis: auto;
+            // display: none;
+        }
+
+        /* Toggle For Hidden Menu */
+        #toggle:checked+.shop-menu,
+        #toggle:checked+.home-menu {
+            display: block;
+        }
+
+
+        .creative-logo {
+            flex-basis: 100%;
+            order: 1;
+
+            .menu-button {
+                display: block;
+                cursor: pointer;
+            }
+
+            h1 {
+                font-size: 2.6rem;
+                text-align: left;
+            }
+        }
+
     }
+
+
+
+
+
 
     /* Footer Styles */
     .footer-container {
@@ -63,29 +103,23 @@
 
 @media (max-width: 800px) {
 
-.wrapper {
+    .wrapper {
         width: 95%;
     }
 
-    /* Header Styles */
+
+    /* Header Styles */ 
 .header-nav {
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    transition: 500ms;
-    
-    .home-menu,
-    .shop-menu {
-        order: 2;
-        flex-basis: auto;
-    }
-    .creative-logo {      
-        flex-basis: 100%;
-        order: 1;
-        h1 {
-            text-align: left;
-        }
+    .shop-menu,
+    .home-menu {
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
     }
 }
+
+
 
     /* Icon Gallery Styles Styles */
     .section-icon-gallery {
