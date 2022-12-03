@@ -8,7 +8,10 @@ html {
     color: $black;
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
     text-transform: uppercase;
     margin: 0;
 }
@@ -19,7 +22,9 @@ h1 {
     letter-spacing: 0.09rem;
 }
 
-h2, h3, h4 {
+h2,
+h3,
+h4 {
     font-weight: 400;
     font-size: 1.8rem;
     letter-spacing: 0.18rem;
@@ -30,23 +35,40 @@ a {
     color: $black;
 }
 
-p, footer li, footer form {
+p {
+    line-height: 2.4rem;
+}
+
+p,
+footer li,
+footer form {
     font-family: $bodyFont;
     font-size: 1.4rem;
-    line-height: 2.4rem;
     letter-spacing: 0.03rem;
 }
 
-footer, footer p, footer a {
+footer p,
+footer li,
+footer form {
+    line-height: 3rem;
+}
+
+
+
+footer,
+footer p,
+footer a {
     color: $pureWhite;
 }
 
-footer input[type="email"] {
-    color: black;
+footer input[type="email"],
+footer button i {
+    color: $black;
 }
 
 /* Nav Text & Footer "Creative Agency" Bar */
-nav, .creative-container {
+nav,
+.creative-container {
     font-weight: 400;
     font-size: 1.4rem;
     letter-spacing: 0.03rem;
@@ -67,4 +89,3 @@ button {
     font-size: 0.8rem;
     line-height: 0.8rem;
 }
-

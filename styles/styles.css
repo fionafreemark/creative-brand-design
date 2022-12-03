@@ -243,7 +243,10 @@ html {
   color: #333333;
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   text-transform: uppercase;
   margin: 0;
 }
@@ -254,7 +257,9 @@ h1 {
   letter-spacing: 0.09rem;
 }
 
-h2, h3, h4 {
+h2,
+h3,
+h4 {
   font-weight: 400;
   font-size: 1.8rem;
   letter-spacing: 0.18rem;
@@ -265,23 +270,38 @@ a {
   color: #333333;
 }
 
-p, footer li, footer form {
+p {
+  line-height: 2.4rem;
+}
+
+p,
+footer li,
+footer form {
   font-family: "Open Sans", sans-serif;
   font-size: 1.4rem;
-  line-height: 2.4rem;
   letter-spacing: 0.03rem;
 }
 
-footer, footer p, footer a {
+footer p,
+footer li,
+footer form {
+  line-height: 3rem;
+}
+
+footer,
+footer p,
+footer a {
   color: #FFFFFF;
 }
 
-footer input[type=email] {
-  color: black;
+footer input[type=email],
+footer button i {
+  color: #333333;
 }
 
 /* Nav Text & Footer "Creative Agency" Bar */
-nav, .creative-container {
+nav,
+.creative-container {
   font-weight: 400;
   font-size: 1.4rem;
   letter-spacing: 0.03rem;
@@ -736,4 +756,102 @@ header .vertical-line {
 .section-drop-a-line .container-drop-img {
   -ms-flex-preferred-size: 50%;
       flex-basis: 50%;
+}
+
+footer {
+  background-color: #333333;
+  padding-top: 10%;
+}
+footer a {
+  -webkit-transition: 300ms;
+  transition: 300ms;
+  cursor: pointer;
+}
+footer a:hover {
+  opacity: 0.5;
+}
+footer .footer-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+footer .footer-container h4 {
+  margin-bottom: 25px;
+}
+
+.footer-icon-container {
+  margin-top: 30px;
+}
+.footer-icon-container a {
+  margin-right: 20px;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+.footer-icon-container a:hover {
+  opacity: 0.5;
+}
+
+.recent-posts-container h4 {
+  text-align: center;
+}
+.recent-posts-container li {
+  list-style: disc;
+  line-height: 3rem;
+}
+
+.twitter-container h4 {
+  text-align: end;
+}
+
+.footer-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  height: 35%;
+}
+.footer-form label {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+}
+.footer-form .email-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+.footer-form .email-container input[type=email] {
+  padding: 3% 18% 3% 8%;
+  border: none;
+}
+.footer-form .email-container button {
+  padding: 3%;
+  background-color: #C3DAB7;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+.footer-form .email-container button:hover, .footer-form .email-container button:focus {
+  background-color: #F6F6F6;
+}
+
+footer .creative-container {
+  text-align: center;
+  margin-top: 10%;
+  padding: 5% 0;
+  border-top: 0.5px solid rgba(165, 165, 165, 0.589);
+}
+footer .creative-container p {
+  font-weight: 900;
+  letter-spacing: 0.6rem;
 }

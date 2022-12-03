@@ -1,1 +1,100 @@
 @use "./variables" as *;
+
+// * {
+//     border: 0.5px solid white;
+// }
+
+footer {
+    background-color: $black;
+    padding-top: 10%;
+
+    a {
+        transition: 300ms;
+        cursor: pointer;
+
+        &:hover {
+            opacity: 0.5;
+        }
+    }
+
+    .footer-container {
+        display: flex;
+        justify-content: space-between;
+
+        h4 {
+            margin-bottom: 25px;
+
+        }
+    }
+}
+
+.footer-icon-container {
+    margin-top: 30px;
+
+    a {
+        margin-right: 20px;
+        transition: 300ms;
+
+        &:hover {
+            opacity: 0.5;
+        }
+    }
+}
+
+.recent-posts-container {
+    h4 {
+        text-align: center;
+    }
+
+    li {
+        list-style: disc;
+        line-height: 3rem;
+    }
+}
+
+
+.twitter-container {
+    h4 {
+        text-align: end;
+    }
+}
+
+
+.footer-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 35%;
+    label {
+        flex-basis: 100%;
+    }
+    .email-container {
+        display: flex;
+        justify-content: flex-end;
+        input[type="email"]{
+            padding: 3% 18% 3% 8%;
+            border: none;
+        }
+        button {
+            padding: 3%;
+            background-color: $lightSage;
+            transition: 300ms;
+            &:hover,
+            &:focus {
+            background-color: $lightGrey;
+            }
+        }
+    }
+}
+
+footer .creative-container {
+    text-align: center;
+    margin-top: 10%;
+    padding: 5% 0;
+    border-top: 0.5px solid rgba(165, 165, 165, 0.589);
+    
+    p {
+        font-weight: 900;
+        letter-spacing: .6rem;
+}
+}
