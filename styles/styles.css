@@ -374,7 +374,7 @@ i {
 }
 
 header {
-  background-color: pink;
+  background-color: #F6F6F6;
   background-image: url(../../assets/home-1.jpeg);
   background-size: cover;
   height: 100vh;
@@ -411,18 +411,21 @@ header .vertical-line {
 .header-nav a {
   padding: 10px 15px;
   display: inline-block;
+  -webkit-transition: 300ms;
+  transition: 300ms;
 }
-.header-nav a,
+.header-nav a:not(.creative-logo),
 .header-nav button {
-  border: 1px rgba(0, 0, 0, 0) solid;
   -webkit-transition: 500ms;
   transition: 500ms;
 }
-.header-nav a:hover,
+.header-nav a:not(.creative-logo):hover,
 .header-nav button:hover {
-  border: 1px #333333 solid;
-  -webkit-transform: scale(0.9);
-          transform: scale(0.9);
+  text-decoration: line-through;
+}
+.header-nav .creative-logo:hover {
+  opacity: 0.5;
+  scale: 0.9;
 }
 
 /* Right Side Shop Nav Bar */
