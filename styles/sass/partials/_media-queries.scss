@@ -1,3 +1,26 @@
 @use "variables" as *;
 
 // Use 1000px 800px & 500px
+
+@media (max-width: 1150px) {
+    .section-icon-gallery {
+        .icon-gallery-container {
+            margin-left: 8%;
+            background-color: rgba(241, 239, 239, 0.278);
+        }
+    }
+}
+
+
+@media (max-width: 800px) {
+    .section-icon-gallery {
+        .icon-gallery-container {
+            flex-direction: column;
+            flex-basis: 100%;
+            li {
+                flex-basis: 100%;
+                padding: 0 15%;
+            }
+        }
+    }
+}
