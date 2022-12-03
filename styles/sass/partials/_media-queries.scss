@@ -18,18 +18,17 @@
 @media (max-width: 1000px) {
 
     /* Header Styles */
-
-
     .header-nav {
         justify-content: flex-start;
         flex-wrap: wrap;
         transition: 500ms;
 
+        /* Menus hidden so they can be revealed by toggle */
         .home-menu,
         .shop-menu {
             order: 2;
             flex-basis: auto;
-            // display: none;
+            display: none;
         }
 
         /* Toggle For Hidden Menu */
@@ -37,7 +36,6 @@
         #toggle:checked+.home-menu {
             display: block;
         }
-
 
         .creative-logo {
             flex-basis: 100%;
@@ -53,13 +51,38 @@
                 text-align: left;
             }
         }
+    }
 
+    /* Section 1: Branding */
+    .desk-img-container .circular-text {
+        width: 30%;
     }
 
 
+    /* Section 3 : Meet our Team*/
+    .container-meet-our-team {
+        .container-team-players {
+            justify-content: center;
+            padding: 2%;
+
+            h3 {
+                margin: 0;
+            }
+        }
+
+        p {
+            font-size: 1.2rem;
+        }
+    }
 
 
+    /* */
 
+    /* */
+
+    /* */
+
+    /* */
 
     /* Footer Styles */
     .footer-container {
@@ -107,19 +130,17 @@
         width: 95%;
     }
 
+    /* Header Styles */
+    .header-nav {
 
-    /* Header Styles */ 
-.header-nav {
-    .shop-menu,
-    .home-menu {
-        width: 100%;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: flex-start;
+        .shop-menu,
+        .home-menu {
+            width: 100%;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+        }
     }
-}
-
-
 
     /* Icon Gallery Styles Styles */
     .section-icon-gallery {
@@ -132,6 +153,48 @@
             li {
                 flex-basis: 100%;
                 padding: 0 15%;
+            }
+        }
+    }
+
+    /* Section 3: Meet Our Team*/
+    .section-team {
+        h2 {
+            margin-top: 50px;
+        }
+    }
+
+
+    .container-meet-our-team {
+
+        .container-team-players {
+            flex-basis: 100%;
+            padding: 4%;
+            margin: 0 0 5px 0;
+        }
+
+        .container-team-img {
+            flex-basis: 50%;
+            height: auto;
+            margin: 0;
+
+        }
+
+        .container-team-img:nth-child(odd) {
+            padding: 5px 0px 5px 5px;
+        }
+
+        .container-team-img:nth-child(even) {
+            padding: 5px 5px 5px 0px;
+        }
+
+        .container-work-with-us {
+            flex-basis: 50%;
+            margin: 0;
+            padding: 5px 0px 5px 5px;
+
+            a {
+                padding: 47% 20%;
             }
         }
     }

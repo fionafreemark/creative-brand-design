@@ -514,7 +514,8 @@ header .vertical-line {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
-.section-branding .desk-img-container {
+
+.desk-img-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -523,10 +524,10 @@ header .vertical-line {
           justify-content: center;
   position: relative;
 }
-.section-branding .desk-img-container .desk-img {
+.desk-img-container .desk-img {
   margin: 0 60%;
 }
-.section-branding .desk-img-container .circular-text {
+.desk-img-container .circular-text {
   position: absolute;
   left: -18%;
   top: -28%;
@@ -534,7 +535,8 @@ header .vertical-line {
   height: auto;
   z-index: 10;
 }
-.section-branding .branding-text-container {
+
+.branding-text-container {
   -ms-flex-preferred-size: 70%;
       flex-basis: 70%;
   display: -webkit-box;
@@ -918,6 +920,7 @@ footer .creative-container p {
         flex-wrap: wrap;
     -webkit-transition: 500ms;
     transition: 500ms;
+    /* Menus hidden so they can be revealed by toggle */
     /* Toggle For Hidden Menu */
   }
   .header-nav .home-menu,
@@ -927,6 +930,7 @@ footer .creative-container p {
             order: 2;
     -ms-flex-preferred-size: auto;
         flex-basis: auto;
+    display: none;
   }
   .header-nav #toggle:checked + .shop-menu,
 .header-nav #toggle:checked + .home-menu {
@@ -947,6 +951,27 @@ footer .creative-container p {
     font-size: 2.6rem;
     text-align: left;
   }
+  /* Section 1: Branding */
+  .desk-img-container .circular-text {
+    width: 30%;
+  }
+  /* Section 3 : Meet our Team*/
+  .container-meet-our-team .container-team-players {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 2%;
+  }
+  .container-meet-our-team .container-team-players h3 {
+    margin: 0;
+  }
+  .container-meet-our-team p {
+    font-size: 1.2rem;
+  }
+  /* */
+  /* */
+  /* */
+  /* */
   /* Footer Styles */
   .footer-container {
     -ms-flex-wrap: wrap;
@@ -1028,6 +1053,37 @@ footer .creative-container p {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
     padding: 0 15%;
+  }
+  /* Section 3: Meet Our Team*/
+  .section-team h2 {
+    margin-top: 50px;
+  }
+  .container-meet-our-team .container-team-players {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    padding: 4%;
+    margin: 0 0 5px 0;
+  }
+  .container-meet-our-team .container-team-img {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+    height: auto;
+    margin: 0;
+  }
+  .container-meet-our-team .container-team-img:nth-child(odd) {
+    padding: 5px 0px 5px 5px;
+  }
+  .container-meet-our-team .container-team-img:nth-child(even) {
+    padding: 5px 5px 5px 0px;
+  }
+  .container-meet-our-team .container-work-with-us {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+    margin: 0;
+    padding: 5px 0px 5px 5px;
+  }
+  .container-meet-our-team .container-work-with-us a {
+    padding: 47% 20%;
   }
   /* Footer Styles */
   .footer-container {
