@@ -23,9 +23,6 @@ header {
         bottom: -60px;
         left: 50%;
     }
-
-
-
 }
 
 .header-nav {
@@ -36,8 +33,9 @@ header {
     padding-top: 20px;
     position: relative;
 
-
-
+    .creative-logo {
+        order: 2;
+    }
     h1 {
         text-align: center;
         margin: 0;
@@ -68,6 +66,7 @@ header {
 .home-menu {
     display: flex;
     flex-basis: 40%;
+    order: 1;
 }
 
 
@@ -77,6 +76,7 @@ header {
     justify-content: flex-end;
     align-items: center;
     flex-basis: 40%;
+    order: 3;
 
     .shop-bag {
         position: relative;
