@@ -404,15 +404,8 @@ header .vertical-line {
           align-items: center;
   padding-top: 20px;
   position: relative;
-}
-.header-nav .creative-logo {
-  -webkit-box-ordinal-group: 3;
-      -ms-flex-order: 2;
-          order: 2;
-}
-.header-nav h1 {
-  text-align: center;
-  margin: 0;
+  /* Right Side Shop Nav Bar */
+  /* Right Side Shop Nav Bar */
 }
 .header-nav a {
   padding: 10px 15px;
@@ -429,13 +422,40 @@ header .vertical-line {
 .header-nav button:hover {
   text-decoration: line-through;
 }
-.header-nav .creative-logo:hover {
-  opacity: 0.5;
-  scale: 0.9;
+.header-nav .creative-logo {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
-
-/* Right Side Shop Nav Bar */
-.home-menu {
+.header-nav .creative-logo h1 {
+  -webkit-transition: 400ms;
+  transition: 400ms;
+  text-align: center;
+  margin: 0;
+}
+.header-nav .creative-logo h1:hover {
+  opacity: 0.5;
+}
+.header-nav .creative-logo .menu-button,
+.header-nav .creative-logo #toggle {
+  display: none;
+  color: #333333;
+}
+.header-nav .creative-logo .menu-button i,
+.header-nav .creative-logo #toggle i {
+  font-size: 2.6rem;
+  margin-left: 20px;
+  padding: 1px;
+}
+.header-nav .creative-logo .menu-button #toggle,
+.header-nav .creative-logo #toggle #toggle {
+  display: none;
+}
+.header-nav .home-menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -445,9 +465,7 @@ header .vertical-line {
       -ms-flex-order: 1;
           order: 1;
 }
-
-/* Right Side Shop Nav Bar */
-.shop-menu {
+.header-nav .shop-menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -462,11 +480,13 @@ header .vertical-line {
   -webkit-box-ordinal-group: 4;
       -ms-flex-order: 3;
           order: 3;
+  -webkit-transition: 500ms;
+  transition: 500ms;
 }
-.shop-menu .shop-bag {
+.header-nav .shop-menu .shop-bag {
   position: relative;
 }
-.shop-menu .cart-number {
+.header-nav .shop-menu .cart-number {
   display: inline;
   position: absolute;
   background-color: #C3DAB7;
@@ -474,6 +494,10 @@ header .vertical-line {
   padding: 3px 5px;
   top: 1.2rem;
   right: 0;
+}
+.header-nav .shop-menu i:hover {
+  scale: 0.9;
+  opacity: 0.5;
 }
 
 .section-branding {
@@ -886,8 +910,42 @@ footer .creative-container p {
 }
 @media (max-width: 1000px) {
   /* Header Styles */
-  h1 {
+  .header-nav {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-transition: 500ms;
+    transition: 500ms;
+    /* Toggle For Hidden Menu */
+  }
+  .header-nav .home-menu,
+.header-nav .shop-menu {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    -ms-flex-preferred-size: auto;
+        flex-basis: auto;
+  }
+  .header-nav #toggle:checked + .shop-menu,
+.header-nav #toggle:checked + .home-menu {
+    display: block;
+  }
+  .header-nav .creative-logo {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .header-nav .creative-logo .menu-button {
+    display: block;
+    cursor: pointer;
+  }
+  .header-nav .creative-logo h1 {
     font-size: 2.6rem;
+    text-align: left;
   }
   /* Footer Styles */
   .footer-container {
@@ -937,32 +995,19 @@ footer .creative-container p {
     width: 95%;
   }
   /* Header Styles */
-  .header-nav {
+  .header-nav .shop-menu,
+.header-nav .home-menu {
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-transition: 500ms;
-    transition: 500ms;
-  }
-  .header-nav .home-menu,
-.header-nav .shop-menu {
-    -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2;
-    -ms-flex-preferred-size: auto;
-        flex-basis: auto;
-  }
-  .header-nav .creative-logo {
-    -ms-flex-preferred-size: 100%;
-        flex-basis: 100%;
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
-  }
-  .header-nav .creative-logo h1 {
-    text-align: left;
   }
   /* Icon Gallery Styles Styles */
   .section-icon-gallery .icon-gallery-container {
