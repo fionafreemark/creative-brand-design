@@ -862,7 +862,7 @@ footer .creative-container p {
 @media (max-width: 1150px) {
   .section-icon-gallery .icon-gallery-container {
     margin-left: 8%;
-    background-color: rgba(241, 239, 239, 0.278);
+    background-color: rgba(241, 239, 239, 0.785);
   }
 }
 @media (max-width: 800px) {
