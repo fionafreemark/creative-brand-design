@@ -4,6 +4,8 @@
 
 /* Icon gallery began to scroll overtop of the dark part of the image so I've added a translucent background so the text is legible. */
 
+/* --------------MEDIA QUERY 1150PX--------------- */
+
 @media (max-width: 1150px) {
 
     /* Icon Gallery Styles */
@@ -14,6 +16,8 @@
         }
     }
 }
+
+/* --------------MEDIA QUERY 1000PX--------------- */
 
 @media (max-width: 1000px) {
 
@@ -59,7 +63,7 @@
     }
 
 
-    /* Section 3 : Meet our Team*/
+    /* Section 4: Meet our Team*/
     .container-meet-our-team {
         .container-team-players {
             justify-content: center;
@@ -75,14 +79,10 @@
         }
     }
 
-
-    /* */
-
-    /* */
-
-    /* */
-
-    /* */
+    /* Section 5: Drop Us A Line */
+    .section-drop-a-line .container-drop-img img {
+        height: 100%;
+    }
 
     /* Footer Styles */
     .footer-container {
@@ -123,6 +123,7 @@
     }
 }
 
+/* --------------MEDIA QUERY 800PX--------------- */
 
 @media (max-width: 800px) {
 
@@ -142,7 +143,11 @@
         }
     }
 
-    /* Icon Gallery Styles Styles */
+    /* Section 2: Branding */
+
+    
+
+    /* Section 3: Icon Gallery Styles Styles */
     .section-icon-gallery {
         .icon-gallery-container {
             flex-direction: column;
@@ -157,16 +162,14 @@
         }
     }
 
-    /* Section 3: Meet Our Team*/
+    /* Section 4: Meet Our Team*/
     .section-team {
         h2 {
             margin-top: 50px;
         }
     }
 
-
     .container-meet-our-team {
-
         .container-team-players {
             flex-basis: 100%;
             padding: 4%;
@@ -177,7 +180,6 @@
             flex-basis: 50%;
             height: auto;
             margin: 0;
-
         }
 
         .container-team-img:nth-child(odd) {
@@ -196,6 +198,24 @@
             a {
                 padding: 47% 20%;
             }
+        }
+    }
+
+    /* Section 5: Drop Us A Line*/
+
+    .section-drop-a-line {
+        position: relative;
+
+        .container-drop-a-line {
+            position: absolute;
+            width: 90%;
+            top: 20%;
+            left: 5%;
+        }
+
+        .container-drop-img {
+            flex-basis: 100%;
+
         }
     }
 
@@ -218,4 +238,30 @@
         }
     }
 
+}
+
+
+/* --------------MEDIA QUERY 500PX--------------- */
+
+/* Section 4: Meet our Team */
+.section-team {
+    padding-bottom: 10px;
+    .anchor-box{
+        h3 {
+            font-size: 1.4rem;
+        }
+    }
+}
+
+/* Section 5: Drop Us A Line */
+.section-drop-a-line {
+
+    .container-drop-a-line {
+        position: static;
+        flex-basis: 100%;
+    }
+
+    .container-drop-img {
+       display:none;
+    }
 }
