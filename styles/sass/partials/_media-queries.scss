@@ -52,29 +52,34 @@
         justify-content: flex-start;
         flex-wrap: wrap;
         transition: 500ms;
+        position: relative;
 
         /* Menus hidden so they can be revealed by toggle */
         .home-menu,
         .shop-menu {
             order: 2;
             flex-basis: auto;
-            // display: none;
+            display: none;
+        }
+
+        .menu-button {
+            display: block;
+            cursor: pointer;
         }
 
         /* Toggle For Hidden Menu */
-        #toggle:checked+.shop-menu,
-        #toggle:checked+.home-menu {
+        #toggle:checked+.mobile-menu {
+            position: absolute;
+            top:60px;
+
             display: block;
+
         }
 
         .creative-logo {
             flex-basis: 100%;
             order: 1;
 
-            .menu-button {
-                display: block;
-                cursor: pointer;
-            }
 
             h1 {
                 font-size: 2.6rem;

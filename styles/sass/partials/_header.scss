@@ -33,6 +33,27 @@ header {
     padding-top: 20px;
     position: relative;
 
+    .mobile-menu {
+        display:none;
+        .shop-bag {
+            position: relative;
+            .cart-number {
+                    display: inline;
+                    position: absolute;
+                    background-color: $lightSage;
+                    border-radius: 50%;
+                    padding: 3px 5px;
+                    top: 1.2rem;
+                    right: 0;
+                }
+        }
+        
+            i:hover {
+                scale: 0.9;
+                opacity: 0.5;
+            }
+    }
+
     a {
         padding: 10px 15px;
         display: inline-block;
@@ -50,7 +71,6 @@ header {
 
     .creative-logo {
         order: 2;
-        position: relative;
         display: flex;
 
         h1 {
@@ -63,20 +83,25 @@ header {
             }
         }
 
-        .menu-button,
+
+    }
+
+    .menu-button,
+    #toggle {
+        display: none;
+        color: $black;
+        position: absolute;
+        left: 170px;
+        top: 30px;
+
+        i {
+            font-size: 2.6rem;
+            margin-left: 20px;
+            padding: 1px;
+        }
+
         #toggle {
             display: none;
-            color: $black;
-
-            i {
-                font-size: 2.6rem;
-                margin-left: 20px;
-                padding: 1px;
-            }
-
-            #toggle {
-                display: none;
-            }
         }
     }
 
