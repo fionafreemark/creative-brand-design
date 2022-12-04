@@ -521,6 +521,8 @@ header .vertical-line {
   opacity: 0.5;
 }
 
+/* HOME/INDEX PAGE SECTIONS STYLES */
+/* SECTION ONE: BRANDING ------------------------------*/
 .section-branding {
   background-color: #C3DAB7;
   padding: 12% 0 10% 0;
@@ -578,6 +580,7 @@ header .vertical-line {
   padding: 0 15px;
 }
 
+/* SECTION TWO: CIRCLE GALLERY ------------------------------*/
 .section-gallery {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -629,6 +632,7 @@ header .vertical-line {
   font-style: italic;
 }
 
+/* SECTION THREE: ICON GALLERY ------------------------------*/
 .section-icon-gallery {
   background-image: url(../../../assets/home-4.jpeg);
   background-size: cover;
@@ -691,6 +695,7 @@ header .vertical-line {
   font-size: 1.1rem;
 }
 
+/* SECTION FOUR: MEET OUR TEAM ------------------------------*/
 .section-team {
   position: relative;
   padding: 7% 0 10% 0;
@@ -783,6 +788,7 @@ header .vertical-line {
   background-color: #F6F6F6;
 }
 
+/* SECTION FIVE: DROP US A LINE ------------------------------*/
 .section-drop-a-line {
   display: -webkit-box;
   display: -ms-flexbox;
