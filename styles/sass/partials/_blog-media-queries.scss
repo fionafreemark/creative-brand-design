@@ -70,7 +70,7 @@
         /* Toggle For Hidden Menu */
         #toggle:checked+.mobile-menu {
             position: absolute;
-            top:60px;
+            top: 60px;
 
             display: block;
 
@@ -168,7 +168,8 @@
             align-items: flex-end;
         }
 
-        .twitter-container {
+        .twitter-container,
+        .subscribe-container {
             width: 100%;
             margin-top: 30px;
 
