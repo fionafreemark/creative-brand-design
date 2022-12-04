@@ -7,24 +7,7 @@
     // border: 1px solid pink;
 }
 
-/* INDEX HEADER -----------------------------------------*/
-
-.index-header {
-    background-image: url("../assets/home-1.jpeg");
-    background-size: cover;
-    height: 100vh;
-    background-position: bottom;
-    position: relative;
-
-    .vertical-line {
-        border-left: .5px solid $black;
-        display: block;
-        height: 120px;
-        position: absolute;
-        bottom: -60px;
-        left: 50%;
-    }
-}
+/* GLOBAL HEADER STYLES ------------------------------------*/
 
 .header-nav {
     display: flex;
@@ -144,6 +127,24 @@
     }
 }
 
+/* INDEX HEADER -----------------------------------------*/
+
+.index-header {
+    background-image: url("../assets/home-1.jpeg");
+    background-size: cover;
+    height: 100vh;
+    background-position: bottom;
+    position: relative;
+
+    .vertical-line {
+        border-left: .5px solid $black;
+        display: block;
+        height: 120px;
+        position: absolute;
+        bottom: -60px;
+        left: 50%;
+    }
+}
 
 /* BLOG HEADER ------------------------------------------*/
 
@@ -152,5 +153,5 @@
     background-size: cover;
     height: 100vh;
     background-position: bottom;
-    position: relative;
 }
+
