@@ -45,4 +45,8 @@
     text-align: center;
     margin-top: 5%;
     flex-wrap: wrap;
+    .container-branding,
+    .container-design-develop {
+        flex-basis: 50%;;
+    }
 }

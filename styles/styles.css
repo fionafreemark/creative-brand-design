@@ -547,6 +547,11 @@ header .vertical-line {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
+.branding-text-container .container-branding,
+.branding-text-container .container-design-develop {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+}
 
 .section-gallery {
   display: -webkit-box;
