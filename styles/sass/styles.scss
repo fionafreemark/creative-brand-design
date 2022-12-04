@@ -3,6 +3,8 @@
 @use "./partials/typography";
 @use "./partials/base-files";
 @use "./partials/header";
-@use "./partials/home-page-sections";
+@use "./partials/index-page-sections";
+@use "./partials/blog-page-sections";
 @use "./partials/footer";
-@use "./partials/media-queries";
+@use "./partials/index-media-queries";
+@use "./partials/blog-media-queries";

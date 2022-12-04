@@ -841,6 +841,11 @@ header .vertical-line {
      object-fit: cover;
 }
 
+/* BLOG PAGE SECTIONS STYLES */
+/* SECTION ONE: HOW TO RUN AN AGENCY -----------------------------*/
+/* SECTION TWO: RELATED POSTS GALLERY------------------------------*/
+/* SECTION THREE: COMMENTS ------------------------------*/
+/* SECTION FOUR: LEAVE A COMMENT ------------------------------*/
 footer {
   background-color: #333333;
   padding-top: 10%;
@@ -887,7 +892,8 @@ footer .footer-container h4 {
   line-height: 3rem;
 }
 
-.twitter-container h4 {
+.twitter-container h4,
+.subscribe-container h4 {
   text-align: end;
 }
 
@@ -1082,17 +1088,21 @@ footer label {
         -ms-flex-align: end;
             align-items: flex-end;
   }
-  .footer-container .twitter-container {
+  .footer-container .twitter-container,
+.footer-container .subscribe-container {
     width: 100%;
     margin-top: 30px;
   }
-  .footer-container .twitter-container h4 {
+  .footer-container .twitter-container h4,
+.footer-container .subscribe-container h4 {
     text-align: center;
   }
-  .footer-container .twitter-container label {
+  .footer-container .twitter-container label,
+.footer-container .subscribe-container label {
     text-align: center;
   }
-  .footer-container .twitter-container .email-container {
+  .footer-container .twitter-container .email-container,
+.footer-container .subscribe-container .email-container {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
