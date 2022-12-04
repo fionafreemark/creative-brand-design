@@ -407,6 +407,25 @@ header .vertical-line {
   /* Right Side Shop Nav Bar */
   /* Right Side Shop Nav Bar */
 }
+.header-nav .mobile-menu {
+  display: none;
+}
+.header-nav .mobile-menu .shop-bag {
+  position: relative;
+}
+.header-nav .mobile-menu .shop-bag .cart-number {
+  display: inline;
+  position: absolute;
+  background-color: #C3DAB7;
+  border-radius: 50%;
+  padding: 3px 5px;
+  top: 1.2rem;
+  right: 0;
+}
+.header-nav .mobile-menu i:hover {
+  scale: 0.9;
+  opacity: 0.5;
+}
 .header-nav a {
   padding: 10px 15px;
   display: inline-block;
@@ -426,7 +445,6 @@ header .vertical-line {
   -webkit-box-ordinal-group: 3;
       -ms-flex-order: 2;
           order: 2;
-  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -440,19 +458,22 @@ header .vertical-line {
 .header-nav .creative-logo h1:hover {
   opacity: 0.5;
 }
-.header-nav .creative-logo .menu-button,
-.header-nav .creative-logo #toggle {
+.header-nav .menu-button,
+.header-nav #toggle {
   display: none;
   color: #333333;
+  position: absolute;
+  left: 170px;
+  top: 30px;
 }
-.header-nav .creative-logo .menu-button i,
-.header-nav .creative-logo #toggle i {
+.header-nav .menu-button i,
+.header-nav #toggle i {
   font-size: 2.6rem;
   margin-left: 20px;
   padding: 1px;
 }
-.header-nav .creative-logo .menu-button #toggle,
-.header-nav .creative-logo #toggle #toggle {
+.header-nav .menu-button #toggle,
+.header-nav #toggle #toggle {
   display: none;
 }
 .header-nav .home-menu {
@@ -954,6 +975,7 @@ footer label {
         flex-wrap: wrap;
     -webkit-transition: 500ms;
     transition: 500ms;
+    position: relative;
     /* Menus hidden so they can be revealed by toggle */
     /* Toggle For Hidden Menu */
   }
@@ -964,9 +986,15 @@ footer label {
             order: 2;
     -ms-flex-preferred-size: auto;
         flex-basis: auto;
+    display: none;
   }
-  .header-nav #toggle:checked + .shop-menu,
-.header-nav #toggle:checked + .home-menu {
+  .header-nav .menu-button {
+    display: block;
+    cursor: pointer;
+  }
+  .header-nav #toggle:checked + .mobile-menu {
+    position: absolute;
+    top: 60px;
     display: block;
   }
   .header-nav .creative-logo {
@@ -975,10 +1003,6 @@ footer label {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
-  }
-  .header-nav .creative-logo .menu-button {
-    display: block;
-    cursor: pointer;
   }
   .header-nav .creative-logo h1 {
     font-size: 2.6rem;
