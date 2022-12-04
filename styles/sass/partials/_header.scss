@@ -7,8 +7,9 @@
     // border: 1px solid pink;
 }
 
-header {
-    background-color: $lightGrey;
+/* INDEX HEADER -----------------------------------------*/
+
+.index-header {
     background-image: url("../assets/home-1.jpeg");
     background-size: cover;
     height: 100vh;
@@ -141,4 +142,15 @@ header {
             opacity: 0.5;
         }
     }
+}
+
+
+/* BLOG HEADER ------------------------------------------*/
+
+.blog-header {
+    background-image: url("../assets/blog-1.jpeg");
+    background-size: cover;
+    height: 100vh;
+    background-position: bottom;
+    position: relative;
 }
