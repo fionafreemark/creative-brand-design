@@ -330,7 +330,7 @@ body {
 
 .wrapper {
   max-width: 1200px;
-  width: 85%;
+  width: 75%;
   margin: 0 auto;
 }
 
@@ -514,6 +514,9 @@ header .vertical-line {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
+.section-branding h2 {
+  margin-bottom: 15px;
+}
 
 .desk-img-container {
   display: -webkit-box;
@@ -551,6 +554,7 @@ header .vertical-line {
 .branding-text-container .container-design-develop {
   -ms-flex-preferred-size: 50%;
       flex-basis: 50%;
+  padding: 0 15px;
 }
 
 .section-gallery {
@@ -838,12 +842,14 @@ footer .footer-container h4 {
   margin-top: 30px;
 }
 .footer-icon-container a {
-  margin-right: 20px;
   -webkit-transition: 300ms;
   transition: 300ms;
 }
 .footer-icon-container a:hover {
   opacity: 0.5;
+}
+.footer-icon-container a i {
+  margin-right: 20px;
 }
 
 .recent-posts-container h4 {
@@ -917,6 +923,25 @@ footer .creative-container p {
     margin-left: 8%;
     background-color: rgba(241, 239, 239, 0.785);
   }
+  /* Section 4: Meet our Team*/
+  .container-meet-our-team .container-team-players {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 2%;
+  }
+  .container-meet-our-team .container-team-players h3 {
+    margin: 0;
+  }
+  .container-meet-our-team p {
+    font-size: 1.2rem;
+  }
+  /* Footer */
+  footer p,
+footer a,
+footer label {
+    font-size: 1.3rem;
+  }
 }
 /* --------------MEDIA QUERY 1000PX--------------- */
 @media (max-width: 1000px) {
@@ -939,7 +964,6 @@ footer .creative-container p {
             order: 2;
     -ms-flex-preferred-size: auto;
         flex-basis: auto;
-    display: none;
   }
   .header-nav #toggle:checked + .shop-menu,
 .header-nav #toggle:checked + .home-menu {
@@ -961,21 +985,47 @@ footer .creative-container p {
     text-align: left;
   }
   /* Section 1: Branding */
+  .branding-text-container {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
   .desk-img-container .circular-text {
     width: 30%;
   }
-  /* Section 4: Meet our Team*/
-  .container-meet-our-team .container-team-players {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    padding: 2%;
+  /* Section 2: Circle Gallery */
+  .section-gallery .container-circle-gallery .magazine-img {
+    width: 70%;
   }
-  .container-meet-our-team .container-team-players h3 {
+  /* Section 4: Meet Our Team*/
+  .section-team h2 {
+    margin-top: 50px;
+  }
+  .container-meet-our-team .container-team-players {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    padding: 4%;
+    margin: 0 0 5px 0;
+  }
+  .container-meet-our-team .container-team-img {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+    height: auto;
     margin: 0;
   }
-  .container-meet-our-team p {
-    font-size: 1.2rem;
+  .container-meet-our-team .container-team-img:nth-child(odd) {
+    padding: 5px 0px 5px 5px;
+  }
+  .container-meet-our-team .container-team-img:nth-child(even) {
+    padding: 5px 5px 5px 0px;
+  }
+  .container-meet-our-team .container-work-with-us {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+    margin: 0;
+    padding: 5px 0px 5px 5px;
+  }
+  .container-meet-our-team .container-work-with-us a {
+    padding: 47% 20%;
   }
   /* Section 5: Drop Us A Line */
   .section-drop-a-line .container-drop-img img {
@@ -1081,37 +1131,6 @@ footer .creative-container p {
         flex-basis: 100%;
     padding: 0 15%;
   }
-  /* Section 4: Meet Our Team*/
-  .section-team h2 {
-    margin-top: 50px;
-  }
-  .container-meet-our-team .container-team-players {
-    -ms-flex-preferred-size: 100%;
-        flex-basis: 100%;
-    padding: 4%;
-    margin: 0 0 5px 0;
-  }
-  .container-meet-our-team .container-team-img {
-    -ms-flex-preferred-size: 50%;
-        flex-basis: 50%;
-    height: auto;
-    margin: 0;
-  }
-  .container-meet-our-team .container-team-img:nth-child(odd) {
-    padding: 5px 0px 5px 5px;
-  }
-  .container-meet-our-team .container-team-img:nth-child(even) {
-    padding: 5px 5px 5px 0px;
-  }
-  .container-meet-our-team .container-work-with-us {
-    -ms-flex-preferred-size: 50%;
-        flex-basis: 50%;
-    margin: 0;
-    padding: 5px 0px 5px 5px;
-  }
-  .container-meet-our-team .container-work-with-us a {
-    padding: 47% 20%;
-  }
   /* Section 5: Drop Us A Line*/
   .section-drop-a-line {
     position: relative;
@@ -1153,6 +1172,9 @@ footer .creative-container p {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+  }
+  .footer-icon-container a i {
+    margin: 0 20px;
   }
 }
 /* --------------MEDIA QUERY 500PX--------------- */
