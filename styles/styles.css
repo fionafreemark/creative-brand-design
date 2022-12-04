@@ -799,7 +799,6 @@ header .vertical-line {
       flex-basis: 50%;
 }
 .section-drop-a-line .container-drop-img img {
-  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -903,6 +902,7 @@ footer .creative-container p {
 }
 
 /* Icon gallery began to scroll overtop of the dark part of the image so I've added a translucent background so the text is legible. */
+/* --------------MEDIA QUERY 1150PX--------------- */
 @media (max-width: 1150px) {
   /* Icon Gallery Styles */
   .section-icon-gallery .icon-gallery-container {
@@ -910,6 +910,7 @@ footer .creative-container p {
     background-color: rgba(241, 239, 239, 0.785);
   }
 }
+/* --------------MEDIA QUERY 1000PX--------------- */
 @media (max-width: 1000px) {
   /* Header Styles */
   .header-nav {
@@ -955,7 +956,7 @@ footer .creative-container p {
   .desk-img-container .circular-text {
     width: 30%;
   }
-  /* Section 3 : Meet our Team*/
+  /* Section 4: Meet our Team*/
   .container-meet-our-team .container-team-players {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -968,10 +969,10 @@ footer .creative-container p {
   .container-meet-our-team p {
     font-size: 1.2rem;
   }
-  /* */
-  /* */
-  /* */
-  /* */
+  /* Section 5: Drop Us A Line */
+  .section-drop-a-line .container-drop-img img {
+    height: 100%;
+  }
   /* Footer Styles */
   .footer-container {
     -ms-flex-wrap: wrap;
@@ -1015,6 +1016,7 @@ footer .creative-container p {
     padding: 2.25%;
   }
 }
+/* --------------MEDIA QUERY 800PX--------------- */
 @media (max-width: 800px) {
   .wrapper {
     width: 95%;
@@ -1034,7 +1036,8 @@ footer .creative-container p {
         -ms-flex-pack: start;
             justify-content: flex-start;
   }
-  /* Icon Gallery Styles Styles */
+  /* Section 2: Branding */
+  /* Section 3: Icon Gallery Styles Styles */
   .section-icon-gallery .icon-gallery-container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1054,7 +1057,7 @@ footer .creative-container p {
         flex-basis: 100%;
     padding: 0 15%;
   }
-  /* Section 3: Meet Our Team*/
+  /* Section 4: Meet Our Team*/
   .section-team h2 {
     margin-top: 50px;
   }
@@ -1085,6 +1088,20 @@ footer .creative-container p {
   .container-meet-our-team .container-work-with-us a {
     padding: 47% 20%;
   }
+  /* Section 5: Drop Us A Line*/
+  .section-drop-a-line {
+    position: relative;
+  }
+  .section-drop-a-line .container-drop-a-line {
+    position: absolute;
+    width: 90%;
+    top: 20%;
+    left: 5%;
+  }
+  .section-drop-a-line .container-drop-img {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
   /* Footer Styles */
   .footer-container {
     -ms-flex-wrap: wrap;
@@ -1113,4 +1130,22 @@ footer .creative-container p {
         -ms-flex-align: center;
             align-items: center;
   }
+}
+/* --------------MEDIA QUERY 500PX--------------- */
+/* Section 4: Meet our Team */
+.section-team {
+  padding-bottom: 10px;
+}
+.section-team .anchor-box h3 {
+  font-size: 1.4rem;
+}
+
+/* Section 5: Drop Us A Line */
+.section-drop-a-line .container-drop-a-line {
+  position: static;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+}
+.section-drop-a-line .container-drop-img {
+  display: none;
 }
