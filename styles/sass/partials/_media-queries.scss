@@ -113,11 +113,6 @@
 
             .email-container {
                 justify-content: center;
-                align-items: center;
-
-                button {
-                    padding: 2.25%;
-                }
             }
         }
     }
@@ -143,9 +138,39 @@
         }
     }
 
-    /* Section 2: Branding */
+    /* Section 1: Branding */
+    .section-branding {
+        padding-top: 15%;
+    }
 
-    
+
+    .desk-img-container {
+        .circular-text {
+            width: 20%;
+            left: calc(50% - 47px);
+            top: 85%;
+        }
+    }
+
+    .branding-text-container {
+        flex-basis: 100%;
+
+        .container-branding,
+        .container-design-develop {
+            flex-basis: 100%;
+            margin: 7% 0 2% 0;
+        }
+    }
+
+    /* Section 2: Circle Gallery */
+    .section-gallery {
+        .container-circle-gallery {
+            .magazine-img {
+                width: 60%;
+            }
+        }
+    }
+
 
     /* Section 3: Icon Gallery Styles Styles */
     .section-icon-gallery {
@@ -237,31 +262,120 @@
             align-items: center;
         }
     }
-
 }
 
 
 /* --------------MEDIA QUERY 500PX--------------- */
 
-/* Section 4: Meet our Team */
-.section-team {
-    padding-bottom: 10px;
-    .anchor-box{
-        h3 {
-            font-size: 1.4rem;
+@media (max-width: 500px) {
+
+    /* Global Styles */
+    h2,
+    h3,
+    h4 {
+        font-size: 1.6rem;
+    }
+
+    /* Header */
+    header {
+        .vertical-line {
+            height: 60px;
+            bottom: -30px;
+        }
+
+    }
+
+    /* Section 1: Branding */
+
+    .desk-img-container {
+        min-height: 300px;
+
+        img {
+            object-fit: cover;
+        }
+
+        .circular-text {
+            width: 20%;
+            left: calc(50% - 9vw);
+            top: calc(85% + 1vh);
         }
     }
-}
 
-/* Section 5: Drop Us A Line */
-.section-drop-a-line {
+    .branding-text-container {
 
-    .container-drop-a-line {
-        position: static;
-        flex-basis: 100%;
+        .container-branding,
+        .container-design-develop {
+            margin: 10% 0 2% 0;
+        }
     }
 
-    .container-drop-img {
-       display:none;
+    /* Section 2: Circle Gallery */
+    .section-gallery {
+        button {
+            align-self: baseline;
+            margin-top: 25%;
+        }
+
+        .container-circle-gallery {
+            flex-basis: 100%;
+            margin: 0 auto;
+
+            .magazine-img {
+                width: 80%;
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    /* Section 3: Icon Gallery Styles Styles */
+    .section-icon-gallery {
+        .icon-gallery-container {
+            flex-direction: column;
+            flex-basis: 100%;
+            justify-content: center;
+            align-items: center;
+
+            li {
+                flex-basis: 100%;
+                padding: 5% 15%;
+                flex-direction: column;
+
+                .gallery-text-container {
+                    text-align: center;
+                }
+
+            }
+        }
+    }
+
+    /* Section 4: Meet our Team */
+    .section-team {
+        padding-bottom: 10px;
+
+        .anchor-box {
+            h3 {
+                font-size: 1.4rem;
+            }
+        }
+    }
+
+    /* Section 5: Drop Us A Line */
+    .section-drop-a-line {
+
+        .container-drop-a-line {
+            position: static;
+            flex-basis: 100%;
+        }
+
+        .container-drop-img {
+            display: none;
+        }
+    }
+
+    /* Footer Styles */
+    .footer-container {
+        p {
+            font-size: 1.3rem;
+        }
     }
 }
