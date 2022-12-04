@@ -1,0 +1,289 @@
+@use "./variables" as *;
+
+/* HOME/INDEX PAGE SECTIONS STYLES */
+
+
+/* SECTION ONE: BRANDING ------------------------------*/
+
+.section-branding {
+    background-color: $lightSage;
+    padding: 12% 0 10% 0;
+
+    .section-container {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    h2 {
+        margin-bottom: 15px;
+    }
+}
+
+.desk-img-container {
+    display: flex;
+    justify-content: center;
+    position: relative;
+
+    .desk-img {
+        // This margin is to make sure the text below doesn't flex wrap up onto the same line. Could perhaps also make it fd column instead.
+        margin: 0 60%;
+    }
+
+    .circular-text {
+        position: absolute;
+        left: -18%;
+        top: -28%;
+        width: 40%;
+        height: auto;
+        z-index: 10;
+    }
+}
+
+.branding-text-container {
+    flex-basis: 70%;
+    display: flex;
+    text-align: center;
+    margin-top: 5%;
+    flex-wrap: wrap;
+
+    .container-branding,
+    .container-design-develop {
+        flex-basis: 50%;
+        padding: 0 15px;
+    }
+}
+
+/* SECTION TWO: CIRCLE GALLERY ------------------------------*/
+
+.section-gallery {
+    display: flex;
+    align-items: center;
+    padding: 12% 0 10% 0;
+
+    .left-scroll-icon {
+        color: $black;
+    }
+
+    .right-scroll-icon {
+        color: rgb(93, 91, 91);
+    }
+
+    .left-scroll-icon,
+    .right-scroll-icon {
+        font-size: 3rem;
+        font-weight: bolder;
+        transition: 300ms;
+
+        &:hover {
+            transform: scale(1.5)
+        }
+    }
+
+    .container-circle-gallery {
+        display: flex;
+        flex-direction: column;
+        flex-basis: 60%;
+        margin: 0 auto;
+        text-align: center;
+
+        .magazine-img {
+            align-self: center;
+            width: 35%;
+            border-radius: 50%;
+        }
+
+        p {
+            margin-top: 5%;
+            font-style: italic;
+        }
+    }
+}
+
+/* SECTION THREE: ICON GALLERY ------------------------------*/
+
+.section-icon-gallery {
+    background-image: url(../../../assets/home-4.jpeg);
+    background-size: cover;
+    padding: 8% 0;
+    background-color: $lightGrey;
+
+    .icon-gallery-container {
+        display: flex;
+        margin-left: 50%;
+        margin-right: 8%;
+    }
+}
+
+.section-icon-gallery ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    li {
+        display: flex;
+        flex-basis: 48%;
+
+        button {
+            align-self: center;
+            justify-self: center;
+
+            i {
+                border: 2px solid $black;
+                font-size: 2.6rem;
+                width: 6rem;
+                height: 6rem;
+                line-height: 4.4rem;
+                text-align: center;
+                border-radius: 50%;
+                transition: 300ms;
+
+                &:hover {
+                    color: $lightGrey;
+                    background-color: $black;
+                    scale: 95%;
+                }
+            }
+        }
+
+        .gallery-text-container {
+            flex-basis: 90%;
+            margin-left: 5%;
+            margin-top: 5%;
+
+            p {
+                font-size: 1.1rem;
+            }
+        }
+    }
+}
+
+/* SECTION FOUR: MEET OUR TEAM ------------------------------*/
+
+.section-team {
+    position: relative;
+    padding: 7% 0 10% 0;
+
+    .vertical-line-two {
+        border-left: 0.5px solid $black;
+        display: block;
+        height: 60px;
+        position: absolute;
+        top: 0;
+        left: 50%;
+    }
+
+    h2 {
+        text-align: center;
+    }
+}
+
+.container-meet-our-team {
+    padding-top: 7%;
+    display: flex;
+    flex-wrap: wrap;
+
+    .container-team-players {
+        flex-basis: calc(50% - 20px);
+        padding: 4%;
+        min-height: 100%;
+        margin: 10px;
+        background-color: $lightGrey;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+
+        h3 {
+            margin-bottom: 15px;
+        }
+    }
+
+}
+
+.container-team-img {
+    flex-basis: calc(25% - 20px);
+    margin: 10px;
+
+    img {
+        width: 100%;
+        height: auto;
+        display: block;
+        transition: 300ms;
+
+        &:hover {
+            opacity: 0.5;
+
+        }
+
+    }
+}
+
+.container-work-with-us {
+    flex-basis: calc(25% - 20px);
+    margin: 10px;
+    position: relative;
+
+    .anchor-box {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 4% 8%;
+        border: 2px solid #00000000;
+    }
+
+    &:hover {
+        border: 2px solid $black;
+        background-color: $lightGrey;
+    }
+}
+
+/* SECTION FIVE: DROP US A LINE ------------------------------*/
+
+.section-drop-a-line {
+    display: flex;
+
+    .container-drop-a-line {
+        flex-basis: 50%;
+        background-color: $lightSage;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 8%;
+        border: 1px solid #00000000;
+
+        p {
+            margin: 12% auto;
+        }
+
+        .portfolio-link {
+            font-weight: 700;
+            font-size: 1.4rem;
+            letter-spacing: 0.07rem;
+            text-transform: uppercase;
+            background-color: $pureWhite;
+            padding: 15px 20px;
+            transition: 300ms;
+
+            &:hover {
+                border: 1px solid $black;
+                scale: (0.9);
+            }
+        }
+    }
+
+    .container-drop-img {
+        flex-basis: 50%;
+
+        img {
+            object-fit: cover;
+        }
+    }
+}
