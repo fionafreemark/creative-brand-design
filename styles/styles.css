@@ -544,6 +544,8 @@ header .vertical-line {
   display: flex;
   text-align: center;
   margin-top: 5%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .section-gallery {
@@ -867,6 +869,7 @@ footer .footer-container h4 {
 .footer-form label {
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
+  margin: 25px 0 30px 0;
 }
 .footer-form .email-container {
   display: -webkit-box;
@@ -877,11 +880,11 @@ footer .footer-container h4 {
           justify-content: flex-end;
 }
 .footer-form .email-container input[type=email] {
-  padding: 3% 18% 3% 8%;
+  padding: 0 50px 0 20px;
   border: none;
 }
 .footer-form .email-container button {
-  padding: 3%;
+  padding: 15px;
   background-color: #C3DAB7;
   -webkit-transition: 300ms;
   transition: 300ms;
@@ -1008,12 +1011,6 @@ footer .creative-container p {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .footer-container .twitter-container .email-container button {
-    padding: 2.25%;
   }
 }
 /* --------------MEDIA QUERY 800PX--------------- */
@@ -1036,7 +1033,29 @@ footer .creative-container p {
         -ms-flex-pack: start;
             justify-content: flex-start;
   }
-  /* Section 2: Branding */
+  /* Section 1: Branding */
+  .section-branding {
+    padding-top: 15%;
+  }
+  .desk-img-container .circular-text {
+    width: 20%;
+    left: calc(50% - 47px);
+    top: 85%;
+  }
+  .branding-text-container {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+  .branding-text-container .container-branding,
+.branding-text-container .container-design-develop {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    margin: 7% 0 2% 0;
+  }
+  /* Section 2: Circle Gallery */
+  .section-gallery .container-circle-gallery .magazine-img {
+    width: 60%;
+  }
   /* Section 3: Icon Gallery Styles Styles */
   .section-icon-gallery .icon-gallery-container {
     -webkit-box-orient: vertical;
@@ -1132,20 +1151,95 @@ footer .creative-container p {
   }
 }
 /* --------------MEDIA QUERY 500PX--------------- */
-/* Section 4: Meet our Team */
-.section-team {
-  padding-bottom: 10px;
-}
-.section-team .anchor-box h3 {
-  font-size: 1.4rem;
-}
-
-/* Section 5: Drop Us A Line */
-.section-drop-a-line .container-drop-a-line {
-  position: static;
-  -ms-flex-preferred-size: 100%;
-      flex-basis: 100%;
-}
-.section-drop-a-line .container-drop-img {
-  display: none;
+@media (max-width: 500px) {
+  /* Global Styles */
+  h2,
+h3,
+h4 {
+    font-size: 1.6rem;
+  }
+  /* Header */
+  header .vertical-line {
+    height: 60px;
+    bottom: -30px;
+  }
+  /* Section 1: Branding */
+  .desk-img-container {
+    min-height: 300px;
+  }
+  .desk-img-container img {
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .desk-img-container .circular-text {
+    width: 20%;
+    left: calc(50% - 9vw);
+    top: calc(85% + 1vh);
+  }
+  .branding-text-container .container-branding,
+.branding-text-container .container-design-develop {
+    margin: 10% 0 2% 0;
+  }
+  /* Section 2: Circle Gallery */
+  .section-gallery button {
+    -ms-flex-item-align: baseline;
+        align-self: baseline;
+    margin-top: 25%;
+  }
+  .section-gallery .container-circle-gallery {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    margin: 0 auto;
+  }
+  .section-gallery .container-circle-gallery .magazine-img {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+  /* Section 3: Icon Gallery Styles Styles */
+  .section-icon-gallery .icon-gallery-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .section-icon-gallery .icon-gallery-container li {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    padding: 5% 15%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .section-icon-gallery .icon-gallery-container li .gallery-text-container {
+    text-align: center;
+  }
+  /* Section 4: Meet our Team */
+  .section-team {
+    padding-bottom: 10px;
+  }
+  .section-team .anchor-box h3 {
+    font-size: 1.4rem;
+  }
+  /* Section 5: Drop Us A Line */
+  .section-drop-a-line .container-drop-a-line {
+    position: static;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+  .section-drop-a-line .container-drop-img {
+    display: none;
+  }
+  /* Footer Styles */
+  .footer-container p {
+    font-size: 1.3rem;
+  }
 }
