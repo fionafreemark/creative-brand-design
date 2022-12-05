@@ -375,23 +375,7 @@ i {
   padding: 5px 5px;
 }
 
-/* INDEX HEADER -----------------------------------------*/
-.index-header {
-  background-image: url("../assets/home-1.jpeg");
-  background-size: cover;
-  height: 100vh;
-  background-position: bottom;
-  position: relative;
-}
-.index-header .vertical-line {
-  border-left: 0.5px solid #333333;
-  display: block;
-  height: 120px;
-  position: absolute;
-  bottom: -60px;
-  left: 50%;
-}
-
+/* GLOBAL HEADER STYLES ------------------------------------*/
 .header-nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -523,13 +507,29 @@ i {
   opacity: 0.5;
 }
 
+/* INDEX HEADER -----------------------------------------*/
+.index-header {
+  background-image: url("../assets/home-1.jpeg");
+  background-size: cover;
+  height: 100vh;
+  background-position: bottom;
+  position: relative;
+}
+.index-header .vertical-line {
+  border-left: 0.5px solid #333333;
+  display: block;
+  height: 120px;
+  position: absolute;
+  bottom: -60px;
+  left: 50%;
+}
+
 /* BLOG HEADER ------------------------------------------*/
 .blog-header {
   background-image: url("../assets/blog-1.jpeg");
   background-size: cover;
   height: 100vh;
   background-position: bottom;
-  position: relative;
 }
 
 /* HOME/INDEX PAGE SECTIONS STYLES */
