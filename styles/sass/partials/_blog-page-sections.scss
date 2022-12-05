@@ -2,9 +2,6 @@
 
 /* BLOG PAGE SECTIONS STYLES */
 
-
-
-
 /* ARTICLE: BLOG - HOW TO RUN AN AGENCY ---------------------------*/
 
 // * {
@@ -185,8 +182,8 @@ section h3 {
     background-color: $lightGrey;
     flex-wrap: wrap;
     position: relative;
-margin-left: 18px;
-    
+    margin-left: 18px;
+
 
     .name-reply {
         display: flex;
@@ -198,7 +195,7 @@ margin-left: 18px;
         }
     }
 
-    .name-reply > p {
+    .name-reply>p {
         text-transform: uppercase;
     }
 
