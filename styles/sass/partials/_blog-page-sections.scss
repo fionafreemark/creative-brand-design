@@ -5,18 +5,224 @@
 
 
 
-/* SECTION ONE: HOW TO RUN AN AGENCY -----------------------------*/
+/* ARTICLE: BLOG - HOW TO RUN AN AGENCY ---------------------------*/
+
+// * {
+//     border: 2px solid navy;
+// }
+
+.section-blog {
+    padding: 3% 0;
+
+    /* Blog Title*/
+    h2 {
+        font-size: 6rem;
+        line-height: 6rem;
+        font-weight: 700;
+        flex-basis: 100%;
+    }
+}
+
+/* Blog Breadcrumb Menu */
+.blog-menu {
+    display: flex;
+    padding: 2% 0;
+
+    li {
+        font-size: 1.4rem;
+        font-family: $bodyFont;
+
+        .blog-home,
+        .blog-blog {
+            color: $mediumGrey;
+        }
+    }
+
+    .menu-item::before {
+        content: "/";
+        padding: 0 5px;
+        color: $mediumGrey;
+    }
+}
+
+/* Blog Post Container */
+.blog-metadata {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4% 0;
+
+    p {
+        color: $mediumGrey;
+    }
+}
+
+/* Blog Author Img */
+.writer-img-container {
+    flex-basis: 7%;
+    margin-right: 10px;
+
+    img {
+        border-radius: 50%;
+        ;
+    }
+}
+
+/* Blog Metadata Formatting */
+.administrator {
+    flex-basis: 30%;
+}
+
+.date,
+.category,
+.tags {
+    flex-basis: 17%;
+
+    ul {
+        display: flex;
+
+        // flex-wrap: wrap;
+        li {
+            padding-right: 5px;
+        }
+
+        .p-list::after {
+            content: ",";
+        }
+    }
+}
+
+/* Blog Article Text */
+.blog-text {
+    p {
+        padding: 10px 0;
+    }
+
+    .bold-text {
+        font-weight: bold;
+    }
+}
+
+.share-container {
+    display: flex;
+    align-items: center;
+
+    i {
+        padding: 10px;
+    }
+}
+
+/* SECTION ONE: RELATED POSTS GALLERY------------------------------*/
+
+.section-related-posts {
+    padding: 3% 0;
+}
+
+section h3 {
+    font-weight: 600;
+    font-size: 3rem;
+    margin-bottom: 30px;
+}
+
+.underline {
+    border-bottom: 1px solid $mediumGrey;
+}
 
 
-/* SECTION TWO: RELATED POSTS GALLERY------------------------------*/
+.posts-container {
+    padding: 3% 0 0 0;
+    display: flex;
+    justify-content: space-between;
+
+    li {
+        flex-basis: 32%;
+        transition: 300ms;
+
+        &:hover {
+            opacity: 0.5;
+        }
+    }
+
+    p {
+        text-transform: uppercase;
+        font-family: $primaryFont;
+        padding: 15px 0;
+    }
+}
+
+
+/* SECTION TWO: COMMENTS ----------------------------------------*/
+.section-comments {
+    padding: 3% 0;
+}
+
+
+.comment-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.comment {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+.comment-img-container {
+    display: flex;
+    flex-basis: 10%;
+    align-self: flex-start;
+
+}
+
+.comment-text-container {
+    display: flex;
+    flex-direction: column;
+    width: 88%;
+    padding: 3%;
+    background-color: $lightGrey;
+    flex-wrap: wrap;
+    position: relative;
+margin-left: 18px;
+    
+
+    .name-reply {
+        display: flex;
+
+        a {
+            font-style: italic;
+            color: $black;
+            padding-left: 5px;
+        }
+    }
+
+    .name-reply > p {
+        text-transform: uppercase;
+    }
+
+    p:nth-of-type(2) {
+        color: $mediumGrey;
+    }
+}
+
+/* Decorative triangle background on comment container that makes it look like a speech bubble */
+.arrow-left-detail {
+    width: 20px;
+    height: 0;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-right: 24px solid $lightGrey;
+    position: absolute;
+    left: -18px;
+    top: 16px;
+}
 
 
 
-/* SECTION THREE: COMMENTS ------------------------------*/
+/* SECTION THREE: LEAVE A COMMENT ----------------------------------*/
 
-
-/* SECTION FOUR: LEAVE A COMMENT ------------------------------*/
-
-
-
-
+.section-comment-form {
+    padding: 3% 0;
+}

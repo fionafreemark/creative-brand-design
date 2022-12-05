@@ -246,7 +246,8 @@ html {
 h1,
 h2,
 h3,
-h4 {
+h4,
+h5 {
   text-transform: uppercase;
   margin: 0;
 }
@@ -259,7 +260,8 @@ h1 {
 
 h2,
 h3,
-h4 {
+h4,
+h5 {
   font-weight: 400;
   font-size: 1.8rem;
   letter-spacing: 0.18rem;
@@ -851,10 +853,246 @@ i {
 }
 
 /* BLOG PAGE SECTIONS STYLES */
-/* SECTION ONE: HOW TO RUN AN AGENCY -----------------------------*/
-/* SECTION TWO: RELATED POSTS GALLERY------------------------------*/
-/* SECTION THREE: COMMENTS ------------------------------*/
-/* SECTION FOUR: LEAVE A COMMENT ------------------------------*/
+/* ARTICLE: BLOG - HOW TO RUN AN AGENCY ---------------------------*/
+.section-blog {
+  padding: 3% 0;
+  /* Blog Title*/
+}
+.section-blog h2 {
+  font-size: 6rem;
+  line-height: 6rem;
+  font-weight: 700;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+}
+
+/* Blog Breadcrumb Menu */
+.blog-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 2% 0;
+}
+.blog-menu li {
+  font-size: 1.4rem;
+  font-family: "Open Sans", sans-serif;
+}
+.blog-menu li .blog-home,
+.blog-menu li .blog-blog {
+  color: #8d8c8c;
+}
+.blog-menu .menu-item::before {
+  content: "/";
+  padding: 0 5px;
+  color: #8d8c8c;
+}
+
+/* Blog Post Container */
+.blog-metadata {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 4% 0;
+}
+.blog-metadata p {
+  color: #8d8c8c;
+}
+
+/* Blog Author Img */
+.writer-img-container {
+  -ms-flex-preferred-size: 7%;
+      flex-basis: 7%;
+  margin-right: 10px;
+}
+.writer-img-container img {
+  border-radius: 50%;
+}
+
+/* Blog Metadata Formatting */
+.administrator {
+  -ms-flex-preferred-size: 30%;
+      flex-basis: 30%;
+}
+
+.date,
+.category,
+.tags {
+  -ms-flex-preferred-size: 17%;
+      flex-basis: 17%;
+}
+.date ul,
+.category ul,
+.tags ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.date ul li,
+.category ul li,
+.tags ul li {
+  padding-right: 5px;
+}
+.date ul .p-list::after,
+.category ul .p-list::after,
+.tags ul .p-list::after {
+  content: ",";
+}
+
+/* Blog Article Text */
+.blog-text p {
+  padding: 10px 0;
+}
+.blog-text .bold-text {
+  font-weight: bold;
+}
+
+.share-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.share-container i {
+  padding: 10px;
+}
+
+/* SECTION ONE: RELATED POSTS GALLERY------------------------------*/
+.section-related-posts {
+  padding: 3% 0;
+}
+
+section h3 {
+  font-weight: 600;
+  font-size: 3rem;
+  margin-bottom: 30px;
+}
+
+.underline {
+  border-bottom: 1px solid #8d8c8c;
+}
+
+.posts-container {
+  padding: 3% 0 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.posts-container li {
+  -ms-flex-preferred-size: 32%;
+      flex-basis: 32%;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+.posts-container li:hover {
+  opacity: 0.5;
+}
+.posts-container p {
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  padding: 15px 0;
+}
+
+/* SECTION TWO: COMMENTS ----------------------------------------*/
+.section-comments {
+  padding: 3% 0;
+}
+
+.comment-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.comment {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 10px 0;
+}
+
+.comment-img-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-preferred-size: 10%;
+      flex-basis: 10%;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+.comment-text-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 88%;
+  padding: 3%;
+  background-color: #F6F6F6;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  position: relative;
+  margin-left: 18px;
+}
+.comment-text-container .name-reply {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.comment-text-container .name-reply a {
+  font-style: italic;
+  color: #333333;
+  padding-left: 5px;
+}
+.comment-text-container .name-reply > p {
+  text-transform: uppercase;
+}
+.comment-text-container p:nth-of-type(2) {
+  color: #8d8c8c;
+}
+
+/* Decorative triangle background on comment container that makes it look like a speech bubble */
+.arrow-left-detail {
+  width: 20px;
+  height: 0;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-right: 24px solid #F6F6F6;
+  position: absolute;
+  left: -18px;
+  top: 16px;
+}
+
+/* SECTION THREE: LEAVE A COMMENT ----------------------------------*/
+.section-comment-form {
+  padding: 3% 0;
+}
+
 footer {
   background-color: #333333;
   padding-top: 10%;

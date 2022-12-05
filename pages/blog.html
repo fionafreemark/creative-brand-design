@@ -12,7 +12,7 @@
         rel="stylesheet">
     <script src="https://kit.fontawesome.com/88337ba8f3.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../styles/styles.css">
-    </head>
+</head>
 
 <body>
     <!-- HEADER BEGINS -->
@@ -21,7 +21,8 @@
             <a class="creative-logo" href="../index.html">
                 <h1>Creative</h1>
             </a>
-            <label class="menu-button" for="toggle"><i class="fa-solid fa-bars" title="Open Navigation Menu"></i></label>
+            <label class="menu-button" for="toggle"><i class="fa-solid fa-bars"
+                    title="Open Navigation Menu"></i></label>
             <input type="checkbox" id="toggle" name="toggle" />
             <ul class="mobile-menu">
                 <li>
@@ -88,15 +89,15 @@
 
     <!-- MAIN BEGINS -->
     <main>
-        <!-- SECTION 1 - BLOG - BEGINS -->
-        <section class="section-blog wrapper">
+        <!-- ARTICLE - BLOG - BEGINS -->
+        <article class="section-blog wrapper">
             <h2>How to Run A Creative Agency</h2>
             <ul class="blog-menu">
                 <li>
-                    <a href="#">Home</a>
+                    <a class="blog-home" href="#">Home</a>
                 </li>
                 <li class="menu-item">
-                    <a href="#">Blog</a>
+                    <a class="blog-blog" href="#">Blog</a>
                 </li>
                 <li class="menu-item">
                     <a href="#">How To Run A Creative Agency</a>
@@ -104,6 +105,11 @@
             </ul><!-- end of .blog-menu-->
             <div class="blog-metadata">
                 <div class="writer-img-container">
+                    <a href="#">
+                        <img src="../assets/blog-2.jpeg" alt="Portrait of Alex, author of the blog post.">
+                    </a>
+                </div>
+                <div class="administrator">
                     <h5>Alex</h5>
                     <p>Administrator</p>
                 </div>
@@ -113,23 +119,58 @@
                 </div>
                 <div class="category">
                     <h5>Category</h5>
-                    <p>Entertainment, Business</p>
+                    <ul>
+                        <li>
+                            <p class="p-list">Entertainment</p>
+                        </li>
+                        <li>
+                            <p>Business</p>
+                        </li>
+                    </ul>
                 </div>
-                <div class="tags">                    
+                <div class="tags">
                     <h5>Tags</h5>
-                    <p>Design, Web, Lifestyle, Site</p>
+                    <ul>
+                        <li>
+                            <p class="p-list">Design</p>
+                        </li>
+                        <li>
+                            <p class="p-list">Web</p>
+                        </li>
+                        <li>
+                            <p class="p-list">Lifestyle</p>
+                        </li>
+                        <li>
+                            <p>Site</p>
+                        </li>
+                    </ul>
                 </div>
             </div> <!-- end of .blog-metadata-->
             <div class="blog-text">
                 <p class="bold-text">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem, ab. Nostrum ea corporis impedit quia quibusdam ullam consequatur veniam, earum molestias quisquam harum sequi iste, aperiam numquam officiis expedita consequuntur quae animi! Modi sequi rerum sunt dolore! Illo, qui rem. Aut fugiat minus dignissimos accusantium consequuntur minima obcaecati, ea fuga.
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem, ab. Nostrum ea corporis
+                    impedit quia quibusdam ullam consequatur veniam, earum molestias quisquam harum sequi iste, aperiam
+                    numquam officiis expedita consequuntur quae animi! Modi sequi rerum sunt dolore! Illo, qui rem.
                 </p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem, ab. Nostrum ea corporis impedit quia quibusdam
-                ullam consequatur veniam, earum molestias quisquam harum sequi iste, aperiam numquam officiis expedita consequuntur quae
-                animi! Modi sequi rerum sunt dolore! Illo, qui rem. Aut fugiat minus dignissimos accusantium consequuntur minima
-                obcaecati, ea fuga.</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse aliquam, labore nihil ratione laboriosam doloribus! Doloremque, dolorem eos dolor quos unde enim suscipit ad iure perferendis assumenda vel? Laudantium aliquam necessitatibus, veniam facilis porro sit quis temporibus nemo. Provident nihil iure quae excepturi eius eos, placeat quibusdam similique deleniti a nam blanditiis eaque sit deserunt distinctio ipsum tenetur iusto eligendi ratione tempora. Accusamus perferendis error vel nihil velit, repellendus dolore soluta possimus, dolor esse expedita numquam eius necessitatibus quo libero nostrum a, dolorum accusantium! Perferendis, quis quos omnis minima non ratione quod, dolore unde earum corporis id laboriosam! Quam, fuga!</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat veniam laborum reiciendis aspernatur voluptatibus omnis laboriosam quae sit facilis soluta facere, nesciunt quisquam dolores ratione atque eos nam porro repellat sequi, blanditiis ut. Perferendis, sapiente. Veniam quibusdam non dolor asperiores?
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem, ab. Nostrum ea corporis
+                    impedit quia quibusdam
+                    ullam consequatur veniam, earum molestias quisquam harum sequi iste, aperiam numquam officiis
+                    expedita consequuntur quae
+                    animi! Modi sequi rerum sunt dolore! Illo, qui rem. Aut fugiat minus dignissimos accusantium
+                    consequuntur minima
+                    obcaecati, ea fuga.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse aliquam, labore nihil ratione
+                    laboriosam doloribus! Doloremque, dolorem eos dolor quos unde enim suscipit ad iure perferendis
+                    assumenda vel? Laudantium aliquam necessitatibus, veniam facilis porro sit quis temporibus nemo.
+                    Provident nihil iure quae excepturi eius eos, placeat quibusdam similique deleniti a nam blanditiis
+                    eaque sit deserunt distinctio ipsum tenetur iusto eligendi ratione tempora. Accusamus perferendis
+                    error vel nihil velit, repellendus dolore soluta possimus, dolor esse expedita numquam eius
+                    necessitatibus quo libero nostrum a, dolorum accusantium! Perferendis, quis quos omnis minima non
+                    ratione quod, dolore unde earum corporis id laboriosam! Quam, fuga!</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat veniam laborum reiciendis aspernatur
+                    voluptatibus omnis laboriosam quae sit facilis soluta facere, nesciunt quisquam dolores ratione
+                    atque eos nam porro repellat sequi, blanditiis ut. Perferendis, sapiente. Veniam quibusdam non dolor
+                    asperiores?
                 </p>
             </div><!-- end of .blog-text-->
             <div class="share-container">
@@ -138,98 +179,176 @@
                 <a href="#"><i class="fa-brands fa-twitter"></i></a>
                 <a href="#"><i class="fa-brands fa-instagram"></i></a>
             </div><!-- end of .share-container-->
-        
-        </section>
-        <!-- SECTION 1 - BLOG - ENDS -->
 
-        <!-- SECTION 2 - RELATED POSTS - BEGINS -->
+        </article>
+        <!-- ARTICLE - BLOG - ENDS -->
+
+        <!-- SECTION 1 - RELATED POSTS - BEGINS -->
         <section class="section-related-posts wrapper">
-
-        </section>
-        <!-- SECTION 2 - RELATED POSTS- ENDS -->
-
-        <!-- SECTION 3 - COMMENTS - BEGINS -->
-        <section class="section-comments wrapper">
-
-        </section>
-        <!-- SECTION 3 - COMMENTS - ENDS -->
-
-        <!-- SECTION 4 - LEAVE A COMMENT - BEGINS -->
-        <section class="section-comment-form wrapper">
-
-        </section>
-        <!-- SECTION 4 - LEAVE A COMMENT - ENDS -->
-
-    </main>
-<!-- FOOTER BEGINS -->
-<footer>
-    <div class="footer-container wrapper">
-
-        <!-- Contact Us Container -->
-        <div class="contact-us-container">
-            <a href="">
-                <h4>Contact Us</h4>
-            </a>
-
-            <p>6591 Orchard Street, NY 10002, United States</p>
-            <p>Email: <a href="mailto:email-address-here">
-                    contact@onepro.co</a></p>
-
-            <p>Phone 01: <a href="tel:phone-number"> +00 (9) 123 3456 789</a></p>
-            <p>Phone 02:<a href="tel:phone-number"> +00 (9) 123 3456 789</a></p>
-            <p>Fax: <a href="fax:fax-number">+00 (9)
-                    <div class="footer-icon-container">
-                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                    </div><!-- End of .footer-icon-container-->
-        </div><!-- End of .contact-us-container-->
-
-        <!-- Recent Posts Container -->
-        <div class="recent-posts-container">
-            <a href="">
-                <h4>Recent Posts</h4>
-            </a>
-            <ul>
+            <h3>Related Posts</h3>
+            <div class="underline"></div>
+            <ul class="posts-container">
                 <li>
-                    <a>Conversion hackathon partner</a>
+                    <a href="#">
+                        <div class="posts-img-container">
+                            <img src="../assets/blog-3.jpeg" alt="Desk scene with laptop and lamp.">
+                            <a href="#"></a>
+                        </div>
+                        <p class="posts-date">July 25, 2018</p>
+                    </a>
                 </li>
                 <li>
-                    <a>Network channels entrepreneur</a>
+                    <a href="#">
+                        <div class="posts-img-container">
+                            <img src="../assets/blog-4.jpeg" alt="Desk with potted plants and candles arranged on it.">
+                        </div>
+                        <p class="posts-date">July 26, 2018</p>
+                    </a>
                 </li>
                 <li>
-                    <a>Return on investment creative</a>
-                </li>
-                <li>
-                    <a>Assets interaction design venture</a>
-                </li>
-                <li>
-                    <a>Infographic learning curve</a>
+                    <a href="#">
+                        <div class="posts-img-container">
+                            <img src="../assets/blog-5.jpeg"
+                                alt="Aerial view of desk with laptop, cellphone and potted plant.">
+                        </div>
+                        <p class="posts-date">July 28, 2018</p>
+                    </a>
                 </li>
             </ul>
-        </div><!-- End of .recent-posts-container-->
+        </section>
+        <!-- SECTION 1 - RELATED POSTS- ENDS -->
 
-        <!-- Subscribe Container -->
-        <div class="subscribe-container">
-            <a href="">
-                <h4>Subscribe Now</h4>
-            </a>
-            <form class="footer-form" action="Post">
-                <label for="email">Signup for emails and notifications below.</label>
-                <div class="email-container">
-                    <input type="email" placeholder="Enter your email">
-                    <button><i class="fa-solid fa-right-long"></i></button>
+        <!-- SECTION 2 - COMMENTS - BEGINS -->
+        <section class="section-comments wrapper">
+            <h3>02 Comments</h3>
+            <div class="underline"></div>
+            <div class="comment-container">
+                <div class="comment">
+                    <div class="comment-img-container">
+                        <img src="../assets/blog-6.jpeg" alt="Portrait of woman with red hair in front of landscape.">
+                    </div>
+                    <div class="comment-text-container">
+                        <div class="arrow-left-detail"></div>
+                        <div class="name-reply">
+                            <p>Jenifer Loopz</p>
+                            <a href="#">
+                                <p>- Reply</p>
+                            </a>
+                        </div>
+                        <p>Ecosystem iPad disruptive social media low hanging fruit stealth launch party handshake
+                            market branding.</p>
+                        <p>July 17, 2015 at 15 hours ago</p>
+                    </div>
                 </div>
+                <div class="comment">
+                    <div class="comment-img-container">
+                        <img src="../assets/blog-7.jpeg" alt="Portrait of man in front of yellow backdrop.">
+                    </div>
+                    <div class="comment-text-container">
+                        <div class="arrow-left-detail"></div>
+                        <div class="name-reply">
+                            <p>Daniel Vandaft</p>
+                            <a href="#">
+                                <p>- Reply</p>
+                            </a>
+
+                        </div>
+                        <p>Pitch agile development business plan stealth channels prototype mass market product management value proposition startup strategy.</p>
+                        <p>July 17, 2015 at 15 hours ago</p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <!-- SECTION 2 - COMMENTS - ENDS -->
+
+        <!-- SECTION 3 - LEAVE A COMMENT - BEGINS -->
+        <section class="section-comment-form wrapper">
+            <label for="comment">
+                <h3>Leave A Comment</h3>
+                <div class="underline"></div>
+            </label>
+            <form action="Post" class="form-container">
+                <input class="comment-name-input" type="text" placeholder="Enter your name...">
+                <input class="comment-email-input" type="email" placeholder="youremail@domain.com">
+                <input class="comment-subject-input" type="text" placeholder="Subject (Optional)">
+                <textarea class="comment-content-input" name="comment-input" id="comment-input" cols="30"
+                    rows="10"></textarea>
+                <button class="button-submit-comment">Submit Comment</button>
             </form>
-        </div> <!-- End of .subscribe-container-->
-    </div><!-- End of .footer-container-->
-    <div class="creative-container">
-        <a href="../index.html">
-            <p>Creative Agency</p>
-        </a>
-    </div>
-</footer>
-<!-- FOOTER ENDS -->
+        </section>
+        <!-- SECTION 3 - LEAVE A COMMENT - ENDS -->
+
+    </main>
+    <!-- FOOTER BEGINS -->
+    <footer>
+        <div class="footer-container wrapper">
+
+            <!-- Contact Us Container -->
+            <div class="contact-us-container">
+                <a href="">
+                    <h4>Contact Us</h4>
+                </a>
+
+                <p>6591 Orchard Street, NY 10002, United States</p>
+                <p>Email: <a href="mailto:email-address-here">
+                        contact@onepro.co</a></p>
+
+                <p>Phone 01: <a href="tel:phone-number"> +00 (9) 123 3456 789</a></p>
+                <p>Phone 02:<a href="tel:phone-number"> +00 (9) 123 3456 789</a></p>
+                <p>Fax: <a href="fax:fax-number">+00 (9)
+                        <div class="footer-icon-container">
+                            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        </div><!-- End of .footer-icon-container-->
+            </div><!-- End of .contact-us-container-->
+
+            <!-- Recent Posts Container -->
+            <div class="recent-posts-container">
+                <a href="">
+                    <h4>Recent Posts</h4>
+                </a>
+                <ul>
+                    <li>
+                        <a>Conversion hackathon partner</a>
+                    </li>
+                    <li>
+                        <a>Network channels entrepreneur</a>
+                    </li>
+                    <li>
+                        <a>Return on investment creative</a>
+                    </li>
+                    <li>
+                        <a>Assets interaction design venture</a>
+                    </li>
+                    <li>
+                        <a>Infographic learning curve</a>
+                    </li>
+                </ul>
+            </div><!-- End of .recent-posts-container-->
+
+            <!-- Subscribe Container -->
+            <div class="subscribe-container">
+                <a href="">
+                    <h4>Subscribe Now</h4>
+                </a>
+                <form class="footer-form" action="Post">
+                    <label for="email">Signup for emails and notifications below.</label>
+                    <div class="email-container">
+                        <input type="email" placeholder="Enter your email">
+                        <button><i class="fa-solid fa-right-long"></i></button>
+                    </div>
+                </form>
+            </div> <!-- End of .subscribe-container-->
+        </div><!-- End of .footer-container-->
+        <div class="creative-container">
+            <a href="../index.html">
+                <p>Creative Agency</p>
+            </a>
+        </div>
+    </footer>
+    <!-- FOOTER ENDS -->
 </body>
 
 </html>
