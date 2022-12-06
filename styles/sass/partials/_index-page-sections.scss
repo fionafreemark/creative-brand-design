@@ -60,44 +60,46 @@
     display: flex;
     align-items: center;
     padding: 12% 0 10% 0;
+}
 
-    .left-scroll-icon {
-        color: $black;
+.left-scroll-icon {
+    color: $black;
+}
+
+.right-scroll-icon {
+    color: rgb(93, 91, 91);
+}
+
+.left-scroll-icon,
+.right-scroll-icon {
+    font-size: 3rem;
+    font-weight: bolder;
+    transition: 300ms;
+
+    &:hover,
+    &:focus {
+        transform: scale(1.5)
     }
+}
 
-    .right-scroll-icon {
-        color: rgb(93, 91, 91);
+.container-circle-gallery {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 60%;
+    margin: 0 auto;
+    text-align: center;
+
+
+    p {
+        margin-top: 5%;
+        font-style: italic;
     }
+}
 
-    .left-scroll-icon,
-    .right-scroll-icon {
-        font-size: 3rem;
-        font-weight: bolder;
-        transition: 300ms;
-
-        &:hover {
-            transform: scale(1.5)
-        }
-    }
-
-    .container-circle-gallery {
-        display: flex;
-        flex-direction: column;
-        flex-basis: 60%;
-        margin: 0 auto;
-        text-align: center;
-
-        .magazine-img {
-            align-self: center;
-            width: 35%;
-            border-radius: 50%;
-        }
-
-        p {
-            margin-top: 5%;
-            font-style: italic;
-        }
-    }
+.magazine-img {
+    align-self: center;
+    width: 35%;
+    border-radius: 50%;
 }
 
 /* SECTION THREE: ICON GALLERY ------------------------------*/
@@ -115,7 +117,7 @@
     }
 }
 
-.section-icon-gallery ul {
+.icon-gallery-list {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -123,38 +125,39 @@
     li {
         display: flex;
         flex-basis: 48%;
+    }
+}
 
-        button {
-            align-self: center;
-            justify-self: center;
+.icon-gallery-button {
+    align-self: center;
+    justify-self: center;
 
-            i {
-                border: 2px solid $black;
-                font-size: 2.6rem;
-                width: 6rem;
-                height: 6rem;
-                line-height: 4.4rem;
-                text-align: center;
-                border-radius: 50%;
-                transition: 300ms;
+    i {
+        border: 2px solid $black;
+        font-size: 2.6rem;
+        width: 6rem;
+        height: 6rem;
+        line-height: 4.4rem;
+        text-align: center;
+        border-radius: 50%;
+        transition: 300ms;
 
-                &:hover {
-                    color: $lightGrey;
-                    background-color: $black;
-                    scale: 95%;
-                }
-            }
+        &:hover,
+        &:focus {
+            color: $lightGrey;
+            background-color: $black;
+            scale: 95%;
         }
+    }
+}
 
-        .gallery-text-container {
-            flex-basis: 90%;
-            margin-left: 5%;
-            margin-top: 5%;
+.gallery-text-container {
+    flex-basis: 90%;
+    margin-left: 5%;
+    margin-top: 5%;
 
-            p {
-                font-size: 1.1rem;
-            }
-        }
+    p {
+        font-size: 1.1rem;
     }
 }
 
@@ -178,28 +181,30 @@
     }
 }
 
+/* Entire "Meet Out Team" Container */
 .container-meet-our-team {
     padding-top: 7%;
     display: flex;
     flex-wrap: wrap;
-
-    .container-team-players {
-        flex-basis: calc(50% - 20px);
-        padding: 4%;
-        min-height: 100%;
-        margin: 10px;
-        background-color: $lightGrey;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-
-        h3 {
-            margin-bottom: 15px;
-        }
-    }
-
 }
 
+/* Team Players Text Container */
+.container-team-players {
+    flex-basis: calc(50% - 20px);
+    padding: 4%;
+    min-height: 100%;
+    margin: 10px;
+    background-color: $lightGrey;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    h3 {
+        margin-bottom: 15px;
+    }
+}
+
+/* Team Profile Images */
 .container-team-img {
     flex-basis: calc(25% - 20px);
     margin: 10px;
@@ -210,34 +215,36 @@
         display: block;
         transition: 300ms;
 
-        &:hover {
+        &:hover,
+        &:focus {
             opacity: 0.5;
-
         }
-
     }
 }
 
+/* Work With Us Box */
 .container-work-with-us {
     flex-basis: calc(25% - 20px);
     margin: 10px;
     position: relative;
+}
 
-    .anchor-box {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        right: 0;
-        left: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        padding: 4% 8%;
-        border: 2px solid #00000000;
-    }
+/* Work With Us Container Styles For Hover */
+.anchor-box {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 4% 8%;
+    border: 2px solid #00000000;
 
-    &:hover {
+    &:hover,
+    &:focus {
         border: 2px solid $black;
         background-color: $lightGrey;
     }
@@ -247,43 +254,44 @@
 
 .section-drop-a-line {
     display: flex;
+}
 
-    .container-drop-a-line {
-        flex-basis: 50%;
-        background-color: $lightSage;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        padding: 8%;
-        border: 1px solid #00000000;
+.container-drop-a-line {
+    flex-basis: 50%;
+    background-color: $lightSage;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 8%;
+    border: 1px solid #00000000;
 
-        p {
-            margin: 12% auto;
-        }
-
-        .portfolio-link {
-            font-weight: 700;
-            font-size: 1.4rem;
-            letter-spacing: 0.07rem;
-            text-transform: uppercase;
-            background-color: $pureWhite;
-            padding: 15px 20px;
-            transition: 300ms;
-
-            &:hover {
-                border: 1px solid $black;
-                scale: (0.9);
-            }
-        }
+    p {
+        margin: 12% auto;
     }
+}
 
-    .container-drop-img {
-        flex-basis: 50%;
+.portfolio-link {
+    font-weight: 700;
+    font-size: 1.4rem;
+    letter-spacing: 0.07rem;
+    text-transform: uppercase;
+    background-color: $pureWhite;
+    padding: 15px 20px;
+    transition: 300ms;
 
-        img {
-            object-fit: cover;
-        }
+    &:hover,
+    &:focus {
+        border: 1px solid $black;
+        scale: (0.9);
+    }
+}
+
+.container-drop-img {
+    flex-basis: 50%;
+
+    img {
+        object-fit: cover;
     }
 }
