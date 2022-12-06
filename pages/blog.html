@@ -21,7 +21,7 @@
             <a class="creative-logo" href="../index.html">
                 <h1>Creative</h1>
             </a>
-            <label class="menu-button" for="toggle"><i class="fa-solid fa-bars"
+            <label class="menu-button" for="toggle"><i class="fa-solid fa-bars hamburger-menu"
                     title="Open Navigation Menu"></i></label>
             <input type="checkbox" id="toggle" name="toggle" />
             <ul class="mobile-menu">
@@ -90,9 +90,8 @@
     <!-- MAIN BEGINS -->
     <main>
         <!-- ARTICLE - BLOG - BEGINS -->
-        
-        <section class="section-blog wrapper">
-            <article>
+
+        <article class="article-blog wrapper">
             <h2>How to Run A Creative Agency</h2>
             <ul class="blog-menu">
                 <li>
@@ -105,6 +104,7 @@
                     <a href="#">How To Run A Creative Agency</a>
                 </li>
             </ul><!-- end of .blog-menu-->
+            <!-- Start of Blog Metadata -->
             <div class="blog-metadata">
                 <div class="writer-img-container">
                     <a href="#">
@@ -121,7 +121,7 @@
                 </div>
                 <div class="category">
                     <h5>Category</h5>
-                    <ul>
+                    <ul class="category-ul">
                         <li>
                             <p class="p-list">Entertainment</p>
                         </li>
@@ -132,7 +132,7 @@
                 </div>
                 <div class="tags">
                     <h5>Tags</h5>
-                    <ul>
+                    <ul class="tags-ul">
                         <li>
                             <p class="p-list">Design</p>
                         </li>
@@ -181,20 +181,18 @@
                 <a href="#"><i class="fa-brands fa-twitter"></i></a>
                 <a href="#"><i class="fa-brands fa-instagram"></i></a>
             </div><!-- end of .share-container-->
-            </article>
-        </section>
+        </article>
         <!-- ARTICLE - BLOG - ENDS -->
 
         <!-- SECTION 1 - RELATED POSTS - BEGINS -->
         <section class="section-related-posts wrapper">
-            <h3>Related Posts</h3>
+            <h3 class="title-related-posts">Related Posts</h3>
             <div class="underline"></div>
             <ul class="posts-container">
                 <li>
                     <a href="#">
                         <div class="posts-img-container">
                             <img src="../assets/blog-3.jpeg" alt="Desk scene with laptop and lamp.">
-                            <a href="#"></a>
                         </div>
                         <p class="posts-date">July 25, 2018</p>
                     </a>
@@ -255,7 +253,8 @@
                             </a>
 
                         </div>
-                        <p>Pitch agile development business plan stealth channels prototype mass market product management value proposition startup strategy.</p>
+                        <p>Pitch agile development business plan stealth channels prototype mass market product
+                            management value proposition startup strategy.</p>
                         <p>July 17, 2015 at 15 hours ago</p>
                     </div>
                 </div>

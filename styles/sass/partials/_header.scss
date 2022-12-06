@@ -16,115 +16,121 @@
     align-items: center;
     padding-top: 20px;
     position: relative;
+}
 
-    .mobile-menu {
-        display:none;
-        .shop-bag {
-            position: relative;
-            .cart-number {
-                    display: inline;
-                    position: absolute;
-                    background-color: $lightSage;
-                    border-radius: 50%;
-                    padding: 3px 5px;
-                    top: 1.2rem;
-                    right: 0;
-                }
-        }
-        
-            i:hover {
-                scale: 0.9;
-                opacity: 0.5;
-            }
-    }
+/* Anchor tag styling for all mobile and desktop menus */
+.mobile-menu,
+.home-menu,
+.shop-menu {
+    display: none;
 
     a {
         padding: 10px 15px;
         display: inline-block;
         transition: 300ms;
+        width: 100%;
     }
 
-    a:not(.creative-logo),
-    button {
+    /* All anchor tags & buttons in nav except for the "Creative" logo. */
+    a:not(.creative-logo) {
         transition: 500ms;
 
-        &:hover {
+        &:hover,
+        &:focus {
             text-decoration: line-through;
         }
     }
+}
 
-    .creative-logo {
-        order: 2;
-        display: flex;
-
-        h1 {
-            transition: 400ms;
-            text-align: center;
-            margin: 0;
-
-            &:hover {
-                opacity: 0.5;
-            }
-        }
-
-
+/* Mobile Menu */
+.mobile-menu {
+    li {
+        background-color: $pureWhite;
     }
 
-    .menu-button,
-    #toggle {
-        display: none;
-        color: $black;
-        position: absolute;
-        left: 170px;
-        top: 30px;
+}
 
-        i {
-            font-size: 2.6rem;
-            margin-left: 20px;
-            padding: 1px;
-        }
+/* Icon Hover Effect */
+button {
+    transition: 300ms;
 
-        #toggle {
-            display: none;
-        }
+    &:hover,
+    &:focus {
+        scale: 0.9;
+        opacity: 0.5;
     }
+}
 
-    /* Right Side Shop Nav Bar */
-    .home-menu {
-        display: flex;
-        flex-basis: 40%;
-        order: 1;
+/* Mobile Menu Button */
+.menu-button,
+#toggle {
+    display: none;
+    color: $black;
+    position: absolute;
+    left: 170px;
+    top: 20px;
+}
+
+.hamburger-menu {
+    font-size: 2.6rem;
+    margin-left: 20px;
+    padding: 1px;
+    transition: 300ms;
+
+    &:hover,
+    &:focus {
+        opacity: 0.5;
     }
+}
 
+/* Left Side Home Nav Bar */
+.home-menu {
+    display: flex;
+    flex-basis: 40%;
+    order: 1;
+}
 
-    /* Right Side Shop Nav Bar */
-    .shop-menu {
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        flex-basis: 40%;
-        order: 3;
-        transition: 500ms;
+/* Creative Logo Styles */
+.creative-logo {
+    order: 2;
+    display: flex;
 
-        .shop-bag {
-            position: relative;
-        }
+    h1 {
+        transition: 400ms;
+        text-align: center;
+        margin: 0;
 
-        .cart-number {
-            display: inline;
-            position: absolute;
-            background-color: $lightSage;
-            border-radius: 50%;
-            padding: 3px 5px;
-            top: 1.2rem;
-            right: 0;
-        }
-
-        i:hover {
-            scale: 0.9;
+        &:hover,
+        &:focus {
             opacity: 0.5;
         }
     }
+}
+
+/* Right Side Shop Nav Bar */
+.shop-menu {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-basis: 40%;
+    order: 3;
+    transition: 500ms;
+}
+
+/* Shopping Bag Icon  */
+.shop-bag {
+    position: relative;
+}
+
+/* Cart Number Graphic */
+.cart-number {
+    display: inline;
+    position: absolute;
+    background-color: $lightSage;
+    border-radius: 50%;
+    padding: 3px 5px;
+    top: 1.2rem;
+    right: 0;
 }
 
 /* INDEX HEADER -----------------------------------------*/
@@ -154,4 +160,3 @@
     height: 100vh;
     background-position: bottom;
 }
-

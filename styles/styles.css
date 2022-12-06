@@ -1,4 +1,5 @@
 /* Site Colours */
+/* I had to create the mediumGrey colour below because the LightGrey made text illegible on my Blog page (at least on my monitor), so it subbed in mediumGrey in some areas for readability. */
 /* Site Fonts */
 html {
   line-height: 1.15;
@@ -390,79 +391,76 @@ i {
           align-items: center;
   padding-top: 20px;
   position: relative;
-  /* Right Side Shop Nav Bar */
-  /* Right Side Shop Nav Bar */
 }
-.header-nav .mobile-menu {
+
+/* Anchor tag styling for all mobile and desktop menus */
+.mobile-menu,
+.home-menu,
+.shop-menu {
   display: none;
+  /* All anchor tags & buttons in nav except for the "Creative" logo. */
 }
-.header-nav .mobile-menu .shop-bag {
-  position: relative;
-}
-.header-nav .mobile-menu .shop-bag .cart-number {
-  display: inline;
-  position: absolute;
-  background-color: #C3DAB7;
-  border-radius: 50%;
-  padding: 3px 5px;
-  top: 1.2rem;
-  right: 0;
-}
-.header-nav .mobile-menu i:hover {
-  scale: 0.9;
-  opacity: 0.5;
-}
-.header-nav a {
+.mobile-menu a,
+.home-menu a,
+.shop-menu a {
   padding: 10px 15px;
   display: inline-block;
   -webkit-transition: 300ms;
   transition: 300ms;
+  width: 100%;
 }
-.header-nav a:not(.creative-logo),
-.header-nav button {
+.mobile-menu a:not(.creative-logo),
+.home-menu a:not(.creative-logo),
+.shop-menu a:not(.creative-logo) {
   -webkit-transition: 500ms;
   transition: 500ms;
 }
-.header-nav a:not(.creative-logo):hover,
-.header-nav button:hover {
+.mobile-menu a:not(.creative-logo):hover, .mobile-menu a:not(.creative-logo):focus,
+.home-menu a:not(.creative-logo):hover,
+.home-menu a:not(.creative-logo):focus,
+.shop-menu a:not(.creative-logo):hover,
+.shop-menu a:not(.creative-logo):focus {
   text-decoration: line-through;
 }
-.header-nav .creative-logo {
-  -webkit-box-ordinal-group: 3;
-      -ms-flex-order: 2;
-          order: 2;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+
+/* Mobile Menu */
+.mobile-menu li {
+  background-color: #FFFFFF;
 }
-.header-nav .creative-logo h1 {
-  -webkit-transition: 400ms;
-  transition: 400ms;
-  text-align: center;
-  margin: 0;
+
+/* Icon Hover Effect */
+button {
+  -webkit-transition: 300ms;
+  transition: 300ms;
 }
-.header-nav .creative-logo h1:hover {
+button:hover, button:focus {
+  scale: 0.9;
   opacity: 0.5;
 }
-.header-nav .menu-button,
-.header-nav #toggle {
+
+/* Mobile Menu Button */
+.menu-button,
+#toggle {
   display: none;
   color: #333333;
   position: absolute;
   left: 170px;
-  top: 30px;
+  top: 20px;
 }
-.header-nav .menu-button i,
-.header-nav #toggle i {
+
+.hamburger-menu {
   font-size: 2.6rem;
   margin-left: 20px;
   padding: 1px;
+  -webkit-transition: 300ms;
+  transition: 300ms;
 }
-.header-nav .menu-button #toggle,
-.header-nav #toggle #toggle {
-  display: none;
+.hamburger-menu:hover, .hamburger-menu:focus {
+  opacity: 0.5;
 }
-.header-nav .home-menu {
+
+/* Left Side Home Nav Bar */
+.home-menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -472,7 +470,28 @@ i {
       -ms-flex-order: 1;
           order: 1;
 }
-.header-nav .shop-menu {
+
+/* Creative Logo Styles */
+.creative-logo {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.creative-logo h1 {
+  -webkit-transition: 400ms;
+  transition: 400ms;
+  text-align: center;
+  margin: 0;
+}
+.creative-logo h1:hover, .creative-logo h1:focus {
+  opacity: 0.5;
+}
+
+/* Right Side Shop Nav Bar */
+.shop-menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -490,10 +509,14 @@ i {
   -webkit-transition: 500ms;
   transition: 500ms;
 }
-.header-nav .shop-menu .shop-bag {
+
+/* Shopping Bag Icon  */
+.shop-bag {
   position: relative;
 }
-.header-nav .shop-menu .cart-number {
+
+/* Cart Number Graphic */
+.cart-number {
   display: inline;
   position: absolute;
   background-color: #C3DAB7;
@@ -501,10 +524,6 @@ i {
   padding: 3px 5px;
   top: 1.2rem;
   right: 0;
-}
-.header-nav .shop-menu i:hover {
-  scale: 0.9;
-  opacity: 0.5;
 }
 
 /* INDEX HEADER -----------------------------------------*/
@@ -601,25 +620,30 @@ i {
           align-items: center;
   padding: 12% 0 10% 0;
 }
-.section-gallery .left-scroll-icon {
+
+.left-scroll-icon {
   color: #333333;
 }
-.section-gallery .right-scroll-icon {
+
+.right-scroll-icon {
   color: rgb(93, 91, 91);
 }
-.section-gallery .left-scroll-icon,
-.section-gallery .right-scroll-icon {
+
+.left-scroll-icon,
+.right-scroll-icon {
   font-size: 3rem;
   font-weight: bolder;
   -webkit-transition: 300ms;
   transition: 300ms;
 }
-.section-gallery .left-scroll-icon:hover,
-.section-gallery .right-scroll-icon:hover {
+.left-scroll-icon:hover, .left-scroll-icon:focus,
+.right-scroll-icon:hover,
+.right-scroll-icon:focus {
   -webkit-transform: scale(1.5);
           transform: scale(1.5);
 }
-.section-gallery .container-circle-gallery {
+
+.container-circle-gallery {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -632,15 +656,16 @@ i {
   margin: 0 auto;
   text-align: center;
 }
-.section-gallery .container-circle-gallery .magazine-img {
+.container-circle-gallery p {
+  margin-top: 5%;
+  font-style: italic;
+}
+
+.magazine-img {
   -ms-flex-item-align: center;
       align-self: center;
   width: 35%;
   border-radius: 50%;
-}
-.section-gallery .container-circle-gallery p {
-  margin-top: 5%;
-  font-style: italic;
 }
 
 /* SECTION THREE: ICON GALLERY ------------------------------*/
@@ -658,7 +683,7 @@ i {
   margin-right: 8%;
 }
 
-.section-icon-gallery ul {
+.icon-gallery-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -668,19 +693,20 @@ i {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-.section-icon-gallery ul li {
+.icon-gallery-list li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-preferred-size: 48%;
       flex-basis: 48%;
 }
-.section-icon-gallery ul li button {
+
+.icon-gallery-button {
   -ms-flex-item-align: center;
       align-self: center;
   justify-self: center;
 }
-.section-icon-gallery ul li button i {
+.icon-gallery-button i {
   border: 2px solid #333333;
   font-size: 2.6rem;
   width: 6rem;
@@ -691,18 +717,19 @@ i {
   -webkit-transition: 300ms;
   transition: 300ms;
 }
-.section-icon-gallery ul li button i:hover {
+.icon-gallery-button i:hover, .icon-gallery-button i:focus {
   color: #F6F6F6;
   background-color: #333333;
   scale: 95%;
 }
-.section-icon-gallery ul li .gallery-text-container {
+
+.gallery-text-container {
   -ms-flex-preferred-size: 90%;
       flex-basis: 90%;
   margin-left: 5%;
   margin-top: 5%;
 }
-.section-icon-gallery ul li .gallery-text-container p {
+.gallery-text-container p {
   font-size: 1.1rem;
 }
 
@@ -723,6 +750,7 @@ i {
   text-align: center;
 }
 
+/* Entire "Meet Out Team" Container */
 .container-meet-our-team {
   padding-top: 7%;
   display: -webkit-box;
@@ -731,7 +759,9 @@ i {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
-.container-meet-our-team .container-team-players {
+
+/* Team Players Text Container */
+.container-team-players {
   -ms-flex-preferred-size: calc(50% - 20px);
       flex-basis: calc(50% - 20px);
   padding: 4%;
@@ -749,10 +779,11 @@ i {
       -ms-flex-pack: end;
           justify-content: flex-end;
 }
-.container-meet-our-team .container-team-players h3 {
+.container-team-players h3 {
   margin-bottom: 15px;
 }
 
+/* Team Profile Images */
 .container-team-img {
   -ms-flex-preferred-size: calc(25% - 20px);
       flex-basis: calc(25% - 20px);
@@ -765,17 +796,20 @@ i {
   -webkit-transition: 300ms;
   transition: 300ms;
 }
-.container-team-img img:hover {
+.container-team-img img:hover, .container-team-img img:focus {
   opacity: 0.5;
 }
 
+/* Work With Us Box */
 .container-work-with-us {
   -ms-flex-preferred-size: calc(25% - 20px);
       flex-basis: calc(25% - 20px);
   margin: 10px;
   position: relative;
 }
-.container-work-with-us .anchor-box {
+
+/* Work With Us Container Styles For Hover */
+.anchor-box {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -794,7 +828,7 @@ i {
   padding: 4% 8%;
   border: 2px solid rgba(0, 0, 0, 0);
 }
-.container-work-with-us:hover {
+.anchor-box:hover, .anchor-box:focus {
   border: 2px solid #333333;
   background-color: #F6F6F6;
 }
@@ -805,7 +839,8 @@ i {
   display: -ms-flexbox;
   display: flex;
 }
-.section-drop-a-line .container-drop-a-line {
+
+.container-drop-a-line {
   -ms-flex-preferred-size: 50%;
       flex-basis: 50%;
   background-color: #C3DAB7;
@@ -826,10 +861,11 @@ i {
   padding: 8%;
   border: 1px solid rgba(0, 0, 0, 0);
 }
-.section-drop-a-line .container-drop-a-line p {
+.container-drop-a-line p {
   margin: 12% auto;
 }
-.section-drop-a-line .container-drop-a-line .portfolio-link {
+
+.portfolio-link {
   font-weight: 700;
   font-size: 1.4rem;
   letter-spacing: 0.07rem;
@@ -839,34 +875,37 @@ i {
   -webkit-transition: 300ms;
   transition: 300ms;
 }
-.section-drop-a-line .container-drop-a-line .portfolio-link:hover {
+.portfolio-link:hover, .portfolio-link:focus {
   border: 1px solid #333333;
   scale: 0.9;
 }
-.section-drop-a-line .container-drop-img {
+
+.container-drop-img {
   -ms-flex-preferred-size: 50%;
       flex-basis: 50%;
 }
-.section-drop-a-line .container-drop-img img {
+.container-drop-img img {
   -o-object-fit: cover;
      object-fit: cover;
 }
 
 /* BLOG PAGE SECTIONS STYLES */
 /* ARTICLE: BLOG - HOW TO RUN AN AGENCY ---------------------------*/
-.section-blog {
+/* Please note: as I mentioned on my variables page - I had to create a mediumGrey variable because the off white colour was hardly showing up on my monitor so any text I used it on became unreadable. I still used the off white (which i called lightGrey) to shade background areas though. */
+/* Article / Title Styles -----------------------0 */
+.article-blog {
   padding: 3% 0;
   /* Blog Title*/
 }
-.section-blog h2 {
-  font-size: 6rem;
+.article-blog h2 {
+  font-size: 5rem;
   line-height: 6rem;
   font-weight: 700;
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
 }
 
-/* Blog Breadcrumb Menu */
+/* Blog Breadcrumb Menu ---------------------------*/
 .blog-menu {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -877,17 +916,18 @@ i {
   font-size: 1.4rem;
   font-family: "Open Sans", sans-serif;
 }
-.blog-menu li .blog-home,
-.blog-menu li .blog-blog {
-  color: #8d8c8c;
-}
 .blog-menu .menu-item::before {
   content: "/";
   padding: 0 5px;
   color: #8d8c8c;
 }
 
-/* Blog Post Container */
+.blog-home,
+.blog-blog {
+  color: #8d8c8c;
+}
+
+/* Blog Post Metadata Container -------------------*/
 .blog-metadata {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -928,25 +968,23 @@ i {
   -ms-flex-preferred-size: 17%;
       flex-basis: 17%;
 }
-.date ul,
-.category ul,
-.tags ul {
+
+.category-ul,
+.tags-ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
-.date ul li,
-.category ul li,
-.tags ul li {
+.category-ul li,
+.tags-ul li {
   padding-right: 5px;
 }
-.date ul .p-list::after,
-.category ul .p-list::after,
-.tags ul .p-list::after {
+.category-ul .p-list::after,
+.tags-ul .p-list::after {
   content: ",";
 }
 
-/* Blog Article Text */
+/* Blog Article Text -----------------------------------------*/
 .blog-text p {
   padding: 10px 0;
 }
@@ -954,6 +992,7 @@ i {
   font-weight: bold;
 }
 
+/* Share / Social Media Icons Container -----------------------*/
 .share-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -971,7 +1010,7 @@ i {
   padding: 3% 0;
 }
 
-section h3 {
+.title-related-posts {
   font-weight: 600;
   font-size: 3rem;
   margin-bottom: 30px;
@@ -999,7 +1038,8 @@ section h3 {
 .posts-container li:hover {
   opacity: 0.5;
 }
-.posts-container p {
+
+.posts-date {
   text-transform: uppercase;
   font-family: "Montserrat", sans-serif;
   padding: 15px 0;
@@ -1059,20 +1099,23 @@ section h3 {
   position: relative;
   margin-left: 18px;
 }
-.comment-text-container .name-reply {
+
+.name-reply {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
-.comment-text-container .name-reply a {
+.name-reply a {
   font-style: italic;
   color: #333333;
   padding-left: 5px;
 }
-.comment-text-container .name-reply > p {
+
+.name-reply > p {
   text-transform: uppercase;
 }
-.comment-text-container p:nth-of-type(2) {
+
+p:nth-of-type(2) {
   color: #8d8c8c;
 }
 

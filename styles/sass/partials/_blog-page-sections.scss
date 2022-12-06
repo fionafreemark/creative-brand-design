@@ -8,19 +8,23 @@
 //     border: 2px solid navy;
 // }
 
-.section-blog {
+/* Please note: as I mentioned on my variables page - I had to create a mediumGrey variable because the off white colour was hardly showing up on my monitor so any text I used it on became unreadable. I still used the off white (which i called lightGrey) to shade background areas though. */
+
+
+/* Article / Title Styles -----------------------0 */
+.article-blog {
     padding: 3% 0;
 
     /* Blog Title*/
     h2 {
-        font-size: 6rem;
+        font-size: 5rem;
         line-height: 6rem;
         font-weight: 700;
         flex-basis: 100%;
     }
 }
 
-/* Blog Breadcrumb Menu */
+/* Blog Breadcrumb Menu ---------------------------*/
 .blog-menu {
     display: flex;
     padding: 2% 0;
@@ -28,11 +32,6 @@
     li {
         font-size: 1.4rem;
         font-family: $bodyFont;
-
-        .blog-home,
-        .blog-blog {
-            color: $mediumGrey;
-        }
     }
 
     .menu-item::before {
@@ -42,7 +41,12 @@
     }
 }
 
-/* Blog Post Container */
+.blog-home,
+.blog-blog {
+    color: $mediumGrey;
+}
+
+/* Blog Post Metadata Container -------------------*/
 .blog-metadata {
     display: flex;
     flex-wrap: wrap;
@@ -76,21 +80,21 @@
 .tags {
     flex-basis: 17%;
 
-    ul {
-        display: flex;
+}
 
-        // flex-wrap: wrap;
-        li {
-            padding-right: 5px;
-        }
+.category-ul,
+.tags-ul {
+    display: flex;
+    li {
+        padding-right: 5px;
+    }
 
-        .p-list::after {
-            content: ",";
-        }
+    .p-list::after {
+        content: ",";
     }
 }
 
-/* Blog Article Text */
+/* Blog Article Text -----------------------------------------*/
 .blog-text {
     p {
         padding: 10px 0;
@@ -101,6 +105,7 @@
     }
 }
 
+/* Share / Social Media Icons Container -----------------------*/
 .share-container {
     display: flex;
     align-items: center;
@@ -116,7 +121,7 @@
     padding: 3% 0;
 }
 
-section h3 {
+.title-related-posts {
     font-weight: 600;
     font-size: 3rem;
     margin-bottom: 30px;
@@ -125,7 +130,6 @@ section h3 {
 .underline {
     border-bottom: 1px solid $mediumGrey;
 }
-
 
 .posts-container {
     padding: 3% 0 0 0;
@@ -140,20 +144,18 @@ section h3 {
             opacity: 0.5;
         }
     }
-
-    p {
-        text-transform: uppercase;
-        font-family: $primaryFont;
-        padding: 15px 0;
-    }
 }
 
+.posts-date {
+    text-transform: uppercase;
+    font-family: $primaryFont;
+    padding: 15px 0;
+}
 
 /* SECTION TWO: COMMENTS ----------------------------------------*/
 .section-comments {
     padding: 3% 0;
 }
-
 
 .comment-container {
     display: flex;
@@ -183,27 +185,25 @@ section h3 {
     flex-wrap: wrap;
     position: relative;
     margin-left: 18px;
+}
 
+.name-reply {
+    display: flex;
 
-    .name-reply {
-        display: flex;
-
-        a {
-            font-style: italic;
-            color: $black;
-            padding-left: 5px;
-        }
-    }
-
-    .name-reply>p {
-        text-transform: uppercase;
-    }
-
-    p:nth-of-type(2) {
-        color: $mediumGrey;
+    a {
+        font-style: italic;
+        color: $black;
+        padding-left: 5px;
     }
 }
 
+.name-reply>p {
+    text-transform: uppercase;
+}
+
+p:nth-of-type(2) {
+    color: $mediumGrey;
+}
 /* Decorative triangle background on comment container that makes it look like a speech bubble */
 .arrow-left-detail {
     width: 20px;
