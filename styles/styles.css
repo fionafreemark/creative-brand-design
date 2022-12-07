@@ -429,11 +429,11 @@ i {
 }
 
 /* Icon Hover Effect */
-button {
+.soc-med-button {
   -webkit-transition: 300ms;
   transition: 300ms;
 }
-button:hover, button:focus {
+.soc-med-button:hover, .soc-med-button:focus {
   scale: 0.9;
   opacity: 0.5;
 }
@@ -890,9 +890,14 @@ button:hover, button:focus {
 }
 
 /* BLOG PAGE SECTIONS STYLES */
+/* Note about colors: I had to create a mediumGrey variable because the off white colour was hardly showing up on my monitor so any text I used it on became unreadable. I still used the off white (which i called lightGrey) to shade background areas though. */
+/* General Styles */
+.underline {
+  border-bottom: 2px solid #F6F6F6;
+}
+
 /* ARTICLE: BLOG - HOW TO RUN AN AGENCY ---------------------------*/
-/* Please note: as I mentioned on my variables page - I had to create a mediumGrey variable because the off white colour was hardly showing up on my monitor so any text I used it on became unreadable. I still used the off white (which i called lightGrey) to shade background areas though. */
-/* Article / Title Styles -----------------------0 */
+/* Article / Title Styles ----------------- */
 .article-blog {
   padding: 3% 0;
   /* Blog Title*/
@@ -905,12 +910,20 @@ button:hover, button:focus {
       flex-basis: 100%;
 }
 
-/* Blog Breadcrumb Menu ---------------------------*/
+/* H3 Styles for Each Section */
+.blog-section-title {
+  font-weight: 600;
+  font-size: 3rem;
+  margin-bottom: 30px;
+}
+
+/* Blog Breadcrumb Menu -----------------*/
 .blog-menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   padding: 2% 0;
+  margin-bottom: 3%;
 }
 .blog-menu li {
   font-size: 1.4rem;
@@ -927,7 +940,7 @@ button:hover, button:focus {
   color: #8d8c8c;
 }
 
-/* Blog Post Metadata Container -------------------*/
+/* Blog Post Metadata Container -----------*/
 .blog-metadata {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -940,7 +953,7 @@ button:hover, button:focus {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 4% 0;
+  padding: 1% 0;
 }
 .blog-metadata p {
   color: #8d8c8c;
@@ -984,15 +997,16 @@ button:hover, button:focus {
   content: ",";
 }
 
-/* Blog Article Text -----------------------------------------*/
+/* Blog Article Text -----------------------*/
 .blog-text p {
   padding: 10px 0;
 }
 .blog-text .bold-text {
   font-weight: bold;
+  margin-top: 3%;
 }
 
-/* Share / Social Media Icons Container -----------------------*/
+/* Share / Social Media Icons Container ------*/
 .share-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1008,16 +1022,6 @@ button:hover, button:focus {
 /* SECTION ONE: RELATED POSTS GALLERY------------------------------*/
 .section-related-posts {
   padding: 3% 0;
-}
-
-.title-related-posts {
-  font-weight: 600;
-  font-size: 3rem;
-  margin-bottom: 30px;
-}
-
-.underline {
-  border-bottom: 1px solid #8d8c8c;
 }
 
 .posts-container {
@@ -1083,6 +1087,7 @@ button:hover, button:focus {
       align-self: flex-start;
 }
 
+/* Background container/colour for comment text.*/
 .comment-text-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1100,25 +1105,6 @@ button:hover, button:focus {
   margin-left: 18px;
 }
 
-.name-reply {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-.name-reply a {
-  font-style: italic;
-  color: #333333;
-  padding-left: 5px;
-}
-
-.name-reply > p {
-  text-transform: uppercase;
-}
-
-p:nth-of-type(2) {
-  color: #8d8c8c;
-}
-
 /* Decorative triangle background on comment container that makes it look like a speech bubble */
 .arrow-left-detail {
   width: 20px;
@@ -1131,9 +1117,87 @@ p:nth-of-type(2) {
   top: 16px;
 }
 
+/* Container for commenter name and reply link */
+.name-reply {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.name-reply > p {
+  text-transform: uppercase;
+}
+
+.reply-link {
+  font-style: italic;
+  padding-left: 5px;
+  color: #8d8c8c;
+}
+
 /* SECTION THREE: LEAVE A COMMENT ----------------------------------*/
 .section-comment-form {
-  padding: 3% 0;
+  padding: 3% 0 8% 0;
+  font-size: 1.4rem;
+}
+
+.comment-form-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 3% 0;
+}
+.comment-form-container input,
+.comment-form-container textarea {
+  color: #8d8c8c;
+  padding: 10px 5px;
+  border-style: none none solid none;
+  border-color: #F6F6F6;
+  border-size: 1px;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+.comment-form-container input:hover, .comment-form-container input:focus,
+.comment-form-container textarea:hover,
+.comment-form-container textarea:focus {
+  color: #333333;
+  border-color: #333333;
+  border-size: 2px;
+}
+
+.comment-name-input,
+.comment-email-input,
+.comment-subject-input {
+  -ms-flex-preferred-size: 32%;
+      flex-basis: 32%;
+}
+
+.comment-content-input {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  margin: 3% 0;
+  resize: none;
+}
+
+/* Submit Button */
+.button-submit-comment {
+  text-transform: uppercase;
+  font-weight: 400;
+  font-family: "Montserrat", sans-serif;
+  padding: 10px 0;
+  border-bottom: 1px solid #333333;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+.button-submit-comment:hover, .button-submit-comment:focus {
+  border-bottom: 2px solid #333333;
+  scale: 0.95;
 }
 
 footer {
@@ -1148,7 +1212,8 @@ footer a {
 footer a:hover {
   opacity: 0.5;
 }
-footer .footer-container {
+
+.footer-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1156,7 +1221,7 @@ footer .footer-container {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-footer .footer-container h4 {
+.footer-container h4 {
   margin-bottom: 25px;
 }
 
@@ -1205,7 +1270,8 @@ footer .footer-container h4 {
       flex-basis: 100%;
   margin: 25px 0 30px 0;
 }
-.footer-form .email-container {
+
+.email-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1213,27 +1279,28 @@ footer .footer-container h4 {
       -ms-flex-pack: end;
           justify-content: flex-end;
 }
-.footer-form .email-container input[type=email] {
+.email-container input[type=email] {
   padding: 0 50px 0 20px;
   border: none;
 }
-.footer-form .email-container button {
+
+.email-submit-button {
   padding: 15px;
   background-color: #C3DAB7;
   -webkit-transition: 300ms;
   transition: 300ms;
 }
-.footer-form .email-container button:hover, .footer-form .email-container button:focus {
+.email-submit-button:hover, .email-submit-button:focus {
   background-color: #F6F6F6;
 }
 
-footer .creative-container {
+.creative-container {
   text-align: center;
   margin-top: 10%;
   padding: 5% 0;
   border-top: 0.5px solid rgba(165, 165, 165, 0.589);
 }
-footer .creative-container p {
+.creative-container p {
   font-weight: 900;
   letter-spacing: 0.6rem;
 }
