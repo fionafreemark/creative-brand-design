@@ -21,7 +21,7 @@
             <a class="creative-logo" href="../index.html">
                 <h1>Creative</h1>
             </a>
-            <label class="menu-button" for="toggle"><i class="fa-solid fa-bars hamburger-menu"
+            <label class="menu-button soc-med-button" for="toggle"><i class="fa-solid fa-bars hamburger-menu"
                     title="Open Navigation Menu"></i></label>
             <input type="checkbox" id="toggle" name="toggle" />
             <ul class="mobile-menu">
@@ -41,12 +41,12 @@
                     <a href="./contact.html">Contact</a>
                 </li>
                 <li>
-                    <button type="button" class="search-button">
+                    <button type="button" class="search-button soc-med-button">
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </button>
                 </li>
                 <li>
-                    <button type="button" class="shop-bag">
+                    <button type="button" class="shop-bag soc-med-button">
                         <i class="fa-solid fa-bag-shopping"></i>
                         <p class="cart-number">2</p>
                     </button>
@@ -71,12 +71,12 @@
                     <a href="./contact.html">Contact</a>
                 </li>
                 <li>
-                    <button type="button" class="search-button">
+                    <button type="button" class="search-button soc-med-button">
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </button>
                 </li>
                 <li>
-                    <button type="button" class="shop-bag">
+                    <button type="button" class="shop-bag soc-med-button">
                         <i class="fa-solid fa-bag-shopping"></i>
                         <p class="cart-number">2</p>
                     </button>
@@ -148,6 +148,7 @@
                     </ul>
                 </div>
             </div> <!-- end of .blog-metadata-->
+            <div class="underline"></div>
             <div class="blog-text">
                 <p class="bold-text">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem, ab. Nostrum ea corporis
@@ -186,7 +187,7 @@
 
         <!-- SECTION 1 - RELATED POSTS - BEGINS -->
         <section class="section-related-posts wrapper">
-            <h3 class="title-related-posts">Related Posts</h3>
+            <h3 class="blog-section-title">Related Posts</h3>
             <div class="underline"></div>
             <ul class="posts-container">
                 <li>
@@ -220,7 +221,7 @@
 
         <!-- SECTION 2 - COMMENTS - BEGINS -->
         <section class="section-comments wrapper">
-            <h3>02 Comments</h3>
+            <h3 class="blog-section-title">02 Comments</h3>
             <div class="underline"></div>
             <div class="comment-container">
                 <div class="comment">
@@ -231,7 +232,7 @@
                         <div class="arrow-left-detail"></div>
                         <div class="name-reply">
                             <p>Jenifer Loopz</p>
-                            <a href="#">
+                            <a class="reply-link" href="#">
                                 <p>- Reply</p>
                             </a>
                         </div>
@@ -248,7 +249,7 @@
                         <div class="arrow-left-detail"></div>
                         <div class="name-reply">
                             <p>Daniel Vandaft</p>
-                            <a href="#">
+                            <a class="reply-link" href="#">
                                 <p>- Reply</p>
                             </a>
 
@@ -266,16 +267,17 @@
         <!-- SECTION 3 - LEAVE A COMMENT - BEGINS -->
         <section class="section-comment-form wrapper">
             <label for="comment">
-                <h3>Leave A Comment</h3>
+                <h3 class="blog-section-title">Leave A Comment</h3>
                 <div class="underline"></div>
             </label>
-            <form action="Post" class="form-container">
-                <input class="comment-name-input" type="text" placeholder="Enter your name...">
-                <input class="comment-email-input" type="email" placeholder="youremail@domain.com">
+            <form action="Post" class="comment-form-container">
+                <input class="comment-name-input" type="text" placeholder="Enter your name..." required >
+                <input class="comment-email-input" type="email" placeholder="youremail@domain.com" required>
                 <input class="comment-subject-input" type="text" placeholder="Subject (Optional)">
-                <textarea class="comment-content-input" name="comment-input" id="comment-input" cols="30"
-                    rows="10"></textarea>
-                <button class="button-submit-comment">Submit Comment</button>
+                <textarea class="comment-content-input" name="comment-input" id="comment-input" cols="30" max-length="500"
+                    rows="10" placeholder="Here goes your comment" required></textarea>
+                <div class="underline"></div>
+                <button name="comment-submission" type="submit" class="button-submit-comment">Submit Comment</button>
             </form>
         </section>
         <!-- SECTION 3 - LEAVE A COMMENT - ENDS -->
@@ -338,7 +340,7 @@
                     <label for="email">Signup for emails and notifications below.</label>
                     <div class="email-container">
                         <input type="email" placeholder="Enter your email">
-                        <button><i class="fa-solid fa-right-long"></i></button>
+                        <button class="email-submit-button"><i class="fa-solid fa-right-long"></i></button>
                     </div>
                 </form>
             </div> <!-- End of .subscribe-container-->
