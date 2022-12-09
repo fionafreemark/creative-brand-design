@@ -2,9 +2,9 @@
 @use "./partials/setup";
 @use "./partials/typography";
 @use "./partials/base-files";
-@use "./partials/header";
-@use "./partials/index-page-sections";
-@use "./partials/blog-page-sections";
+@use "./partials/nav";
+@use "./partials/index-styles";
+@use "./partials/blog-styles";
 @use "./partials/footer";
 @use "./partials/index-media-queries";
 @use "./partials/blog-media-queries";

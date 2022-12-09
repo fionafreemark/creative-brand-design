@@ -1,7 +1,25 @@
 @use "./variables" as *;
 
-/* HOME/INDEX PAGE SECTIONS STYLES */
+/* HOME/INDEX STYLES */
 
+/* INDEX HEADER -----------------------------------------*/
+
+.index-header {
+    background-image: url("../assets/home-1.jpeg");
+    background-size: cover;
+    height: 100vh;
+    background-position: bottom;
+    position: relative;
+
+    .vertical-line {
+        border-left: .5px solid $black;
+        display: block;
+        height: 120px;
+        position: absolute;
+        bottom: -60px;
+        left: 50%;
+    }
+}
 
 /* SECTION ONE: BRANDING ------------------------------*/
 

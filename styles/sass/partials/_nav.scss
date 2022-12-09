@@ -1,13 +1,6 @@
 @use "./variables" as *;
 
-// there is a wrapper on nav or .header-nav
-// edited wrapper down to 75% width
-
-* {
-    // border: 1px solid pink;
-}
-
-/* GLOBAL HEADER STYLES ------------------------------------*/
+/* GLOBAL NAV STYLES ------------------------------------*/
 
 .header-nav {
     display: flex;
@@ -133,42 +126,5 @@
     right: 0;
 }
 
-/* INDEX HEADER -----------------------------------------*/
 
-.index-header {
-    background-image: url("../assets/home-1.jpeg");
-    background-size: cover;
-    height: 100vh;
-    background-position: bottom;
-    position: relative;
 
-    .vertical-line {
-        border-left: .5px solid $black;
-        display: block;
-        height: 120px;
-        position: absolute;
-        bottom: -60px;
-        left: 50%;
-    }
-}
-
-/* BLOG HEADER ------------------------------------------*/
-
-.blog-header {
-    background-image: url("../assets/blog-1.jpeg");
-    background-size: cover;
-    height: 100vh;
-    background-position: bottom;
-    background-repeat: no-repeat;
-}
-
-/* CONTACT HEADER --------------------------------------- */
-
-.contact-header {
-    background-image: url("../assets/contact-1.jpeg");
-    background-size: contain;
-    height: 257px;
-    position: relative;
-    background-position: top 100px left 0;
-    background-repeat: no-repeat;
-}
