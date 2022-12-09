@@ -83,52 +83,80 @@
                 </li>
             </ul>
         </nav>
-        <span class="vertical-line" aria-hidden="true"></span>
+        <h2>Contact Us</h2>
     </header>
     <!-- HEADER ENDS -->
 
     <!-- MAIN BEGINS -->
     <main>
-        <!-- SECTION 1 - BLOG - BEGINS -->
-        <section class="section-blog wrapper">
+        <!-- SECTION 1 - CONTACT DETAILS-->
+        <section class="section-contact-details wrapper">
+            <div class="details-container">
+                <h3>Contact Details</h3>
+                <p>If you need any help, please contact us or send an email or go to our forum.</p>
+                <p>We are sure that you can receive our reply as soon as possible.</p>
+            </div><!-- end of .details-container -->
+            <div class="contact-icon-container">
+                <div class="contact-phone-container">
+                    <a href="#"><i class="fa-solid fa-mobile-screen-button"></i></a>
+                    <h4>Phone</h4>
+                    <p>Phone 01: <a href="tel:phone-number">123 456 7890</a></p>
+                    <p>Phone 02: <a href="tel:phone-number">345 6788 9101</a></p>
+                </div> <!-- end of .contact-phone-container -->
+                <div class="contact-address-container">
+                    <a href="#"><i class="fa-solid fa-location-dot"></i></a>
+                    <h4>Address</h4>
+                    <p>6591 Orchard Street, Toronto, Ontario</p>
 
-
+                </div> <!-- end of .contact-address-container -->
+                <div class="contact-email-container">
+                    <a href="#"><i class="fa-solid fa-envelope"></i></a>
+                    <h4>Email</h4>
+                    <p><a href="mailto:email-address-here">contact@creative.com</a></p>
+                    <p><a href="mailto:email-address-here">info@creative.com</a></p>
+                </div> <!-- end of .contact-email-container -->
+            </div><!-- end of .contact-icon-container -->
         </section>
-        <!-- SECTION 1 - BLOG - ENDS -->
+        <!-- SECTION 1 - CONTACT DETAILS - ENDS -->
 
-        <!-- SECTION 2 - RELATED POSTS - BEGINS -->
-        <section class="section-related-posts wrapper">
-
+        <!-- SECTION 2 - GET IN TOUCH WITH US - BEGINS -->
+        <section class="section-in-touch wrapper">   
+            <label for="comment">
+                <h2>Get in Touch with Us</h2>
+                <p>If you have any questions, please don't hesitate to send us a message.</p>
+            </label>
+            <form action="#" method="post" class="comment-form-container">
+                <input class="comment-name-input" type="text" placeholder="Enter your name..." required>
+                <input class="comment-email-input" type="email" placeholder="youremail@domain.com" required>
+                <input class="comment-subject-input" type="text" placeholder="Subject (Optional)">
+                <textarea class="comment-content-input" name="comment-input" id="comment-input" cols="30"
+                    max-length="500" rows="10" placeholder="Here goes your comment" required></textarea>
+                <div class="underline"></div>
+                <button name="comment-submission" type="submit" class="button-submit-comment">Send Message</button>
+            </form>
         </section>
-        <!-- SECTION 2 - RELATED POSTS- ENDS -->
+        <!-- SECTION 2 - GET IN TOUCH WITH US- ENDS -->
 
-        <!-- SECTION 3 - COMMENTS - BEGINS -->
-        <section class="section-comments wrapper">
-
+        <!-- SECTION 3 - FULL BLEED IMAGE - BEGINS -->
+        <section class="section-comments-full-image">
+            <img src="../assets/contact-2.jpeg" alt="Woman smiling while making a phone call.">
         </section>
-        <!-- SECTION 3 - COMMENTS - ENDS -->
-
-        <!-- SECTION 4 - LEAVE A COMMENT - BEGINS -->
-        <section class="section-comment-form wrapper">
-
-        </section>
-        <!-- SECTION 4 - LEAVE A COMMENT - ENDS -->
-
+        
     </main>
     <!-- FOOTER BEGINS -->
     <footer>
         <div class="footer-container wrapper">
-    
+
             <!-- Contact Us Container -->
             <div class="contact-us-container">
                 <a href="">
                     <h4>Contact Us</h4>
                 </a>
-    
+
                 <p>6591 Orchard Street, NY 10002, United States</p>
                 <p>Email: <a href="mailto:email-address-here">
                         contact@onepro.co</a></p>
-    
+
                 <p>Phone 01: <a href="tel:phone-number"> +00 (9) 123 3456 789</a></p>
                 <p>Phone 02:<a href="tel:phone-number"> +00 (9) 123 3456 789</a></p>
                 <p>Fax: <a href="fax:fax-number">+00 (9)
@@ -138,7 +166,7 @@
                             <a href="#"><i class="fa-brands fa-instagram"></i></a>
                         </div><!-- End of .footer-icon-container-->
             </div><!-- End of .contact-us-container-->
-    
+
             <!-- Recent Posts Container -->
             <div class="recent-posts-container">
                 <a href="">
@@ -162,7 +190,7 @@
                     </li>
                 </ul>
             </div><!-- End of .recent-posts-container-->
-    
+
             <!-- Subscribe Container -->
             <div class="subscribe-container">
                 <a href="">

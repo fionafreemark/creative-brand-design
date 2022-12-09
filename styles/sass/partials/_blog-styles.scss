@@ -1,14 +1,22 @@
 @use "./variables" as *;
 
-/* BLOG PAGE SECTIONS STYLES */
-
-
+/* BLOG STYLES */
 
 /* Note about colors: I had to create a mediumGrey variable because the off white colour was hardly showing up on my monitor so any text I used it on became unreadable. I still used the off white (which i called lightGrey) to shade background areas though. */
 
 /* General Styles */
 .underline {
     border-bottom: 2px solid $lightGrey;
+}
+
+/* BLOG HEADER ------------------------------------------*/
+
+.blog-header {
+    background-image: url("../assets/blog-1.jpeg");
+    background-size: cover;
+    height: 100vh;
+    background-position: bottom;
+    background-repeat: no-repeat;
 }
 
 /* ARTICLE: BLOG - HOW TO RUN AN AGENCY ---------------------------*/
