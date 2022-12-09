@@ -241,7 +241,7 @@ html {
 html {
   font-size: 62.5%;
   font-family: "Montserrat", sans-serif;
-  color: #333333;
+  color: #000;
 }
 
 h1,
@@ -270,7 +270,7 @@ h5 {
 }
 
 a {
-  color: #333333;
+  color: #000;
 }
 
 p {
@@ -299,7 +299,7 @@ footer a {
 
 footer input[type=email],
 footer button i {
-  color: #333333;
+  color: #000;
 }
 
 /* Nav Text & Footer "Creative Agency" Bar */
@@ -354,6 +354,10 @@ p {
   margin: 0;
 }
 
+p {
+  color: #333333;
+}
+
 a {
   text-decoration: none;
   padding: 0;
@@ -376,7 +380,7 @@ i {
   padding: 5px 5px;
 }
 
-/* GLOBAL HEADER STYLES ------------------------------------*/
+/* GLOBAL NAV STYLES ------------------------------------*/
 .header-nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -442,7 +446,7 @@ i {
 .menu-button,
 #toggle {
   display: none;
-  color: #333333;
+  color: #000;
   position: absolute;
   left: 170px;
   top: 20px;
@@ -526,6 +530,7 @@ i {
   right: 0;
 }
 
+/* HOME/INDEX STYLES */
 /* INDEX HEADER -----------------------------------------*/
 .index-header {
   background-image: url("../assets/home-1.jpeg");
@@ -535,7 +540,7 @@ i {
   position: relative;
 }
 .index-header .vertical-line {
-  border-left: 0.5px solid #333333;
+  border-left: 0.5px solid #000;
   display: block;
   height: 120px;
   position: absolute;
@@ -543,26 +548,6 @@ i {
   left: 50%;
 }
 
-/* BLOG HEADER ------------------------------------------*/
-.blog-header {
-  background-image: url("../assets/blog-1.jpeg");
-  background-size: cover;
-  height: 100vh;
-  background-position: bottom;
-  background-repeat: no-repeat;
-}
-
-/* CONTACT HEADER --------------------------------------- */
-.contact-header {
-  background-image: url("../assets/contact-1.jpeg");
-  background-size: contain;
-  height: 257px;
-  position: relative;
-  background-position: top 100px left 0;
-  background-repeat: no-repeat;
-}
-
-/* HOME/INDEX PAGE SECTIONS STYLES */
 /* SECTION ONE: BRANDING ------------------------------*/
 .section-branding {
   background-color: #C3DAB7;
@@ -633,7 +618,7 @@ i {
 }
 
 .left-scroll-icon {
-  color: #333333;
+  color: #000;
 }
 
 .right-scroll-icon {
@@ -718,7 +703,7 @@ i {
   justify-self: center;
 }
 .icon-gallery-button i {
-  border: 2px solid #333333;
+  border: 2px solid #000;
   font-size: 2.6rem;
   width: 6rem;
   height: 6rem;
@@ -730,7 +715,7 @@ i {
 }
 .icon-gallery-button i:hover, .icon-gallery-button i:focus {
   color: #F6F6F6;
-  background-color: #333333;
+  background-color: #000;
   scale: 95%;
 }
 
@@ -750,7 +735,7 @@ i {
   padding: 7% 0 10% 0;
 }
 .section-team .vertical-line-two {
-  border-left: 0.5px solid #333333;
+  border-left: 0.5px solid #000;
   display: block;
   height: 60px;
   position: absolute;
@@ -840,7 +825,7 @@ i {
   border: 2px solid rgba(0, 0, 0, 0);
 }
 .anchor-box:hover, .anchor-box:focus {
-  border: 2px solid #333333;
+  border: 2px solid #000;
   background-color: #F6F6F6;
 }
 
@@ -887,7 +872,7 @@ i {
   transition: 300ms;
 }
 .portfolio-link:hover, .portfolio-link:focus {
-  border: 1px solid #333333;
+  border: 1px solid #000;
   scale: 0.9;
 }
 
@@ -900,11 +885,20 @@ i {
      object-fit: cover;
 }
 
-/* BLOG PAGE SECTIONS STYLES */
+/* BLOG STYLES */
 /* Note about colors: I had to create a mediumGrey variable because the off white colour was hardly showing up on my monitor so any text I used it on became unreadable. I still used the off white (which i called lightGrey) to shade background areas though. */
 /* General Styles */
 .underline {
   border-bottom: 2px solid #F6F6F6;
+}
+
+/* BLOG HEADER ------------------------------------------*/
+.blog-header {
+  background-image: url("../assets/blog-1.jpeg");
+  background-size: cover;
+  height: 100vh;
+  background-position: bottom;
+  background-repeat: no-repeat;
 }
 
 /* ARTICLE: BLOG - HOW TO RUN AN AGENCY ---------------------------*/
@@ -1177,8 +1171,8 @@ i {
 .comment-form-container input:hover, .comment-form-container input:focus,
 .comment-form-container textarea:hover,
 .comment-form-container textarea:focus {
-  color: #333333;
-  border-color: #333333;
+  color: #000;
+  border-color: #000;
   border-size: 2px;
 }
 
@@ -1202,13 +1196,106 @@ i {
   font-weight: 400;
   font-family: "Montserrat", sans-serif;
   padding: 10px 0;
-  border-bottom: 1px solid #333333;
+  border-bottom: 1px solid #000;
   -webkit-transition: 300ms;
   transition: 300ms;
 }
 .button-submit-comment:hover, .button-submit-comment:focus {
-  border-bottom: 2px solid #333333;
+  border-bottom: 2px solid #000;
   scale: 0.95;
+}
+
+/* CONTACT PAGE SECTIONS STYLES */
+/* HEADER BEGINS */
+.contact-header {
+  background-image: url("../assets/contact-1.jpeg");
+  background-size: contain;
+  height: 314px;
+  background-position: top 90px left 0;
+  background-repeat: no-repeat;
+}
+
+/* HEADER ENDS */
+/* SECTION 1: CONTACT DETAILS ------------------------------*/
+.contact-header h2 {
+  font-weight: 800;
+  font-size: 5rem;
+  line-height: 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 29%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  top: 185px;
+}
+
+.contact-header h2::before {
+  content: "";
+  border-bottom: 2px solid black;
+  width: 4rem;
+  position: absolute;
+  left: 0;
+  top: -40px;
+}
+
+/* SECTION 1: CONTACT DETAILS ------------------ */
+.section-contact-details,
+.section-in-touch {
+  padding: 3% 0;
+}
+
+.details-container,
+.contact-icon-container {
+  padding: 3% 0;
+}
+
+.details-container h3,
+.section-in-touch h3 {
+  margin-bottom: 2%;
+}
+
+.contact-icon-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+.contact-icon-container i {
+  font-size: 3.5rem;
+  padding-left: 0;
+}
+.contact-icon-container h4 {
+  font-size: 1.4rem;
+  letter-spacing: 0.9rem;
+  padding: 4% 0;
+}
+.contact-icon-container a {
+  -webkit-transition: 300ms;
+  transition: 300ms;
+  color: #333333;
+}
+.contact-icon-container a:hover, .contact-icon-container a:focus {
+  color: #8d8c8c;
+}
+
+.contact-phone-container,
+.contact-email-container,
+.contact-address-container {
+  -ms-flex-preferred-size: 30%;
+      flex-basis: 30%;
 }
 
 footer {
@@ -1303,6 +1390,9 @@ footer a:hover {
 }
 .email-submit-button:hover, .email-submit-button:focus {
   background-color: #F6F6F6;
+}
+.email-submit-button i {
+  color: #333333;
 }
 
 .creative-container {
@@ -2040,3 +2130,4 @@ h4 {
     font-size: 1.3rem;
   }
 }
+/* CONTACT PAGE MEDIA QUERIES */

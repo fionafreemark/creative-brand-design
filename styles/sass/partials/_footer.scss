@@ -5,7 +5,7 @@
 // }
 
 footer {
-    background-color: $black;
+    background-color: $charcoal;
     padding-top: 10%;
 
     a {
@@ -89,11 +89,14 @@ footer {
     padding: 15px;
     background-color: $lightSage;
     transition: 300ms;
-
+    
     &:hover,
     &:focus {
         background-color: $lightGrey;
     }
+    i {
+        color: $charcoal;
+}
 }
 
 .creative-container {
