@@ -5,11 +5,12 @@
 /* HEADER BEGINS */
 .contact-header {
     background-image: url("../assets/contact-1.jpeg");
-    background-size: contain;
-    // image size is 224px + 90px for nav bar spacing
-    height: 314px;
-    background-position: top 90px left 0;
+    background-size: cover;
     background-repeat: no-repeat;
+    background-position: top 90px center;
+    // image height is 224px + 90px for nav bar spacing
+    min-height: 314px;
+
 }
 /* HEADER ENDS */
 
@@ -25,7 +26,7 @@
     width: 29%;
     align-items: center;
     position: relative;
-    top: 185px;
+    bottom: -185px;
 }
 
 .contact-header h2::before {

@@ -1209,10 +1209,10 @@ i {
 /* HEADER BEGINS */
 .contact-header {
   background-image: url("../assets/contact-1.jpeg");
-  background-size: contain;
-  height: 314px;
-  background-position: top 90px left 0;
+  background-size: cover;
   background-repeat: no-repeat;
+  background-position: top 90px center;
+  min-height: 314px;
 }
 
 /* HEADER ENDS */
@@ -1235,7 +1235,7 @@ i {
       -ms-flex-align: center;
           align-items: center;
   position: relative;
-  top: 185px;
+  bottom: -185px;
 }
 
 .contact-header h2::before {
