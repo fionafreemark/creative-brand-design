@@ -1,3 +1,77 @@
 @use "./variables" as *;
 
+// Use 1000px 800px & 500px
+
 /* CONTACT PAGE MEDIA QUERIES */
+
+/* MEDIA QUERY MAX WIDTH 1000PX ------------------------------------------------- */
+
+@media (max-width: 1000px) {
+    .contact-header h2 {
+        font-size: 4rem;
+    }
+
+    /* SECTION 1: CONTACT DETAILS -----------------------*/
+    .contact-icon-container {
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+        align-items: flex-start;
+    }
+
+    .contact-phone-container,
+    .contact-email-container,
+    .contact-address-container {
+        padding: 3% 0;
+    }
+
+    .contact-address-container::before,
+    .contact-email-container::before {
+        display: none;
+    }
+
+    /* SECTION 2: GET IN TOUCH WITH US FORMS -------------- */
+
+    .comment-form-container {
+        flex-direction: column;
+
+        input {
+            margin: 3% 0;
+        }
+
+        button {
+            align-self: center;
+        }
+    }
+
+    /* SECTION 3: FULL BLEED IMAGE-------------------------- */
+    .section-comments-full-image {
+        max-height: 500px;
+    }
+}
+
+
+/* MEDIA QUERY MAX WIDTH 800PX -------------------------------------------------- */
+
+@media (max-width: 800px) {
+
+    .contact-background-img {
+        background-position: left;
+    }
+
+    /* SECTION 2: GET IN TOUCH WITH US FORMS -------------- */
+
+    .comment-form-container {
+        flex-direction: column;
+
+        input {
+            margin: 4% 0;
+        }
+    }
+
+
+    /* SECTION 3: FULL BLEED IMAGE-------------------------- */
+    .section-comments-full-image {
+        max-height: 300px;
+    }
+}

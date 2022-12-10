@@ -4,11 +4,6 @@
 
 /* Note about colors: I had to create a mediumGrey variable because the off white colour was hardly showing up on my monitor so any text I used it on became unreadable. I still used the off white (which i called lightGrey) to shade background areas though. */
 
-/* General Styles */
-.underline {
-    border-bottom: 2px solid $lightGrey;
-}
-
 /* BLOG HEADER ------------------------------------------*/
 
 .blog-header {
@@ -71,6 +66,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 1% 0;
+    position: relative;
 
     p {
         color: $mediumGrey;
@@ -112,6 +108,14 @@
         content: ",";
     }
 }
+
+// .blog-metadata::after {
+//     content: " ";
+//     border-bottom: 2px solid $lightGrey;
+//     width: 100%;
+//     position: absolute;
+//     bottom: -10%;
+// }
 
 /* Blog Article Text -----------------------*/
 .blog-text {
@@ -276,11 +280,40 @@
     font-weight: 400;
     font-family: $primaryFont;
     padding: 10px 0;
-    border-bottom: 1px solid $black;
+    border-bottom: 1px solid $black ;
     transition: 300ms;
+    scale: 1;
     &:hover,
     &:focus {
-        border-bottom: 2px solid $black;
-        scale: 0.95;
+        scale: 0.90;
     }
+}
+
+/* DECORATIVE UNDERLINE STYLING (::AFTERS) ----------------------------------*/
+
+.blog-metadata::after,
+.blog-section-title::after {
+    content: " ";
+    border-bottom: 2px solid $lightGrey;
+    width: 100%;
+    position: absolute;
+    display: inline-block;
+}
+
+.blog-metadata,
+.blog-section-title {
+    position: relative;
+}
+
+.blog-metadata::after {
+    bottom: -20%;
+}
+
+.blog-section-title {
+    padding-bottom: 5%;
+}
+
+.blog-section-title::after {
+    left: 0;
+    bottom: 30%;
 }
