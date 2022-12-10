@@ -321,6 +321,12 @@ button {
   letter-spacing: 0.07rem;
 }
 
+input,
+textarea {
+  color: #8d8c8c;
+  font-size: 1.4rem;
+}
+
 .cart-number {
   font-size: 0.8rem;
   line-height: 0.8rem;
@@ -1160,7 +1166,6 @@ i {
 }
 .comment-form-container input,
 .comment-form-container textarea {
-  color: #8d8c8c;
   padding: 10px 5px;
   border-style: none none solid none;
   border-color: #F6F6F6;
@@ -1207,12 +1212,13 @@ i {
 
 /* CONTACT PAGE SECTIONS STYLES */
 /* HEADER BEGINS */
-.contact-header {
+.contact-background-img {
+  margin-top: 20px;
   background-image: url("../assets/contact-1.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: top 90px center;
-  min-height: 314px;
+  min-height: 200px;
+  background-position: bottom;
 }
 
 /* HEADER ENDS */
@@ -1235,7 +1241,7 @@ i {
       -ms-flex-align: center;
           align-items: center;
   position: relative;
-  bottom: -185px;
+  top: -66px;
 }
 
 .contact-header h2::before {
@@ -1249,10 +1255,7 @@ i {
 
 /* SECTION 1: CONTACT DETAILS ------------------ */
 .section-contact-details,
-.section-in-touch {
-  padding: 3% 0;
-}
-
+.section-in-touch,
 .details-container,
 .contact-icon-container {
   padding: 3% 0;
@@ -1296,6 +1299,17 @@ i {
 .contact-address-container {
   -ms-flex-preferred-size: 30%;
       flex-basis: 30%;
+  position: relative;
+}
+
+.contact-address-container::before,
+.contact-email-container::before {
+  content: "";
+  border-right: 2px solid #F6F6F6;
+  height: 150%;
+  position: absolute;
+  left: -15%;
+  top: -25%;
 }
 
 footer {

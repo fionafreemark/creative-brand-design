@@ -85,6 +85,12 @@ button {
     letter-spacing: 0.07rem;
 }
 
+input, 
+textarea {
+    color: $mediumGrey;
+    font-size: 1.4rem;
+}
+
 .cart-number {
     font-size: 0.8rem;
     line-height: 0.8rem;
