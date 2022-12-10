@@ -9,6 +9,7 @@
     align-items: center;
     padding-top: 20px;
     position: relative;
+    z-index: 10;
 }
 
 /* Anchor tag styling for all mobile and desktop menus */
@@ -38,7 +39,7 @@
 /* Mobile Menu */
 .mobile-menu {
     li {
-        background-color: $pureWhite;
+        background-color: rgba(255, 255, 255, 0.971);
     }
 
 }

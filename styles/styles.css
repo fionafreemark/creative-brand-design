@@ -401,6 +401,7 @@ i {
           align-items: center;
   padding-top: 20px;
   position: relative;
+  z-index: 10;
 }
 
 /* Anchor tag styling for all mobile and desktop menus */
@@ -435,7 +436,7 @@ i {
 
 /* Mobile Menu */
 .mobile-menu li {
-  background-color: #FFFFFF;
+  background-color: rgba(255, 255, 255, 0.971);
 }
 
 /* Icon Hover Effect */
@@ -893,11 +894,6 @@ i {
 
 /* BLOG STYLES */
 /* Note about colors: I had to create a mediumGrey variable because the off white colour was hardly showing up on my monitor so any text I used it on became unreadable. I still used the off white (which i called lightGrey) to shade background areas though. */
-/* General Styles */
-.underline {
-  border-bottom: 2px solid #F6F6F6;
-}
-
 /* BLOG HEADER ------------------------------------------*/
 .blog-header {
   background-image: url("../assets/blog-1.jpeg");
@@ -965,6 +961,7 @@ i {
       -ms-flex-align: center;
           align-items: center;
   padding: 1% 0;
+  position: relative;
 }
 .blog-metadata p {
   color: #8d8c8c;
@@ -1204,10 +1201,38 @@ i {
   border-bottom: 1px solid #000;
   -webkit-transition: 300ms;
   transition: 300ms;
+  scale: 1;
 }
 .button-submit-comment:hover, .button-submit-comment:focus {
-  border-bottom: 2px solid #000;
-  scale: 0.95;
+  scale: 0.9;
+}
+
+/* DECORATIVE UNDERLINE STYLING (::AFTERS) ----------------------------------*/
+.blog-metadata::after,
+.blog-section-title::after {
+  content: " ";
+  border-bottom: 2px solid #F6F6F6;
+  width: 100%;
+  position: absolute;
+  display: inline-block;
+}
+
+.blog-metadata,
+.blog-section-title {
+  position: relative;
+}
+
+.blog-metadata::after {
+  bottom: -20%;
+}
+
+.blog-section-title {
+  padding-bottom: 5%;
+}
+
+.blog-section-title::after {
+  left: 0;
+  bottom: 30%;
 }
 
 /* CONTACT PAGE SECTIONS STYLES */
@@ -1221,8 +1246,6 @@ i {
   background-position: bottom;
 }
 
-/* HEADER ENDS */
-/* SECTION 1: CONTACT DETAILS ------------------------------*/
 .contact-header h2 {
   font-weight: 800;
   font-size: 5rem;
@@ -1244,6 +1267,8 @@ i {
   top: -66px;
 }
 
+/* HEADER ENDS */
+/* SECTION 1: CONTACT DETAILS ------------------------------*/
 .contact-header h2::before {
   content: "";
   border-bottom: 2px solid black;
@@ -1275,6 +1300,8 @@ i {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
 }
 .contact-icon-container i {
   font-size: 3.5rem;
@@ -1310,6 +1337,22 @@ i {
   position: absolute;
   left: -15%;
   top: -25%;
+}
+
+/* SECTION 3: FULL BLEED IMAGE-------------------------- */
+.section-comments-full-image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 688px;
+}
+.section-comments-full-image img {
+  min-width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
 }
 
 footer {
@@ -1583,7 +1626,7 @@ footer label {
 /* --------------MEDIA QUERY 800PX--------------- */
 @media (max-width: 800px) {
   .wrapper {
-    width: 95%;
+    width: 90%;
   }
   /* Header Styles */
   .header-nav .shop-menu,
@@ -1944,9 +1987,6 @@ footer label {
 }
 /* --------------MEDIA QUERY 800PX--------------- */
 @media (max-width: 800px) {
-  .wrapper {
-    width: 95%;
-  }
   /* Header Styles */
   .header-nav .shop-menu,
 .header-nav .home-menu {
@@ -2145,3 +2185,70 @@ h4 {
   }
 }
 /* CONTACT PAGE MEDIA QUERIES */
+/* MEDIA QUERY MAX WIDTH 1000PX ------------------------------------------------- */
+@media (max-width: 1000px) {
+  .contact-header h2 {
+    font-size: 4rem;
+  }
+  /* SECTION 1: CONTACT DETAILS -----------------------*/
+  .contact-icon-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 100%;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .contact-phone-container,
+.contact-email-container,
+.contact-address-container {
+    padding: 3% 0;
+  }
+  .contact-address-container::before,
+.contact-email-container::before {
+    display: none;
+  }
+  /* SECTION 2: GET IN TOUCH WITH US FORMS -------------- */
+  .comment-form-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .comment-form-container input {
+    margin: 3% 0;
+  }
+  .comment-form-container button {
+    -ms-flex-item-align: center;
+        align-self: center;
+  }
+  /* SECTION 3: FULL BLEED IMAGE-------------------------- */
+  .section-comments-full-image {
+    max-height: 500px;
+  }
+}
+/* MEDIA QUERY MAX WIDTH 800PX -------------------------------------------------- */
+@media (max-width: 800px) {
+  .contact-background-img {
+    background-position: left;
+  }
+  /* SECTION 2: GET IN TOUCH WITH US FORMS -------------- */
+  .comment-form-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .comment-form-container input {
+    margin: 4% 0;
+  }
+  /* SECTION 3: FULL BLEED IMAGE-------------------------- */
+  .section-comments-full-image {
+    max-height: 300px;
+  }
+}
