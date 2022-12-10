@@ -23,18 +23,42 @@
         display: inline-block;
         transition: 300ms;
         width: 100%;
+        position: relative;
+
     }
 
     /* All anchor tags & buttons in nav except for the "Creative" logo. */
     a:not(.creative-logo) {
         transition: 500ms;
 
-        &:hover,
-        &:focus {
-            text-decoration: line-through;
+        &:hover::after,
+        &:focus::after {
+            content: (" ");
+            width: 90%;
+            height: 1px;
+            position: absolute;
+            background-color: black;
+            bottom: 50%;
+            left: 5%;
         }
     }
 }
+
+/* Strike-through effect for active page link. */
+.active-link::after {
+    content: (" ");
+    width: 90%;
+    height: 1px;
+    position: absolute;
+    background-color: $black;
+    bottom: 50%;
+    left: 5%;
+}
+
+.active-link {
+    position: relative;
+}
+
 
 /* Mobile Menu */
 .mobile-menu {
@@ -126,6 +150,3 @@
     top: 1.2rem;
     right: 0;
 }
-
-
-

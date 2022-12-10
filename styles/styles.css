@@ -419,6 +419,7 @@ i {
   -webkit-transition: 300ms;
   transition: 300ms;
   width: 100%;
+  position: relative;
 }
 .mobile-menu a:not(.creative-logo),
 .home-menu a:not(.creative-logo),
@@ -426,12 +427,33 @@ i {
   -webkit-transition: 500ms;
   transition: 500ms;
 }
-.mobile-menu a:not(.creative-logo):hover, .mobile-menu a:not(.creative-logo):focus,
-.home-menu a:not(.creative-logo):hover,
-.home-menu a:not(.creative-logo):focus,
-.shop-menu a:not(.creative-logo):hover,
-.shop-menu a:not(.creative-logo):focus {
-  text-decoration: line-through;
+.mobile-menu a:not(.creative-logo):hover::after, .mobile-menu a:not(.creative-logo):focus::after,
+.home-menu a:not(.creative-logo):hover::after,
+.home-menu a:not(.creative-logo):focus::after,
+.shop-menu a:not(.creative-logo):hover::after,
+.shop-menu a:not(.creative-logo):focus::after {
+  content: " ";
+  width: 90%;
+  height: 1px;
+  position: absolute;
+  background-color: black;
+  bottom: 50%;
+  left: 5%;
+}
+
+/* Strike-through effect for active page link. */
+.active-link::after {
+  content: " ";
+  width: 90%;
+  height: 1px;
+  position: absolute;
+  background-color: #000;
+  bottom: 50%;
+  left: 5%;
+}
+
+.active-link {
+  position: relative;
 }
 
 /* Mobile Menu */
