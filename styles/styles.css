@@ -337,6 +337,22 @@ body {
   padding: 0;
 }
 
+.skip-link {
+  position: absolute;
+  left: -1000px;
+  top: 5px;
+  z-index: 999;
+  background: white;
+  color: black;
+  font-size: 1.4rem;
+  padding: 5px;
+  border: 1px solid #000;
+}
+
+.skip-link:focus {
+  left: 0;
+}
+
 .wrapper {
   max-width: 1200px;
   width: 75%;
@@ -599,8 +615,8 @@ i {
   scale: 1;
   border: 1px solid rgba(0, 0, 0, 0);
 }
-.section-branding h2:hover {
-  scale: 0.9;
+.section-branding h2:hover, .section-branding h2:focus {
+  color: #8d8c8c;
 }
 
 .desk-img-container {
@@ -998,7 +1014,7 @@ i {
   -webkit-transition: 300ms;
   transition: 300ms;
 }
-.blog-metadata p:hover {
+.blog-metadata p:hover, .blog-metadata p:focus {
   color: #000;
 }
 
@@ -1074,7 +1090,7 @@ i {
   -webkit-transition: 300ms;
   transition: 300ms;
 }
-.share-container i:hover {
+.share-container i:hover, .share-container i:focus {
   color: #8d8c8c;
 }
 
@@ -1098,7 +1114,7 @@ i {
   -webkit-transition: 300ms;
   transition: 300ms;
 }
-.posts-container li:hover {
+.posts-container li:hover, .posts-container li:focus {
   opacity: 0.5;
 }
 
@@ -1415,7 +1431,7 @@ footer a {
   transition: 300ms;
   cursor: pointer;
 }
-footer a:hover {
+footer a:hover, footer a:focus {
   opacity: 0.5;
 }
 
@@ -1438,7 +1454,7 @@ footer a:hover {
   -webkit-transition: 300ms;
   transition: 300ms;
 }
-.footer-icon-container a:hover {
+.footer-icon-container a:hover, .footer-icon-container a:focus {
   opacity: 0.5;
 }
 .footer-icon-container a i {
@@ -1484,14 +1500,17 @@ footer a:hover {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .email-container input[type=email] {
-  padding: 0 50px 0 20px;
+  padding: 14px 50px 15px 20px;
   border: none;
 }
 
 .email-submit-button {
-  padding: 15px;
+  padding: 8px;
   background-color: #C3DAB7;
   -webkit-transition: 300ms;
   transition: 300ms;

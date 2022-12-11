@@ -39,8 +39,9 @@
         transition: 300ms;
         scale: 1;
         border: 1px solid #00000000;
-        &:hover {
-            scale: 0.9;
+        &:hover,
+        &:focus {
+            color: $mediumGrey;
         }
     }
 }
