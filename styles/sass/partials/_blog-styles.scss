@@ -68,8 +68,14 @@
     padding: 1% 0;
     position: relative;
 
+
     p {
-        color: $mediumGrey;
+        color: $mediumGrey; 
+        transition: 300ms;
+
+        &:hover {
+            color: $black;
+        }
     }
 }
 
@@ -89,7 +95,10 @@
     flex-shrink: 3;
 }
 
-.date,
+.date {
+    flex-basis: 14%;
+}
+
 .category,
 .tags {
     flex-basis: 17%;
@@ -129,6 +138,11 @@
 
     i {
         padding: 10px;
+        transition: 300ms;
+        
+            &:hover {
+                color: $mediumGrey;
+            }
     }
 }
 
@@ -240,12 +254,13 @@
 
     input,
     textarea {
-        
+
         padding: 10px 5px;
         border-style: none none solid none;
         border-color: $lightGrey;
         border-size: 1px;
         transition: 300ms;
+
         &:hover,
         &:focus {
             color: $black;
@@ -276,6 +291,7 @@
     border-bottom: 1px solid $black ;
     transition: 300ms;
     scale: 1;
+
     &:hover,
     &:focus {
         scale: 0.90;

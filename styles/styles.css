@@ -594,6 +594,13 @@ i {
 }
 .section-branding h2 {
   margin-bottom: 15px;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+  scale: 1;
+  border: 1px solid rgba(0, 0, 0, 0);
+}
+.section-branding h2:hover {
+  scale: 0.9;
 }
 
 .desk-img-container {
@@ -912,6 +919,7 @@ i {
 .container-drop-img img {
   -o-object-fit: cover;
      object-fit: cover;
+  width: 100%;
 }
 
 /* BLOG STYLES */
@@ -987,6 +995,11 @@ i {
 }
 .blog-metadata p {
   color: #8d8c8c;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+.blog-metadata p:hover {
+  color: #000;
 }
 
 /* Blog Author Img */
@@ -1007,7 +1020,11 @@ i {
       flex-shrink: 3;
 }
 
-.date,
+.date {
+  -ms-flex-preferred-size: 14%;
+      flex-basis: 14%;
+}
+
 .category,
 .tags {
   -ms-flex-preferred-size: 17%;
@@ -1054,6 +1071,11 @@ i {
 }
 .share-container i {
   padding: 10px;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+.share-container i:hover {
+  color: #8d8c8c;
 }
 
 /* SECTION ONE: RELATED POSTS GALLERY------------------------------*/
@@ -1482,7 +1504,15 @@ footer a:hover {
 }
 
 .creative-container {
-  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-top: 10%;
   padding: 5% 0;
   border-top: 0.5px solid rgba(165, 165, 165, 0.589);
@@ -1860,10 +1890,6 @@ h4 {
   .article-blog h2 {
     font-size: 3.8rem;
   }
-  .administrator {
-    -ms-flex-negative: 2;
-        flex-shrink: 2;
-  }
 }
 /* --------------MEDIA QUERY 1000PX--------------- */
 @media (max-width: 1000px) {
@@ -1874,7 +1900,6 @@ h4 {
   .article-blog h2 {
     font-size: 3rem;
   }
-  /* Metadata Section */
   /* Metadata Section */
   .blog-metadata {
     -webkit-box-ordinal-group: 0;
@@ -1899,6 +1924,12 @@ h4 {
     -webkit-box-ordinal-group: 4;
         -ms-flex-order: 3;
             order: 3;
+  }
+  .date,
+.category,
+.tags,
+.administrator {
+    margin-bottom: 2%;
   }
   .blog-metadata::after {
     bottom: -10%;

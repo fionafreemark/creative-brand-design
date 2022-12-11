@@ -14,9 +14,9 @@
         font-size: 3.8rem;
     }
 
-    .administrator {
-        flex-shrink: 2;
-    }
+    // .administrator {
+    //     flex-shrink: 2;
+    // }
 }
 
 
@@ -33,26 +33,9 @@
         font-size: 3rem;
     }
 
-    /* Metadata Section */
-    // .administrator {
-    //     flex-basis: 30%;
-    //     flex-grow: 0;
-    //     flex-shrink: 0;
-    //     margin-top: 10px;
-    // }
-
-    // .date,
-    // .category,
-    // .tags {
-    //     flex-basis: 50%;
-    //     flex-grow: 0;
-    //     flex-shrink: 0;
-    //     margin-top: 10px;
-    // }
 
     /* Metadata Section */
     .blog-metadata {
-        // justify-content: flex-start;
         order: -1;
         position: relative;
     }
@@ -71,6 +54,13 @@
     .tags {
         flex-basis: 100%;
         order: 3;
+    }
+
+    .date,
+    .category,
+    .tags,
+    .administrator {
+        margin-bottom: 2%;
     }
 
     .blog-metadata::after {
