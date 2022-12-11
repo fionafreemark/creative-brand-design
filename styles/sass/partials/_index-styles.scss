@@ -33,12 +33,12 @@
         flex-wrap: wrap;
     }
 
-
     h2 {
         margin-bottom: 15px;
         transition: 300ms;
         scale: 1;
         border: 1px solid #00000000;
+
         &:hover,
         &:focus {
             color: $mediumGrey;
@@ -52,7 +52,6 @@
     position: relative;
 
     .desk-img {
-        // This margin is to make sure the text below doesn't flex wrap up onto the same line. Could perhaps also make it fd column instead.
         margin: 0 60%;
     }
 
@@ -114,7 +113,6 @@
     flex-basis: 60%;
     margin: 0 auto;
     text-align: center;
-
 
     p {
         margin-top: 5%;

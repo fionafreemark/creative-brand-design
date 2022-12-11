@@ -68,9 +68,8 @@
     padding: 1% 0;
     position: relative;
 
-
     p {
-        color: $mediumGrey; 
+        color: $mediumGrey;
         transition: 300ms;
 
         &:hover,
@@ -140,11 +139,11 @@
     i {
         padding: 10px;
         transition: 300ms;
-        
-            &:hover,
-            &:focus {
-                color: $mediumGrey;
-            }
+
+        &:hover,
+        &:focus {
+            color: $mediumGrey;
+        }
     }
 }
 
@@ -197,7 +196,6 @@
     display: flex;
     flex-basis: 10%;
     align-self: flex-start;
-
 }
 
 /* Background container/colour for comment text.*/
@@ -239,8 +237,6 @@
     color: $mediumGrey;
 }
 
-
-
 /* SECTION THREE: LEAVE A COMMENT ----------------------------------*/
 
 .section-comment-form {
@@ -257,7 +253,6 @@
 
     input,
     textarea {
-
         padding: 10px 5px;
         border-style: none none solid none;
         border-color: $lightGrey;

@@ -1,6 +1,6 @@
 @use "./variables" as *;
 
-
+/* TYPOGRAPHY STYLES */
 
 html {
     font-size: 62.5%;
@@ -39,6 +39,7 @@ a {
 
 p {
     line-height: 2.4rem;
+    color: $charcoal;
 }
 
 p,
@@ -85,7 +86,7 @@ button {
     letter-spacing: 0.07rem;
 }
 
-input, 
+input,
 textarea {
     color: $mediumGrey;
     font-size: 1.4rem;

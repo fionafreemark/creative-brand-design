@@ -2,7 +2,7 @@
 
 /* CONTACT PAGE SECTIONS STYLES */
 
-/* HEADER BEGINS */
+/* HEADER BEGINS -------------------------*/
 .contact-background-img {
     margin-top: 20px;
     background-image: url("../assets/contact-1.jpeg");
@@ -10,6 +10,7 @@
     background-repeat: no-repeat;
     min-height: 200px;
     background-position: bottom;
+    margin-bottom: 20px;
 }
 
 .contact-header h2 {
@@ -22,13 +23,11 @@
     width: 29%;
     align-items: center;
     position: relative;
-    top: -66px;
+    top: 129px;
 }
 /* HEADER ENDS */
 
 /* SECTION 1: CONTACT DETAILS ------------------------------*/
-
-
 .contact-header h2::before {
     content: "";
     border-bottom: 2px solid black;
@@ -38,15 +37,12 @@
     top: -40px;
 }
 
-/* SECTION 1: CONTACT DETAILS ------------------ */
 .section-contact-details,
 .section-in-touch,
 .details-container,
 .contact-icon-container {
     padding: 3% 0;
 }
-
-
 
 .details-container,
 .section-in-touch {
@@ -60,6 +56,7 @@
     flex-wrap: wrap;
     justify-content: space-evenly;
     flex-basis: 100%;
+    margin-top: 2%;
 
     i {
         font-size: 3.5rem;
@@ -83,6 +80,10 @@
     }
 }
 
+.comment-form-container {
+    margin-top: 8%;
+}
+
 .contact-phone-container,
 .contact-email-container,
 .contact-address-container {
@@ -101,7 +102,6 @@
 }
 
 /* SECTION 3: FULL BLEED IMAGE-------------------------- */
-
 .section-comments-full-image {
     display: flex;
     width: 100%;

@@ -1,9 +1,5 @@
 @use "variables" as *;
 
-// Use 1000px 800px & 500px
-
-/* Icon gallery began to scroll overtop of the dark part of the image so I've added a translucent background so the text is legible. */
-
 /* --------------MEDIA QUERY 1150PX--------------- */
 
 @media (max-width: 1150px) {
@@ -87,7 +83,6 @@
     }
 
     /* Section 1: Branding */
-
     .branding-text-container {
         flex-basis: 100%;
     }
@@ -211,7 +206,6 @@
         padding-top: 15%;
     }
 
-
     .desk-img-container {
         .circular-text {
             width: 20%;
@@ -238,7 +232,6 @@
             }
         }
     }
-
 
     /* Section 3: Icon Gallery Styles Styles */
     .section-icon-gallery {
@@ -270,7 +263,6 @@
 
         .container-drop-img {
             flex-basis: 100%;
-
         }
     }
 
@@ -302,7 +294,6 @@
     }
 }
 
-
 /* --------------MEDIA QUERY 500PX--------------- */
 
 @media (max-width: 500px) {
@@ -320,11 +311,9 @@
             height: 60px;
             bottom: -30px;
         }
-
     }
 
     /* Section 1: Branding */
-
     .desk-img-container {
         min-height: 300px;
 
@@ -339,13 +328,11 @@
         }
     }
 
-    .branding-text-container {
-
-        .container-branding,
-        .container-design-develop {
-            margin: 10% 0 2% 0;
-        }
+    .container-branding,
+    .container-design-develop {
+        margin: 10% 0 2% 0;
     }
+
 
     /* Section 2: Circle Gallery */
     .section-gallery {
@@ -381,7 +368,6 @@
                 .gallery-text-container {
                     text-align: center;
                 }
-
             }
         }
     }
@@ -416,6 +402,7 @@
             font-size: 1.3rem;
         }
     }
+
     .contact-us-container p:first-of-type {
         text-align: center;
     }

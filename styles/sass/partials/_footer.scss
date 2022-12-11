@@ -1,9 +1,5 @@
 @use "./variables" as *;
 
-// * {
-//     border: 0.5px solid white;
-// }
-
 footer {
     background-color: $charcoal;
     padding-top: 10%;
@@ -19,6 +15,7 @@ footer {
     }
 }
 
+/* Footer Container */
 .footer-container {
     display: flex;
     justify-content: space-between;
@@ -27,7 +24,7 @@ footer {
         margin-bottom: 25px;
     }
 }
-
+/* Footer Icon Container */
 .footer-icon-container {
     margin-top: 30px;
 
@@ -45,6 +42,7 @@ footer {
     }
 }
 
+/* Recent Posts Container */
 .recent-posts-container {
     h4 {
         text-align: center;
@@ -56,7 +54,7 @@ footer {
     }
 }
 
-
+/* Twitter Container */
 .twitter-container,
 .subscribe-container {
     h4 {
@@ -64,7 +62,7 @@ footer {
     }
 }
 
-
+/* Email Form */
 .footer-form {
     display: flex;
     flex-direction: column;
@@ -102,6 +100,7 @@ footer {
 }
 }
 
+/* Footer Logo */
 .creative-container {
     display: flex;
     justify-content: center;

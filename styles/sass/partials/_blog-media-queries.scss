@@ -1,11 +1,5 @@
 @use "variables" as *;
 
-// Use 1000px 800px & 500px
-
-/* Icon gallery began to scroll overtop of the dark part of the image so I've added a translucent background so the text is legible. */
-
-
-
 /* --------------MEDIA QUERY 1150PX--------------- */
 
 @media (max-width: 1300px) {
@@ -14,11 +8,7 @@
         font-size: 3.8rem;
     }
 
-    // .administrator {
-    //     flex-shrink: 2;
-    // }
 }
-
 
 /* --------------MEDIA QUERY 1000PX--------------- */
 
@@ -47,7 +37,6 @@
         right: 10px;
         top: 10px;
     }
-
 
     .date,
     .category,
@@ -100,12 +89,8 @@
             }
         }
     }
-
-
-
-
+    
 }
-
 
 /* --------------MEDIA QUERY 500PX--------------- */
 
@@ -116,13 +101,13 @@
         font-size: 1.2rem;
     }
 
-/* Comment Section */
-.comment-img-container {
-    flex-basis: 20%;
-}
-.comment-text-container {
-    flex-basis: 74%;
-}
+    /* Comment Section */
+    .comment-img-container {
+        flex-basis: 20%;
+    }
 
+    .comment-text-container {
+        flex-basis: 74%;
+    }
 
 }

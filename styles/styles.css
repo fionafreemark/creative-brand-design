@@ -238,6 +238,7 @@ html {
   overflow: hidden;
 }
 
+/* TYPOGRAPHY STYLES */
 html {
   font-size: 62.5%;
   font-family: "Montserrat", sans-serif;
@@ -275,6 +276,7 @@ a {
 
 p {
   line-height: 2.4rem;
+  color: #333333;
 }
 
 p,
@@ -337,6 +339,7 @@ body {
   padding: 0;
 }
 
+/* Navigation Skip Link */
 .skip-link {
   position: absolute;
   left: -1000px;
@@ -359,6 +362,7 @@ body {
   margin: 0 auto;
 }
 
+/* Removing/Adding Default Styles */
 ul {
   margin: 0;
   padding: 0;
@@ -374,10 +378,6 @@ h3,
 h4,
 p {
   margin: 0;
-}
-
-p {
-  color: #333333;
 }
 
 a {
@@ -1303,7 +1303,7 @@ i {
 }
 
 /* CONTACT PAGE SECTIONS STYLES */
-/* HEADER BEGINS */
+/* HEADER BEGINS -------------------------*/
 .contact-background-img {
   margin-top: 20px;
   background-image: url("../assets/contact-1.jpeg");
@@ -1311,6 +1311,7 @@ i {
   background-repeat: no-repeat;
   min-height: 200px;
   background-position: bottom;
+  margin-bottom: 20px;
 }
 
 .contact-header h2 {
@@ -1331,7 +1332,7 @@ i {
       -ms-flex-align: center;
           align-items: center;
   position: relative;
-  top: -66px;
+  top: 129px;
 }
 
 /* HEADER ENDS */
@@ -1345,7 +1346,6 @@ i {
   top: -40px;
 }
 
-/* SECTION 1: CONTACT DETAILS ------------------ */
 .section-contact-details,
 .section-in-touch,
 .details-container,
@@ -1369,6 +1369,7 @@ i {
           justify-content: space-evenly;
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
+  margin-top: 2%;
 }
 .contact-icon-container i {
   font-size: 3.5rem;
@@ -1386,6 +1387,10 @@ i {
 }
 .contact-icon-container a:hover, .contact-icon-container a:focus {
   color: #8d8c8c;
+}
+
+.comment-form-container {
+  margin-top: 8%;
 }
 
 .contact-phone-container,
@@ -1435,6 +1440,7 @@ footer a:hover, footer a:focus {
   opacity: 0.5;
 }
 
+/* Footer Container */
 .footer-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1447,6 +1453,7 @@ footer a:hover, footer a:focus {
   margin-bottom: 25px;
 }
 
+/* Footer Icon Container */
 .footer-icon-container {
   margin-top: 30px;
 }
@@ -1461,6 +1468,7 @@ footer a:hover, footer a:focus {
   margin-right: 20px;
 }
 
+/* Recent Posts Container */
 .recent-posts-container h4 {
   text-align: center;
 }
@@ -1469,11 +1477,13 @@ footer a:hover, footer a:focus {
   line-height: 3rem;
 }
 
+/* Twitter Container */
 .twitter-container h4,
 .subscribe-container h4 {
   text-align: end;
 }
 
+/* Email Form */
 .footer-form {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1522,6 +1532,7 @@ footer a:hover, footer a:focus {
   color: #333333;
 }
 
+/* Footer Logo */
 .creative-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1541,7 +1552,6 @@ footer a:hover, footer a:focus {
   letter-spacing: 0.6rem;
 }
 
-/* Icon gallery began to scroll overtop of the dark part of the image so I've added a translucent background so the text is legible. */
 /* --------------MEDIA QUERY 1150PX--------------- */
 @media (max-width: 1150px) {
   /* Icon Gallery Styles */
@@ -1836,8 +1846,8 @@ h4 {
     left: calc(50% - 9vw);
     top: calc(85% + 1vh);
   }
-  .branding-text-container .container-branding,
-.branding-text-container .container-design-develop {
+  .container-branding,
+.container-design-develop {
     margin: 10% 0 2% 0;
   }
   /* Section 2: Circle Gallery */
@@ -1906,7 +1916,6 @@ h4 {
     text-align: center;
   }
 }
-/* Icon gallery began to scroll overtop of the dark part of the image so I've added a translucent background so the text is legible. */
 /* --------------MEDIA QUERY 1150PX--------------- */
 @media (max-width: 1300px) {
   .article-blog h2 {
@@ -2012,7 +2021,7 @@ h4 {
   .contact-header h2 {
     font-size: 4rem;
   }
-  /* SECTION 1: CONTACT DETAILS -----------------------*/
+  /* Section 1: Contact Details */
   .contact-icon-container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -2035,7 +2044,7 @@ h4 {
 .contact-email-container::before {
     display: none;
   }
-  /* SECTION 2: GET IN TOUCH WITH US FORMS -------------- */
+  /* Section 2: Get In Touch With Us Forms */
   .comment-form-container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -2049,7 +2058,7 @@ h4 {
     -ms-flex-item-align: center;
         align-self: center;
   }
-  /* SECTION 3: FULL BLEED IMAGE-------------------------- */
+  /* Section 3: Full Bleed Image */
   .section-comments-full-image {
     max-height: 500px;
   }
@@ -2059,7 +2068,13 @@ h4 {
   .contact-background-img {
     background-position: left;
   }
-  /* SECTION 2: GET IN TOUCH WITH US FORMS -------------- */
+  .section-contact-details,
+.section-in-touch,
+.details-container,
+.contact-icon-container {
+    padding: 5% 0;
+  }
+  /* Section 2: Get In Touch With Us Forms */
   .comment-form-container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -2069,7 +2084,7 @@ h4 {
   .comment-form-container input {
     margin: 4% 0;
   }
-  /* SECTION 3: FULL BLEED IMAGE-------------------------- */
+  /* Section 3: Full Bleed Image */
   .section-comments-full-image {
     max-height: 300px;
   }

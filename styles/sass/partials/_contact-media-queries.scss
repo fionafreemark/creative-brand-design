@@ -1,7 +1,5 @@
 @use "./variables" as *;
 
-// Use 1000px 800px & 500px
-
 /* CONTACT PAGE MEDIA QUERIES */
 
 /* MEDIA QUERY MAX WIDTH 1000PX ------------------------------------------------- */
@@ -11,7 +9,7 @@
         font-size: 4rem;
     }
 
-    /* SECTION 1: CONTACT DETAILS -----------------------*/
+    /* Section 1: Contact Details */
     .contact-icon-container {
         flex-direction: column;
         justify-content: space-between;
@@ -30,8 +28,7 @@
         display: none;
     }
 
-    /* SECTION 2: GET IN TOUCH WITH US FORMS -------------- */
-
+    /* Section 2: Get In Touch With Us Forms */
     .comment-form-container {
         flex-direction: column;
 
@@ -44,12 +41,11 @@
         }
     }
 
-    /* SECTION 3: FULL BLEED IMAGE-------------------------- */
+    /* Section 3: Full Bleed Image */
     .section-comments-full-image {
         max-height: 500px;
     }
 }
-
 
 /* MEDIA QUERY MAX WIDTH 800PX -------------------------------------------------- */
 
@@ -59,8 +55,14 @@
         background-position: left;
     }
 
-    /* SECTION 2: GET IN TOUCH WITH US FORMS -------------- */
+    .section-contact-details,
+    .section-in-touch,
+    .details-container,
+    .contact-icon-container {
+        padding: 5% 0;
+    }
 
+    /* Section 2: Get In Touch With Us Forms */
     .comment-form-container {
         flex-direction: column;
 
@@ -69,8 +71,7 @@
         }
     }
 
-
-    /* SECTION 3: FULL BLEED IMAGE-------------------------- */
+    /* Section 3: Full Bleed Image */
     .section-comments-full-image {
         max-height: 300px;
     }
