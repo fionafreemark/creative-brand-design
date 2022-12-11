@@ -991,18 +991,20 @@ i {
 
 /* Blog Author Img */
 .writer-img-container {
-  -ms-flex-preferred-size: 7%;
-      flex-basis: 7%;
   margin-right: 10px;
 }
 .writer-img-container img {
   border-radius: 50%;
 }
 
-/* Blog Metadata Formatting */
 .administrator {
-  -ms-flex-preferred-size: 30%;
-      flex-basis: 30%;
+  -ms-flex-preferred-size: 17%;
+      flex-basis: 17%;
+  -webkit-box-flex: 3;
+      -ms-flex-positive: 3;
+          flex-grow: 3;
+  -ms-flex-negative: 3;
+      flex-shrink: 3;
 }
 
 .date,
@@ -1010,6 +1012,11 @@ i {
 .tags {
   -ms-flex-preferred-size: 17%;
       flex-basis: 17%;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
 }
 
 .category-ul,
@@ -1849,361 +1856,92 @@ h4 {
 }
 /* Icon gallery began to scroll overtop of the dark part of the image so I've added a translucent background so the text is legible. */
 /* --------------MEDIA QUERY 1150PX--------------- */
-@media (max-width: 1150px) {
-  /* Icon Gallery Styles */
-  .section-icon-gallery .icon-gallery-container {
-    margin-left: 8%;
-    background-color: rgba(241, 239, 239, 0.785);
+@media (max-width: 1300px) {
+  .article-blog h2 {
+    font-size: 3.8rem;
   }
-  /* Section 4: Meet our Team*/
-  .container-meet-our-team .container-team-players {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    padding: 2%;
-  }
-  .container-meet-our-team .container-team-players h3 {
-    margin: 0;
-  }
-  .container-meet-our-team p {
-    font-size: 1.2rem;
-  }
-  /* Footer */
-  footer p,
-footer a,
-footer label {
-    font-size: 1.3rem;
+  .administrator {
+    -ms-flex-negative: 2;
+        flex-shrink: 2;
   }
 }
 /* --------------MEDIA QUERY 1000PX--------------- */
 @media (max-width: 1000px) {
-  /* Header Styles */
-  .header-nav {
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-transition: 500ms;
-    transition: 500ms;
-    position: relative;
-    /* Menus hidden so they can be revealed by toggle */
-    /* Toggle For Hidden Menu */
+  .blog-header {
+    background-position: bottom left;
   }
-  .header-nav .home-menu,
-.header-nav .shop-menu {
+  /* Blog Title */
+  .article-blog h2 {
+    font-size: 3rem;
+  }
+  /* Metadata Section */
+  /* Metadata Section */
+  .blog-metadata {
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+    position: relative;
+  }
+  .writer-img-container {
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2;
-    -ms-flex-preferred-size: auto;
-        flex-basis: auto;
-    display: none;
-  }
-  .header-nav .menu-button {
-    display: block;
-    cursor: pointer;
-  }
-  .header-nav #toggle:checked + .mobile-menu {
+    margin: 0;
     position: absolute;
-    top: 60px;
-    display: block;
+    right: 10px;
+    top: 10px;
   }
-  .header-nav .creative-logo {
+  .date,
+.category,
+.tags {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
   }
-  .header-nav .creative-logo h1 {
-    font-size: 2.6rem;
-    text-align: left;
-  }
-  /* Section 1: Branding */
-  .branding-text-container {
-    -ms-flex-preferred-size: 100%;
-        flex-basis: 100%;
-  }
-  .desk-img-container .circular-text {
-    width: 30%;
-  }
-  /* Section 2: Circle Gallery */
-  .section-gallery .container-circle-gallery .magazine-img {
-    width: 70%;
-  }
-  /* Section 4: Meet Our Team*/
-  .section-team h2 {
-    margin-top: 50px;
-  }
-  .container-meet-our-team .container-team-players {
-    -ms-flex-preferred-size: 100%;
-        flex-basis: 100%;
-    padding: 4%;
-    margin: 0 0 5px 0;
-  }
-  .container-meet-our-team .container-team-img {
-    -ms-flex-preferred-size: 50%;
-        flex-basis: 50%;
-    height: auto;
-    margin: 0;
-  }
-  .container-meet-our-team .container-team-img:nth-child(odd) {
-    padding: 5px 0px 5px 5px;
-  }
-  .container-meet-our-team .container-team-img:nth-child(even) {
-    padding: 5px 5px 5px 0px;
-  }
-  .container-meet-our-team .container-work-with-us {
-    -ms-flex-preferred-size: 50%;
-        flex-basis: 50%;
-    margin: 0;
-    padding: 5px 0px 5px 5px;
-  }
-  .container-meet-our-team .container-work-with-us a {
-    padding: 47% 20%;
-  }
-  /* Section 5: Drop Us A Line */
-  .section-drop-a-line .container-drop-img img {
-    height: 100%;
-  }
-  /* Footer Styles */
-  .footer-container {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
-  .footer-container .contact-us-container {
-    min-width: 40%;
-  }
-  .footer-container .recent-posts-container {
-    min-width: 40%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end;
-  }
-  .footer-container .twitter-container,
-.footer-container .subscribe-container {
-    width: 100%;
-    margin-top: 30px;
-  }
-  .footer-container .twitter-container h4,
-.footer-container .subscribe-container h4 {
-    text-align: center;
-  }
-  .footer-container .twitter-container label,
-.footer-container .subscribe-container label {
-    text-align: center;
-  }
-  .footer-container .twitter-container .email-container,
-.footer-container .subscribe-container .email-container {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+  .blog-metadata::after {
+    bottom: -10%;
   }
 }
 /* --------------MEDIA QUERY 800PX--------------- */
 @media (max-width: 800px) {
-  /* Header Styles */
-  .header-nav .shop-menu,
-.header-nav .home-menu {
-    width: 100%;
+  /* Related Posts Section ----------------*/
+  /* H3 Styles for Each Section */
+  .blog-section-title {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+  /* Image Gallery */
+  .posts-container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-  }
-  /* Section 1: Branding */
-  .section-branding {
-    padding-top: 15%;
-  }
-  .desk-img-container .circular-text {
-    width: 20%;
-    left: calc(50% - 47px);
-    top: 85%;
-  }
-  .branding-text-container {
-    -ms-flex-preferred-size: 100%;
-        flex-basis: 100%;
-  }
-  .branding-text-container .container-branding,
-.branding-text-container .container-design-develop {
-    -ms-flex-preferred-size: 100%;
-        flex-basis: 100%;
-    margin: 7% 0 2% 0;
-  }
-  /* Section 2: Circle Gallery */
-  .section-gallery .container-circle-gallery .magazine-img {
-    width: 60%;
-  }
-  /* Section 3: Icon Gallery Styles Styles */
-  .section-icon-gallery .icon-gallery-container {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -ms-flex-preferred-size: 100%;
-        flex-basis: 100%;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .section-icon-gallery .icon-gallery-container li {
-    -ms-flex-preferred-size: 100%;
-        flex-basis: 100%;
-    padding: 0 15%;
-  }
-  /* Section 5: Drop Us A Line*/
-  .section-drop-a-line {
-    position: relative;
-  }
-  .section-drop-a-line .container-drop-a-line {
-    position: absolute;
-    width: 90%;
-    top: 20%;
-    left: 5%;
-  }
-  .section-drop-a-line .container-drop-img {
-    -ms-flex-preferred-size: 100%;
-        flex-basis: 100%;
-  }
-  /* Footer Styles */
-  .footer-container {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    height: auto;
   }
-  .footer-container .contact-us-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    min-width: 100%;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+  .posts-container li {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    height: 100%;
+    padding-bottom: 3%;
   }
-  .footer-container .recent-posts-container {
-    min-width: 100%;
-    margin-top: 30px;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .footer-icon-container a i {
-    margin: 0 20px;
+  .posts-container li img {
+    width: 100%;
+    max-height: 350px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: bottom;
+       object-position: bottom;
   }
 }
 /* --------------MEDIA QUERY 500PX--------------- */
 @media (max-width: 500px) {
-  /* Global Styles */
-  h2,
-h3,
-h4 {
-    font-size: 1.6rem;
-  }
-  /* Header */
-  header .vertical-line {
-    height: 60px;
-    bottom: -30px;
-  }
-  /* Section 1: Branding */
-  .desk-img-container {
-    min-height: 300px;
-  }
-  .desk-img-container img {
-    -o-object-fit: cover;
-       object-fit: cover;
-  }
-  .desk-img-container .circular-text {
-    width: 20%;
-    left: calc(50% - 9vw);
-    top: calc(85% + 1vh);
-  }
-  .branding-text-container .container-branding,
-.branding-text-container .container-design-develop {
-    margin: 10% 0 2% 0;
-  }
-  /* Section 2: Circle Gallery */
-  .section-gallery button {
-    -ms-flex-item-align: baseline;
-        align-self: baseline;
-    margin-top: 25%;
-  }
-  .section-gallery .container-circle-gallery {
-    -ms-flex-preferred-size: 100%;
-        flex-basis: 100%;
-    margin: 0 auto;
-  }
-  .section-gallery .container-circle-gallery .magazine-img {
-    width: 80%;
-    margin-bottom: 20px;
-  }
-  /* Section 3: Icon Gallery Styles Styles */
-  .section-icon-gallery .icon-gallery-container {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -ms-flex-preferred-size: 100%;
-        flex-basis: 100%;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .section-icon-gallery .icon-gallery-container li {
-    -ms-flex-preferred-size: 100%;
-        flex-basis: 100%;
-    padding: 5% 15%;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .section-icon-gallery .icon-gallery-container li .gallery-text-container {
-    text-align: center;
-  }
-  /* Section 4: Meet our Team */
-  .section-team {
-    padding-bottom: 10px;
-  }
-  .section-team .anchor-box h3 {
-    font-size: 1.4rem;
-  }
-  /* Section 5: Drop Us A Line */
-  .section-drop-a-line .container-drop-a-line {
-    position: static;
-    -ms-flex-preferred-size: 100%;
-        flex-basis: 100%;
-  }
-  .section-drop-a-line .container-drop-img {
-    display: none;
-  }
-  /* Footer Styles */
-  .footer-container p {
-    font-size: 1.3rem;
+  /* Blog Menu */
+  .blog-menu a {
+    font-size: 1.2rem;
   }
 }
 /* CONTACT PAGE MEDIA QUERIES */

@@ -75,7 +75,6 @@
 
 /* Blog Author Img */
 .writer-img-container {
-    flex-basis: 7%;
     margin-right: 10px;
 
     img {
@@ -84,16 +83,18 @@
     }
 }
 
-/* Blog Metadata Formatting */
 .administrator {
-    flex-basis: 30%;
+    flex-basis: 17%;
+    flex-grow: 3;
+    flex-shrink: 3;
 }
 
 .date,
 .category,
 .tags {
     flex-basis: 17%;
-
+    flex-grow: 1;
+    flex-shrink: 1;
 }
 
 .category-ul,
@@ -108,14 +109,6 @@
         content: ",";
     }
 }
-
-// .blog-metadata::after {
-//     content: " ";
-//     border-bottom: 2px solid $lightGrey;
-//     width: 100%;
-//     position: absolute;
-//     bottom: -10%;
-// }
 
 /* Blog Article Text -----------------------*/
 .blog-text {
