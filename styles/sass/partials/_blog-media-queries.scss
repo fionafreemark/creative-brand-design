@@ -4,300 +4,116 @@
 
 /* Icon gallery began to scroll overtop of the dark part of the image so I've added a translucent background so the text is legible. */
 
+
+
 /* --------------MEDIA QUERY 1150PX--------------- */
 
-@media (max-width: 1150px) {
+@media (max-width: 1300px) {
 
-    /* Icon Gallery Styles */
-    .section-icon-gallery {
-        .icon-gallery-container {
-            margin-left: 8%;
-            background-color: rgba(241, 239, 239, 0.785);
-        }
+    .article-blog h2 {
+        font-size: 3.8rem;
     }
 
-    /* Section 4: Meet our Team*/
-    .container-meet-our-team {
-        .container-team-players {
-            justify-content: center;
-            padding: 2%;
-
-            h3 {
-                margin: 0;
-            }
-        }
-
-        p {
-            font-size: 1.2rem;
-        }
-    }
-
-    /* Footer */
-    footer {
-
-        p,
-        a,
-        label {
-            font-size: 1.3rem;
-        }
+    .administrator {
+        flex-shrink: 2;
     }
 }
+
 
 /* --------------MEDIA QUERY 1000PX--------------- */
 
 @media (max-width: 1000px) {
 
-    /* Header Styles */
-    .header-nav {
-        justify-content: flex-start;
-        flex-wrap: wrap;
-        transition: 500ms;
+    .blog-header {
+        background-position: bottom left;
+    }
+
+    /* Blog Title */
+    .article-blog h2 {
+        font-size: 3rem;
+    }
+
+    /* Metadata Section */
+    // .administrator {
+    //     flex-basis: 30%;
+    //     flex-grow: 0;
+    //     flex-shrink: 0;
+    //     margin-top: 10px;
+    // }
+
+    // .date,
+    // .category,
+    // .tags {
+    //     flex-basis: 50%;
+    //     flex-grow: 0;
+    //     flex-shrink: 0;
+    //     margin-top: 10px;
+    // }
+
+    /* Metadata Section */
+    .blog-metadata {
+        // justify-content: flex-start;
+        order: -1;
         position: relative;
-
-        /* Menus hidden so they can be revealed by toggle */
-        .home-menu,
-        .shop-menu {
-            order: 2;
-            flex-basis: auto;
-            display: none;
-        }
-
-        .menu-button {
-            display: block;
-            cursor: pointer;
-        }
-
-        /* Toggle For Hidden Menu */
-        #toggle:checked+.mobile-menu {
-            position: absolute;
-            top: 60px;
-
-            display: block;
-
-        }
-
-        .creative-logo {
-            flex-basis: 100%;
-            order: 1;
-
-
-            h1 {
-                font-size: 2.6rem;
-                text-align: left;
-            }
-        }
     }
 
-    /* Section 1: Branding */
+    .writer-img-container {
+        order: 2;
+        margin: 0;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+    }
 
-    .branding-text-container {
+
+    .date,
+    .category,
+    .tags {
         flex-basis: 100%;
+        order: 3;
     }
 
-    .desk-img-container .circular-text {
-        width: 30%;
+    .blog-metadata::after {
+        bottom: -10%;
     }
 
-    /* Section 2: Circle Gallery */
-    .section-gallery {
-        .container-circle-gallery {
-            .magazine-img {
-                width: 70%;
-            }
-        }
-    }
-
-    /* Section 4: Meet Our Team*/
-    .section-team {
-        h2 {
-            margin-top: 50px;
-        }
-    }
-
-    .container-meet-our-team {
-        .container-team-players {
-            flex-basis: 100%;
-            padding: 4%;
-            margin: 0 0 5px 0;
-        }
-
-        .container-team-img {
-            flex-basis: 50%;
-            height: auto;
-            margin: 0;
-        }
-
-        .container-team-img:nth-child(odd) {
-            padding: 5px 0px 5px 5px;
-        }
-
-        .container-team-img:nth-child(even) {
-            padding: 5px 5px 5px 0px;
-        }
-
-        .container-work-with-us {
-            flex-basis: 50%;
-            margin: 0;
-            padding: 5px 0px 5px 5px;
-
-            a {
-                padding: 47% 20%;
-            }
-        }
-    }
-
-
-
-    /* Section 5: Drop Us A Line */
-    .section-drop-a-line .container-drop-img img {
-        height: 100%;
-    }
-
-    /* Footer Styles */
-    .footer-container {
-        flex-wrap: wrap;
-
-        .contact-us-container {
-            min-width: 40%;
-        }
-
-        .recent-posts-container {
-            min-width: 40%;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-end;
-        }
-
-        .twitter-container,
-        .subscribe-container {
-            width: 100%;
-            margin-top: 30px;
-
-            h4 {
-                text-align: center;
-            }
-
-            label {
-                text-align: center;
-            }
-
-            .email-container {
-                justify-content: center;
-            }
-        }
-    }
 }
 
 /* --------------MEDIA QUERY 800PX--------------- */
 
 @media (max-width: 800px) {
 
-    /* Header Styles */
-    .header-nav {
+    /* Related Posts Section ----------------*/
 
-        .shop-menu,
-        .home-menu {
-            width: 100%;
-            flex-direction: column;
-            align-items: flex-start;
-            justify-content: flex-start;
-        }
+    /* H3 Styles for Each Section */
+    .blog-section-title {
+        font-size: 2.5rem;
+        margin-bottom: 10px;
     }
 
-    /* Section 1: Branding */
-    .section-branding {
-        padding-top: 15%;
-    }
-
-
-    .desk-img-container {
-        .circular-text {
-            width: 20%;
-            left: calc(50% - 47px);
-            top: 85%;
-        }
-    }
-
-    .branding-text-container {
-        flex-basis: 100%;
-
-        .container-branding,
-        .container-design-develop {
-            flex-basis: 100%;
-            margin: 7% 0 2% 0;
-        }
-    }
-
-    /* Section 2: Circle Gallery */
-    .section-gallery {
-        .container-circle-gallery {
-            .magazine-img {
-                width: 60%;
-            }
-        }
-    }
-
-
-    /* Section 3: Icon Gallery Styles Styles */
-    .section-icon-gallery {
-        .icon-gallery-container {
-            flex-direction: column;
-            flex-basis: 100%;
-            justify-content: center;
-            align-items: center;
-
-            li {
-                flex-basis: 100%;
-                padding: 0 15%;
-            }
-        }
-    }
-
-
-    /* Section 5: Drop Us A Line*/
-
-    .section-drop-a-line {
-        position: relative;
-
-        .container-drop-a-line {
-            position: absolute;
-            width: 90%;
-            top: 20%;
-            left: 5%;
-        }
-
-        .container-drop-img {
-            flex-basis: 100%;
-
-        }
-    }
-
-    /* Footer Styles */
-    .footer-container {
+    /* Image Gallery */
+    .posts-container {
+        flex-direction: column;
         flex-wrap: wrap;
+        height: auto;
 
-        .contact-us-container {
-            display: flex;
-            flex-direction: column;
-            min-width: 100%;
-            justify-content: center;
-            align-items: center;
-        }
+        li {
+            flex-basis: 100%;
+            height: 100%;
+            padding-bottom: 3%;
 
-        .recent-posts-container {
-            min-width: 100%;
-            margin-top: 30px;
-            align-items: center;
-        }
-    }
-
-    .footer-icon-container {
-        a {
-            i {
-                margin: 0 20px;
+            img {
+                width: 100%;
+                max-height: 350px;
+                object-fit: cover;
+                object-position: bottom;
             }
         }
     }
+
+
+
+
 }
 
 
@@ -305,113 +121,12 @@
 
 @media (max-width: 500px) {
 
-    /* Global Styles */
-    h2,
-    h3,
-    h4 {
-        font-size: 1.6rem;
+    /* Blog Menu */
+    .blog-menu a {
+        font-size: 1.2rem;
     }
 
-    /* Header */
-    header {
-        .vertical-line {
-            height: 60px;
-            bottom: -30px;
-        }
 
-    }
 
-    /* Section 1: Branding */
 
-    .desk-img-container {
-        min-height: 300px;
-
-        img {
-            object-fit: cover;
-        }
-
-        .circular-text {
-            width: 20%;
-            left: calc(50% - 9vw);
-            top: calc(85% + 1vh);
-        }
-    }
-
-    .branding-text-container {
-
-        .container-branding,
-        .container-design-develop {
-            margin: 10% 0 2% 0;
-        }
-    }
-
-    /* Section 2: Circle Gallery */
-    .section-gallery {
-        button {
-            align-self: baseline;
-            margin-top: 25%;
-        }
-
-        .container-circle-gallery {
-            flex-basis: 100%;
-            margin: 0 auto;
-
-            .magazine-img {
-                width: 80%;
-                margin-bottom: 20px;
-            }
-        }
-    }
-
-    /* Section 3: Icon Gallery Styles Styles */
-    .section-icon-gallery {
-        .icon-gallery-container {
-            flex-direction: column;
-            flex-basis: 100%;
-            justify-content: center;
-            align-items: center;
-
-            li {
-                flex-basis: 100%;
-                padding: 5% 15%;
-                flex-direction: column;
-
-                .gallery-text-container {
-                    text-align: center;
-                }
-
-            }
-        }
-    }
-
-    /* Section 4: Meet our Team */
-    .section-team {
-        padding-bottom: 10px;
-
-        .anchor-box {
-            h3 {
-                font-size: 1.4rem;
-            }
-        }
-    }
-
-    /* Section 5: Drop Us A Line */
-    .section-drop-a-line {
-
-        .container-drop-a-line {
-            position: static;
-            flex-basis: 100%;
-        }
-
-        .container-drop-img {
-            display: none;
-        }
-    }
-
-    /* Footer Styles */
-    .footer-container {
-        p {
-            font-size: 1.3rem;
-        }
-    }
 }
