@@ -1396,8 +1396,8 @@ i {
 .contact-phone-container,
 .contact-email-container,
 .contact-address-container {
-  -ms-flex-preferred-size: 30%;
-      flex-basis: 30%;
+  -ms-flex-preferred-size: 28%;
+      flex-basis: 28%;
   position: relative;
 }
 
