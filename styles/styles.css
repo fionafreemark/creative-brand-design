@@ -1902,6 +1902,9 @@ h4 {
   .footer-container p {
     font-size: 1.3rem;
   }
+  .contact-us-container p:first-of-type {
+    text-align: center;
+  }
 }
 /* Icon gallery began to scroll overtop of the dark part of the image so I've added a translucent background so the text is legible. */
 /* --------------MEDIA QUERY 1150PX--------------- */
@@ -1992,6 +1995,15 @@ h4 {
   /* Blog Menu */
   .blog-menu a {
     font-size: 1.2rem;
+  }
+  /* Comment Section */
+  .comment-img-container {
+    -ms-flex-preferred-size: 20%;
+        flex-basis: 20%;
+  }
+  .comment-text-container {
+    -ms-flex-preferred-size: 74%;
+        flex-basis: 74%;
   }
 }
 /* CONTACT PAGE MEDIA QUERIES */
