@@ -12,7 +12,8 @@ footer {
         transition: 300ms;
         cursor: pointer;
 
-        &:hover {
+        &:hover,
+        &:focus {
             opacity: 0.5;
         }
     }
@@ -33,7 +34,8 @@ footer {
     a {
         transition: 300ms;
 
-        &:hover {
+        &:hover,
+        &:focus {
             opacity: 0.5;
         }
 
@@ -78,15 +80,16 @@ footer {
 .email-container {
     display: flex;
     justify-content: flex-end;
+    align-items: center;
 
     input[type="email"] {
-        padding: 0 50px 0 20px;
+        padding: 14px 50px 15px 20px;
         border: none;
     }
 }
 
 .email-submit-button {
-    padding: 15px;
+    padding: 8px;
     background-color: $lightSage;
     transition: 300ms;
     

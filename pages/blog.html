@@ -15,6 +15,8 @@
 </head>
 
 <body>
+    <!-- Skip Link -->
+    <a href="#main-content" class="skip-link">Skip to main content.</a>
     <!-- HEADER BEGINS -->
     <header class="blog-header">
         <nav class="header-nav wrapper">
@@ -29,7 +31,7 @@
                     <a href="../index.html">Home</a>
                 </li>
                 <li>
-                    <a class="active-link"href="./blog.html">Blog</a>
+                    <a class="active-link" href="./blog.html">Blog</a>
                 </li>
                 <li>
                     <a href="#">Portfolio</a>
@@ -57,7 +59,7 @@
                     <a href="../index.html">Home</a>
                 </li>
                 <li>
-                    <a class="active-link"href="./blog.html">Blog</a>
+                    <a class="active-link" href="./blog.html">Blog</a>
                 </li>
                 <li>
                     <a href="">Portfolio</a>
@@ -88,7 +90,7 @@
     <!-- HEADER ENDS -->
 
     <!-- MAIN BEGINS -->
-    <main>
+    <main id="main-content">
         <!-- ARTICLE - BLOG - BEGINS -->
 
         <article class="article-blog wrapper">
@@ -117,19 +119,25 @@
                 </div>
                 <div class="date">
                     <h5>Date</h5>
-                    <a href="#"><p>July 31, 2018</p></a>
-                    
+                    <a href="#">
+                        <p>July 31, 2018</p>
+                    </a>
+
                 </div>
                 <div class="category">
                     <h5>Category</h5>
                     <ul class="category-ul">
                         <li>
-                            <a href="#"><p class="p-list">Entertainment</p></a>
-                            
+                            <a href="#">
+                                <p class="p-list">Entertainment</p>
+                            </a>
+
                         </li>
                         <li>
-                            <a href="#"><p>Business</p></a>
-                            
+                            <a href="#">
+                                <p>Business</p>
+                            </a>
+
                         </li>
                     </ul>
                 </div>
@@ -137,20 +145,28 @@
                     <h5>Tags</h5>
                     <ul class="tags-ul">
                         <li>
-                            <a href="#"><p class="p-list">Design</p></a>
-                            
+                            <a href="#">
+                                <p class="p-list">Design</p>
+                            </a>
+
                         </li>
                         <li>
-                            <a href="#"><p class="p-list">Web</p></a>
-                            
+                            <a href="#">
+                                <p class="p-list">Web</p>
+                            </a>
+
                         </li>
                         <li>
-                            <a href="#"><p class="p-list">Lifestyle</p></a>
-                            
+                            <a href="#">
+                                <p class="p-list">Lifestyle</p>
+                            </a>
+
                         </li>
                         <li>
-                            <a href="#"><p>Site</p></a>
-                            
+                            <a href="#">
+                                <p>Site</p>
+                            </a>
+
                         </li>
                     </ul>
                 </div>
@@ -270,15 +286,26 @@
 
         <!-- SECTION 3 - LEAVE A COMMENT - BEGINS -->
         <section class="section-comment-form wrapper">
-            <label class="comment-label" for="comment">
-                <h3 class="blog-section-title comment-h3">Leave A Comment</h3>
-            </label>
-            <form action="Post" class="comment-form-container">
-                <input class="comment-name-input" type="text" placeholder="Enter your name..." required >
-                <input class="comment-email-input" type="email" placeholder="youremail@domain.com" required>
-                <input class="comment-subject-input" type="text" placeholder="Subject (Optional)">
-                <textarea class="comment-content-input" name="comment-input" id="comment-input" cols="30" max-length="500"
+            <h3 class="blog-section-title comment-h3">Leave A Comment</h3>
+            <!-- Form Begins -->
+            <form action="#" method="post" class="comment-form-container" name="comment-form">
+                <!-- User Name Input --------------------------->
+                <label for="comment-user" class="sr-only">User Name</label>
+                <input type="text" id="comment-user" name="comment-user-name" class="comment-name-input"
+                    placeholder="Enter your name..." required>
+                <!--User Email Input  -------------------------->
+                <label for="comment-email" class="sr-only">User Email</label>
+                <input type="email" id="comment-email" name="comment-user-email" class="comment-email-input"
+                    placeholder="youremail@domain.com" required>
+                <!-- Subject Line Input ------------------------>
+                <label for="comment-subject" class="sr-only">Subject(Optional)</label>
+                <input type="text" id="comment-subject" name="comment-subject" class="comment-subject-input"
+                    placeholder="Subject (Optional)">
+                <!-- User Comment Input-------------------------->
+                <label for="user-comment" class="sr-only">Leave a comment.</label>
+                <textarea class="comment-content-input" name="user-comment" id="user-comment" cols="30" max-length="500"
                     rows="10" placeholder="Here goes your comment" required></textarea>
+                <!-- Submit Button ------------------------------>
                 <button name="comment-submission" type="submit" class="button-submit-comment">Submit Comment</button>
             </form>
         </section>
@@ -338,11 +365,12 @@
                 <a href="">
                     <h4>Subscribe Now</h4>
                 </a>
-                <form class="footer-form" action="Post">
-                    <label for="email">Signup for emails and notifications below.</label>
+                <form action="#" method="post" class="footer-form" name="footer-form">
+                    <label for="user-email">Signup for emails and notifications below.</label>
                     <div class="email-container">
-                        <input type="email" placeholder="Enter your email">
-                        <button class="email-submit-button"><i class="fa-solid fa-right-long"></i></button>
+                        <input type="email" name="user-email" id="user-email" placeholder="Enter your email">
+                        <button type="submit" class="email-submit-button"><i
+                                class="fa-solid fa-right-long"></i></button>
                     </div>
                 </form>
             </div> <!-- End of .subscribe-container-->

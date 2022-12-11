@@ -73,7 +73,8 @@
         color: $mediumGrey; 
         transition: 300ms;
 
-        &:hover {
+        &:hover,
+        &:focus {
             color: $black;
         }
     }
@@ -140,7 +141,8 @@
         padding: 10px;
         transition: 300ms;
         
-            &:hover {
+            &:hover,
+            &:focus {
                 color: $mediumGrey;
             }
     }
@@ -161,7 +163,8 @@
         flex-basis: 32%;
         transition: 300ms;
 
-        &:hover {
+        &:hover,
+        &:focus {
             opacity: 0.5;
         }
     }

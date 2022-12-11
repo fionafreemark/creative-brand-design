@@ -15,8 +15,10 @@
 </head>
 
 <body>
+    <!-- Skip Link -->
+    <a href="#main-content" class="skip-link">Skip to main content.</a>
     <!-- HEADER BEGINS -->
-    <header class="contact-header" >
+    <header class="contact-header">
         <nav class="header-nav wrapper">
             <a class="creative-logo" href="../index.html">
                 <h1>Creative</h1>
@@ -93,7 +95,7 @@
     <!-- HEADER ENDS -->
 
     <!-- MAIN BEGINS -->
-    <main>
+    <main id="main-content">
         <!-- SECTION 1 - CONTACT DETAILS-->
         <section class="section-contact-details wrapper">
             <div class="details-container">
@@ -125,19 +127,29 @@
         <!-- SECTION 1 - CONTACT DETAILS - ENDS -->
 
         <!-- SECTION 2 - GET IN TOUCH WITH US - BEGINS -->
-        <section class="section-in-touch wrapper">   
-            <label for="comment">
-                <h3>Get in Touch with Us</h3>
-                <p>If you have any questions, please don't hesitate to send us a message.</p>
-            </label>
-            <form action="#" method="post" class="comment-form-container">
-                <input  class="comment-name-input" type="text" placeholder="Enter your name..." required>
-                <input class="comment-email-input" type="email" placeholder="youremail@domain.com" required>
-                <input class="comment-subject-input" type="text" placeholder="Subject (Optional)">
-                <textarea class="comment-content-input" name="comment-input" id="comment-input" cols="30"
-                    max-length="500" rows="10" placeholder="Here goes your comment" required></textarea>
-                <div class="underline"></div>
-                <button name="comment-submission" type="submit" class="button-submit-comment">Send Message</button>
+        <section class="section-in-touch wrapper">
+            <h3>Get in Touch with Us</h3>
+            <p>If you have any questions, please don't hesitate to send us a message.</p>
+            <!-- Form Begins -->
+            <form action="#" method="post" class="comment-form-container" name="comment-form">
+                <!-- User Name Input --------------------------->
+                <label for="comment-user" class="sr-only">User Name</label>
+                <input type="text" id="comment-user" name="comment-user-name" class="comment-name-input"
+                    placeholder="Enter your name..." required>
+                <!--User Email Input  -------------------------->
+                <label for="comment-email" class="sr-only">User Email</label>
+                <input type="email" id="comment-email" name="comment-user-email" class="comment-email-input"
+                    placeholder="youremail@domain.com" required>
+                <!-- Subject Line Input ------------------------>
+                <label for="comment-subject" class="sr-only">Subject(Optional)</label>
+                <input type="text" id="comment-subject" name="comment-subject" class="comment-subject-input"
+                    placeholder="Subject (Optional)">
+                <!-- User Comment Input-------------------------->
+                <label for="user-comment" class="sr-only">Leave a comment.</label>
+                <textarea class="comment-content-input" name="user-comment" id="user-comment" cols="30" max-length="500"
+                    rows="10" placeholder="Here goes your comment" required></textarea>
+                <!-- Submit Button ------------------------------>
+                <button name="comment-submission" type="submit" class="button-submit-comment">Submit Message</button>
             </form>
         </section>
         <!-- SECTION 2 - GET IN TOUCH WITH US- ENDS -->
@@ -146,7 +158,7 @@
         <section class="section-comments-full-image">
             <img src="../assets/contact-2.jpeg" alt="Woman smiling while making a phone call.">
         </section>
-        
+
     </main>
     <!-- FOOTER BEGINS -->
     <footer>
@@ -201,11 +213,12 @@
                 <a href="">
                     <h4>Subscribe Now</h4>
                 </a>
-                <form class="footer-form" action="Post">
-                    <label for="email">Signup for emails and notifications below.</label>
+                <form action="#" method="post" class="footer-form" name="footer-form">
+                    <label for="user-email">Signup for emails and notifications below.</label>
                     <div class="email-container">
-                        <input type="email" placeholder="Enter your email">
-                        <button class="email-submit-button"><i class="fa-solid fa-right-long"></i></button>
+                        <input type="email" name="user-email" id="user-email" placeholder="Enter your email">
+                        <button type="submit" class="email-submit-button"><i
+                                class="fa-solid fa-right-long"></i></button>
                     </div>
                 </form>
             </div> <!-- End of .subscribe-container-->
