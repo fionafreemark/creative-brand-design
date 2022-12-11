@@ -33,8 +33,15 @@
         flex-wrap: wrap;
     }
 
+
     h2 {
         margin-bottom: 15px;
+        transition: 300ms;
+        scale: 1;
+        border: 1px solid #00000000;
+        &:hover {
+            scale: 0.9;
+        }
     }
 }
 
@@ -311,5 +318,6 @@
 
     img {
         object-fit: cover;
+        width: 100%;
     }
 }
