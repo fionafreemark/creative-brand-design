@@ -1192,6 +1192,10 @@ i {
   top: 16px;
 }
 
+.subject-paragraph {
+  width: 100%;
+}
+
 /* Container for commenter name and reply link */
 .name-reply {
   display: -webkit-box;
