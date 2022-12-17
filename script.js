@@ -1,54 +1,19 @@
-// PSEUDO CODE
-// Select all of the images in the photo carousel and set their translateX property and multiply it by each slide's index in the array. The array is zero-based, so it starts at 0%, 100%, 200% etc. 
-// Create an event listener to signal the user clicking on the right-scroll button.
-// When user clicks the button, a function will be triggered that shifts all images 
-// Create an event listener to signal the user clicking on the left-scroll button. 
-
-
-
-// Select images
-// const carouselPhotos = document.querySelectorAll(".carousel-photo");
-
-
-// for (let i = 0; i < carouselPhotos.length; i++) {
-//     carouselPhotos.style.transform = `translateX(${i * 100}%)`;
-//     console.log(carouselPhotos[i]);
-// };
-
-
-
-// carouselPhotos.forEach((carouselPhotos, i) => {
-//     carouselPhotos.style.transform = `translateX(${i * 100}%)`;
-// });
-
-// for (let i = 0; i < carouselPhotos.length, i++) {
-//     carouselPhotos.style.transform = `translateX(${i * 100}%)`;
-//     console.log('test');
-// }
-
-
-
-
-
-
 // PSEUDO CODE FOR ADDING A COMMENT
 
 // User fills out comment form and clicks "submit" button
 // Form automatically clears (like to-do-list exercise)
 // JS grabs the values from the fields
-// Use JS to build innerHTML
+// Use JS to build & append the html elements that create the comment box.
 // Js inserts the values onto the page
-// 
 
 // Add listener to the submit button and prevent form from refreshing with "prevent default"
 
-// ---->I don't understand why it says 'form' in the brackets... aren't we trying to specify the submit button? It didn't work when I had the button in there. 
+// ---->I don't understand why it says 'form' in the brackets... aren't we trying to specify the submit button? It didn't work when I had the button in there. Is this a "bubbling" situation?
 const formSubmit = document.querySelector('form');
 formSubmit.addEventListener('submit', function (event) {
     event.preventDefault();
     alert('Your comment has been submitted.');
 
-    
 
     // ----------------------------------------
     // create outermost div with class "comment"
@@ -61,8 +26,9 @@ formSubmit.addEventListener('submit', function (event) {
     // append div.comment to its parent, "comment-container"
     document.querySelector('.comment-container').appendChild(commentDiv);
 
+
     // ----------------------------------------
-    // create div with class "comment-img-container" and add img to it
+    // Creating Div with Class "comment-img-container" & Adding an IMG to It
     // ----------------------------------------
     const commentImgContainer = document.createElement('div');
 
@@ -71,16 +37,17 @@ formSubmit.addEventListener('submit', function (event) {
 
     // append div.comment-img-container to its parent, "comment"
     commentDiv.appendChild(commentImgContainer);
-    
+
     // add image file as inner HTML to the div "comment-img-container" on every new submit.
-    
+
     commentImgContainer.innerHTML = '<img class="comment-portraits" src="https://source.unsplash.com/random/70×70/?portrait" alt="Portrait of user.">';
 
     // console.log(commentDiv);
     // console.log(commentImgContainer);
 
+
     // ----------------------------------------
-    // create div with class comment-text-container
+    // Creating Div with Class "comment-text-container"
     // ----------------------------------------
     const commentTextContainerDiv = document.createElement('div');
 
@@ -122,12 +89,13 @@ formSubmit.addEventListener('submit', function (event) {
         // select the div and add the nameReplyText <p> as it's child. 
         nameReplyDiv.appendChild(nameReplyText);
 
-
-        console.log(nameReplyDiv);
-        console.log(nameReplyText.innerText);
+        // console.log(nameReplyDiv);
+        // console.log(nameReplyText.innerText);
         // clear the input to an empty string
         nameInput.value = '';
     };
+
+
     // ----------------------------------------
     // Adding Reply Button 
     // ----------------------------------------
@@ -136,9 +104,7 @@ formSubmit.addEventListener('submit', function (event) {
     const replyAnchor = document.createElement('a');
 
     replyAnchor.classList = 'new-reply-link';
-
     replyAnchor.href = '#';
-
     replyAnchor.innerHTML = '<p>- Reply</p>';
 
     // append the "Reply" <a> tag to the .comment-text-container. 
@@ -146,14 +112,15 @@ formSubmit.addEventListener('submit', function (event) {
 
     // console.log(replyAnchor);
 
+
     // ----------------------------------------
     // Targeting Subject Input in the Form
     // ----------------------------------------
     // Select the subject text input
     const subjectInput = document.querySelector(".comment-subject-input");
-    // console.log(nameInput.value)
+
     const logSubject = subjectInput.value;
-    console.log(logSubject);
+    // console.log(logSubject);
 
     if (logSubject) {
 
@@ -163,7 +130,7 @@ formSubmit.addEventListener('submit', function (event) {
         // add class to subjectParagraph so you can style it in CSS
         subjectParagraph.classList = 'subject-paragraph';
 
-        // put the user's input into the task(i.e. logName)
+        // put the user's input into the task(i.e. logSubject)
         subjectParagraph.textContent = logSubject;
 
         // select the .comment-text-container div and append the subject paragraph to it. 
@@ -180,23 +147,20 @@ formSubmit.addEventListener('submit', function (event) {
     // Targeting Comment Input in the Form
     // ----------------------------------------
     const commentInput = document.querySelector(".comment-content-input");
-    // console.log(nameInput.value)
+
     const logComment = commentInput.value;
     // console.log(logComment);
 
     if (logComment) {
-        // console.log(logComment);
-
 
         // create a p element to contain the user's name input
         const commentParagraph = document.createElement('p');
 
-        // put the user's input into the task(i.e. logName)
+        // put the user's input into the task(i.e. logComment)
         commentParagraph.textContent = logComment;
 
         // select the div and add the nameReplyText <p> as it's child. 
         commentTextContainerDiv.appendChild(commentParagraph);
-
 
         // console.log(commentTextContainerDiv);
         // console.log(commentParagraph.innerText);
@@ -210,18 +174,14 @@ formSubmit.addEventListener('submit', function (event) {
     // ----------------------------------------
     // I won't be logging their email anywhere, but I will make it refresh to a blank box. 
     const emailInput = document.querySelector(".comment-email-input");
-    // console.log(nameInput.value)
+
     const logEmail = emailInput.value;
-    console.log(logEmail);
+    // console.log(logEmail);
 
     if (logEmail) {
         // clear the input to an empty string
         emailInput.value = '';
     };
-    // IT WONT CLEAR THE EMAIL FOR SOME REASON
-
-
-
 
 
     // ----------------------------------------
@@ -236,7 +196,7 @@ formSubmit.addEventListener('submit', function (event) {
     // append the dateStamp to the .comment-text-container. 
     commentTextContainerDiv.appendChild(dateStamp);
 
-    console.log(dateStamp);
+    // console.log(dateStamp);
 
 });
 
