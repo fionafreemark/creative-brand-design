@@ -1142,7 +1142,8 @@ i {
           justify-content: center;
 }
 
-.comment {
+.comment,
+.new-comment {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1163,7 +1164,8 @@ i {
 }
 
 /* Background container/colour for comment text.*/
-.comment-text-container {
+.comment-text-container,
+.new-comment-text-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1177,37 +1179,59 @@ i {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   position: relative;
-  margin-left: 18px;
+  margin-left: 24px;
 }
 
 /* Decorative triangle background on comment container that makes it look like a speech bubble */
-.arrow-left-detail {
+.comment-text-container::before,
+.new-comment-text-container::before {
+  content: " ";
+  display: inline-block;
   width: 20px;
   height: 0;
   border-top: 8px solid transparent;
   border-bottom: 8px solid transparent;
   border-right: 24px solid #F6F6F6;
   position: absolute;
-  left: -18px;
-  top: 16px;
+  left: -24px;
+  top: 18px;
+  z-index: 10;
 }
 
 .subject-paragraph {
   width: 100%;
+  text-transform: uppercase;
+}
+
+.comment-portraits {
+  width: 70px;
+  height: 70px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 
 /* Container for commenter name and reply link */
-.name-reply {
+.name-reply,
+.new-name-reply {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.name-reply > p {
+.new-reply-link {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+.name-reply > p,
+.new-name-reply > p {
   text-transform: uppercase;
 }
 
-.reply-link {
+.reply-link,
+.new-reply-link {
   font-style: italic;
   padding-left: 5px;
   color: #8d8c8c;

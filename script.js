@@ -48,13 +48,15 @@ formSubmit.addEventListener('submit', function (event) {
     event.preventDefault();
     alert('Your comment has been submitted.');
 
+    
+
     // ----------------------------------------
     // create outermost div with class "comment"
     // ----------------------------------------
     const commentDiv = document.createElement('div');
 
     // add class name "comment" to the div
-    commentDiv.className = 'comment';
+    commentDiv.className = 'new-comment';
 
     // append div.comment to its parent, "comment-container"
     document.querySelector('.comment-container').appendChild(commentDiv);
@@ -62,9 +64,20 @@ formSubmit.addEventListener('submit', function (event) {
     // ----------------------------------------
     // create div with class "comment-img-container" and add img to it
     // ----------------------------------------
-    commentDiv.innerHTML = '<div class="comment-img-container" <img src="../assets/blog-6.jpeg" alt="Portrait of woman with red hair in front of landscape."> </div>';
+    const commentImgContainer = document.createElement('div');
 
-    console.log(commentDiv);
+    // add class name "comment" to the div
+    commentImgContainer.className = 'comment-img-container';
+
+    // append div.comment-img-container to its parent, "comment"
+    commentDiv.appendChild(commentImgContainer);
+    
+    // add image file as inner HTML to the div "comment-img-container" on every new submit.
+    
+    commentImgContainer.innerHTML = '<img class="comment-portraits" src="https://source.unsplash.com/random/70×70/?portrait" alt="Portrait of user.">';
+
+    // console.log(commentDiv);
+    // console.log(commentImgContainer);
 
     // ----------------------------------------
     // create div with class comment-text-container
@@ -72,22 +85,66 @@ formSubmit.addEventListener('submit', function (event) {
     const commentTextContainerDiv = document.createElement('div');
 
     // add class name "comment-text-container" to the div
-    commentTextContainerDiv.className = 'comment-text-container';
+    commentTextContainerDiv.className = 'new-comment-text-container';
 
-    console.log(commentTextContainerDiv);
+    // insert commentTextContainerDiv adjacent to commentImgContainer, "beforeend" signifies putting it just inside the targetElement, after it's last child. Syntax is .insertAdjacentElement('position', element);
+
+    commentDiv.insertAdjacentElement('beforeend', commentTextContainerDiv);
+
+    // console.log(commentTextContainerDiv);
+
 
     // ----------------------------------------
-    // creative div with class arrow-left-detail
+    // Targeting Name Input in the Form
     // ----------------------------------------
-    const arrowDiv = document.createElement('div');
+    const nameInput = document.querySelector(".comment-name-input");
+    // console.log(nameInput.value)
+    const logName = nameInput.value;
+    // console.log(logName);
 
-    // add class name "comment-text-container" to the div
-    arrowDiv.className = 'arrow-left-detail';
+    if (logName) {
+        // console.log(logName);
+        // create a div element to contain the name "p" element
+        const nameReplyDiv = document.createElement('div');
 
-    // append arrowDiv to the commentTextContainerDiv
-    document.querySelector('.comment-text-container').appendChild(arrowDiv);
+        // add class name "name-reply" to the div
+        nameReplyDiv.className = 'new-name-reply';
 
-    console.log(arrowDiv);
+        // select the div.name-reply and add it to the .comment-text-container as it's child.
+        commentTextContainerDiv.appendChild(nameReplyDiv);
+
+        // create a p element to contain the user's name input
+        const nameReplyText = document.createElement('p');
+
+        // put the user's input into the task(i.e. logName)
+        nameReplyText.textContent = logName;
+
+        // select the div and add the nameReplyText <p> as it's child. 
+        nameReplyDiv.appendChild(nameReplyText);
+
+
+        console.log(nameReplyDiv);
+        console.log(nameReplyText.innerText);
+        // clear the input to an empty string
+        nameInput.value = '';
+    };
+    // ----------------------------------------
+    // Adding Reply Button 
+    // ----------------------------------------
+
+    // create an anchor tag with a Reply <p> tag inside to contain the user's name input
+    const replyAnchor = document.createElement('a');
+
+    replyAnchor.classList = 'new-reply-link';
+
+    replyAnchor.href = '#';
+
+    replyAnchor.innerHTML = '<p>- Reply</p>';
+
+    // append the "Reply" <a> tag to the .comment-text-container. 
+    commentTextContainerDiv.appendChild(replyAnchor);
+
+    // console.log(replyAnchor);
 
     // ----------------------------------------
     // Targeting Subject Input in the Form
@@ -110,65 +167,14 @@ formSubmit.addEventListener('submit', function (event) {
         subjectParagraph.textContent = logSubject;
 
         // select the .comment-text-container div and append the subject paragraph to it. 
-        document.querySelector('.comment-text-container').appendChild(subjectParagraph);
+        commentTextContainerDiv.appendChild(subjectParagraph);
 
-        console.log(subjectParagraph.innerText);
+        // console.log(subjectParagraph.innerText);
 
         // clear the input to an empty string
         subjectInput.value = '';
 
     };
-
-    // ----------------------------------------
-    // Targeting Name Input in the Form
-    // ----------------------------------------
-    const nameInput = document.querySelector(".comment-name-input");
-    // console.log(nameInput.value)
-    const logName = nameInput.value;
-    // console.log(logName);
-
-    if (logName) {
-        // console.log(logName);
-        // create a div element to contain the name "p" element
-        const nameReplyDiv = document.createElement('div');
-
-        // add class name "name-reply" to the div
-        nameReplyDiv.className = 'name-reply';
-
-        // create a p element to contain the user's name input
-        const nameReplyText = document.createElement('p');
-
-        // put the user's input into the task(i.e. logName)
-        nameReplyText.textContent = logName;
-
-        // select the div and add the nameReplyText <p> as it's child. 
-        document.querySelector('div').appendChild(nameReplyText);
-
-        // select the div.name-reply and add it to the .comment-text-container as it's child.
-        document.querySelector('.comment-text-container').appendChild(nameReplyDiv);
-
-        console.log(nameReplyDiv);
-        console.log(nameReplyText.innerText);
-        // clear the input to an empty string
-        nameInput.value = '';
-    };
-    // ----------------------------------------
-    // Adding Reply Button 
-    // ----------------------------------------
-
-    // create an anchor tag with a Reply <p> tag inside to contain the user's name input
-    const replyAnchor = document.createElement('a');
-
-    replyAnchor.classList = 'reply-link';
-
-    replyAnchor.innerHTML = '<p>- Reply</p>';
-
-    // append the "Reply" <a> tag to the .comment-text-container. 
-    document.querySelector('.comment-text-container').appendChild(replyAnchor);
-
-    console.log(replyAnchor);
-
-
 
     // ----------------------------------------
     // Targeting Comment Input in the Form
@@ -189,11 +195,12 @@ formSubmit.addEventListener('submit', function (event) {
         commentParagraph.textContent = logComment;
 
         // select the div and add the nameReplyText <p> as it's child. 
-        document.querySelector('.comment-text-container').appendChild(commentParagraph);
+        commentTextContainerDiv.appendChild(commentParagraph);
 
 
         // console.log(commentTextContainerDiv);
-        console.log(commentParagraph.innerText);
+        // console.log(commentParagraph.innerText);
+
         // clear the input to an empty string
         commentInput.value = '';
     };
@@ -227,11 +234,13 @@ formSubmit.addEventListener('submit', function (event) {
     dateStamp.textContent = 'Dec 16, 2022 at 22:00';
 
     // append the dateStamp to the .comment-text-container. 
-    document.querySelector('.comment-text-container').appendChild(dateStamp);
+    commentTextContainerDiv.appendChild(dateStamp);
 
     console.log(dateStamp);
 
 });
+
+
 
 
 

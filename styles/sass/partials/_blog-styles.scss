@@ -186,7 +186,8 @@
     justify-content: center;
 }
 
-.comment {
+.comment,
+.new-comment {
     display: flex;
     justify-content: space-between;
     padding: 10px 0;
@@ -199,7 +200,8 @@
 }
 
 /* Background container/colour for comment text.*/
-.comment-text-container {
+.comment-text-container,
+.new-comment-text-container {
     display: flex;
     flex-direction: column;
     width: 88%;
@@ -207,39 +209,61 @@
     background-color: $lightGrey;
     flex-wrap: wrap;
     position: relative;
-    margin-left: 18px;
+    margin-left: 24px;
 }
 
 /* Decorative triangle background on comment container that makes it look like a speech bubble */
-.arrow-left-detail {
+// .arrow-left-detail 
+.comment-text-container::before,
+.new-comment-text-container::before{
+    content: " ";
+    display: inline-block;
     width: 20px;
     height: 0;
     border-top: 8px solid transparent;
     border-bottom: 8px solid transparent;
     border-right: 24px solid $lightGrey;
     position: absolute;
-    left: -18px;
-    top: 16px;
+    left: -24px;
+    top: 18px;
+    z-index: 10;
 }
 
-// JS SUBJEECT PARAGRAPH STYLE
+// JS SUBJECT PARAGRAPH STYLE
 .subject-paragraph {
     width: 100%;
-}
-
-/* Container for commenter name and reply link */
-.name-reply {
-    display: flex;
-}
-
-.name-reply>p {
     text-transform: uppercase;
 }
 
-.reply-link {
+.comment-portraits {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Container for commenter name and reply link */
+//  classes with "new-" in front relate to javascript additions
+.name-reply,
+.new-name-reply {
+    display: flex;
+}
+
+.new-reply-link {
+    align-self: flex-start;
+}
+
+.name-reply>p,
+.new-name-reply>p {
+    text-transform: uppercase;
+}
+
+.reply-link,
+.new-reply-link {
     font-style: italic;
     padding-left: 5px;
     color: $mediumGrey;
+
 }
 
 /* SECTION THREE: LEAVE A COMMENT ----------------------------------*/
