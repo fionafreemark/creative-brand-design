@@ -473,10 +473,6 @@ i {
 }
 
 /* Mobile Menu */
-.mobile-menu li {
-  background-color: rgba(255, 255, 255, 0.971);
-}
-
 /* Icon Hover Effect */
 .soc-med-button {
   -webkit-transition: 300ms;
@@ -495,17 +491,19 @@ i {
   position: absolute;
   left: 170px;
   top: 20px;
+  -webkit-transition: 500ms;
+  transition: 500ms;
+}
+.menu-button:hover, .menu-button:focus,
+#toggle:hover,
+#toggle:focus {
+  opacity: 0.5;
 }
 
 .hamburger-menu {
   font-size: 2.6rem;
   margin-left: 20px;
   padding: 1px;
-  -webkit-transition: 300ms;
-  transition: 300ms;
-}
-.hamburger-menu:hover, .hamburger-menu:focus {
-  opacity: 0.5;
 }
 
 /* Left Side Home Nav Bar */
@@ -1627,7 +1625,25 @@ footer label {
   .header-nav #toggle:checked + .mobile-menu {
     position: absolute;
     top: 60px;
-    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 30%;
+    background-color: rgba(255, 255, 255, 0.968627451);
+    border: 1px solid rgba(0, 0, 0, 0.723);
+  }
+  .header-nav #toggle:checked + .mobile-menu li {
+    position: relative;
+    line-height: 3rem;
+    -ms-flex-item-align: start;
+        align-self: flex-start;
   }
   .header-nav .creative-logo {
     -ms-flex-preferred-size: 100%;

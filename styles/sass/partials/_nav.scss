@@ -60,10 +60,13 @@
 
 /* Mobile Menu */
 .mobile-menu {
-    li {
-        background-color: rgba(255, 255, 255, 0.971);
-    }
+    // li {
+    //     background-color: rgba(255, 255, 255, 0.971);
+    // }
 }
+
+
+
 
 /* Icon Hover Effect */
 .soc-med-button {
@@ -84,19 +87,20 @@
     position: absolute;
     left: 170px;
     top: 20px;
+    transition: 500ms;
+    
+        &:hover,
+        &:focus {
+            opacity: 0.5;
+        }
 }
 
 .hamburger-menu {
     font-size: 2.6rem;
     margin-left: 20px;
     padding: 1px;
-    transition: 300ms;
-
-    &:hover,
-    &:focus {
-        opacity: 0.5;
-    }
 }
+
 
 /* Left Side Home Nav Bar */
 .home-menu {
