@@ -218,4 +218,16 @@ formSubmit.addEventListener('submit', function (event) {
 
 
 
+/* ------------------------------------------------------- */
+/* Part 2: Changing my mobile hamburger menu button to an X when actived by click. */
+/* ------------------------------------------------------- */
+// My mentor helped me with this one:
+
+const menuButton = document.querySelector('.menu-button');
+
+menuButton.addEventListener('click', function() {
+    console.log('hello');
+    menuButton.classList.toggle("active");
+
+});
 

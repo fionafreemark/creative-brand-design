@@ -483,12 +483,36 @@ i {
   opacity: 0.5;
 }
 
+.line-1,
+.line-2,
+.line-3 {
+  content: " ";
+  position: absolute;
+  width: 30px;
+  height: 3px;
+  top: 6px;
+  background-color: black;
+  border-radius: 10px;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+
+.line-2 {
+  top: 14px;
+}
+
+.line-3 {
+  top: 22px;
+}
+
 /* Mobile Menu Button */
 .menu-button,
 #toggle {
   display: none;
   color: #000;
   position: absolute;
+  width: 28px;
+  height: 22px;
   left: 170px;
   top: 20px;
   -webkit-transition: 500ms;
@@ -500,10 +524,15 @@ i {
   opacity: 0.5;
 }
 
-.hamburger-menu {
-  font-size: 2.6rem;
-  margin-left: 20px;
-  padding: 1px;
+.menu-button.active .line-1 {
+  rotate: 45deg;
+  top: 14px;
+}
+.menu-button.active .line-2 {
+  rotate: -45deg;
+}
+.menu-button.active .line-3 {
+  opacity: 0;
 }
 
 /* Left Side Home Nav Bar */
