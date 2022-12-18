@@ -12,7 +12,7 @@
 const formSubmit = document.querySelector('form');
 formSubmit.addEventListener('submit', function (event) {
     event.preventDefault();
-    alert('Your comment has been submitted.');
+    // alert('Your comment has been submitted.');
 
 
     // ----------------------------------------
