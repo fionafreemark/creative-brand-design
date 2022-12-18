@@ -189,19 +189,42 @@ formSubmit.addEventListener('submit', function (event) {
     // ----------------------------------------
 
     // create an <p> tag with the Date posted inside that will be added to the end of the .comment-text-container div.
-    const dateStamp = document.createElement('p');
-
-    dateStamp.textContent = 'Dec 16, 2022 at 22:00';
-
+    const commentDateStamp = document.createElement('p');
     // append the dateStamp to the .comment-text-container. 
-    commentTextContainerDiv.appendChild(dateStamp);
+    commentTextContainerDiv.appendChild(commentDateStamp);
+
+    // Create a current timestamp when submit button is clicked and input it into the commentDateStamp textContent.
+    const dateEvent = new Date();
+    const fullDateStamp = dateEvent.toDateString();
+    const fullTimeStamp = dateEvent.getHours() + ":" + dateEvent.getMinutes();
+    // const fullTimeStamp = dateEvent.toTimeString(hh:mm:ss);
+
+
+    commentDateStamp.textContent = `${fullDateStamp} at ${fullTimeStamp}`;
+
 
     // console.log(dateStamp);
 
+
+    // // setting the submit button back to original state
+    // const submitButton = document.querySelector('.button-submit-comment');
+    // console.log(submitButton);
+    // submitButton.addEventListener('submit', function (event) {
+    //     // when a user clicks on the submit button, it should return to original state
+    //     if (event.target.tagName === 'BUTTON') {
+    //         //tasks to perform
+    //         console.log('We clicked submit!');
+    //         updateToDo(event.target);
+    //     }
+
+    // });
+
+    // function updateToDo(submitButton) {
+    //     submitButton.toggle(' ');
+
+    // }
+
 });
-
-
-
 
 
 
