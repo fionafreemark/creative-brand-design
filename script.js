@@ -105,7 +105,7 @@ formSubmit.addEventListener('submit', function (event) {
         replyAnchor.href = '#leave-a-comment';
         replyAnchor.innerHTML = '<p>- Reply</p>';
 
-        // append the "Reply" <a> tag to the .comment-text-container. 
+        // append the "Reply" <a> tag to the .name-reply div(nameReplyDiv). 
         nameReplyDiv.appendChild(replyAnchor);
 
         // console.log(replyAnchor);
@@ -177,7 +177,7 @@ formSubmit.addEventListener('submit', function (event) {
     // ----------------------------------------
     // Targeting Email Input in the Form
     // ----------------------------------------
-    // I won't be logging their email anywhere, but I will make it refresh to a blank box. 
+    // I won't be logging the email anywhere, but I will make it refresh to a blank box. 
     const emailInput = document.querySelector(".comment-email-input");
 
     const logEmail = emailInput.value;
