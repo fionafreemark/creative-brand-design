@@ -93,24 +93,28 @@ formSubmit.addEventListener('submit', function (event) {
         // console.log(nameReplyText.innerText);
         // clear the input to an empty string
         nameInput.value = '';
+
+        // ----------------------------------------
+        // Adding Reply Button 
+        // ----------------------------------------
+
+        // create an anchor tag with a Reply <p> tag inside to contain the user's name input
+        const replyAnchor = document.createElement('a');
+
+        replyAnchor.classList = 'new-reply-link';
+        replyAnchor.href = '#leave-a-comment';
+        replyAnchor.innerHTML = '<p>- Reply</p>';
+
+        // append the "Reply" <a> tag to the .comment-text-container. 
+        nameReplyDiv.appendChild(replyAnchor);
+
+        // console.log(replyAnchor);
+        // Resources to figure this out:
+        // 1. Adding href link to the <a> tag I created:
+        // https://www.w3schools.com/jsref/prop_anchor_href.asp
+        // ___________.href = "url goes here";
     };
 
-
-    // ----------------------------------------
-    // Adding Reply Button 
-    // ----------------------------------------
-
-    // create an anchor tag with a Reply <p> tag inside to contain the user's name input
-    const replyAnchor = document.createElement('a');
-
-    replyAnchor.classList = 'new-reply-link';
-    replyAnchor.href = '#';
-    replyAnchor.innerHTML = '<p>- Reply</p>';
-
-    // append the "Reply" <a> tag to the .comment-text-container. 
-    commentTextContainerDiv.appendChild(replyAnchor);
-
-    // console.log(replyAnchor);
 
 
     // ----------------------------------------
@@ -185,7 +189,7 @@ formSubmit.addEventListener('submit', function (event) {
 
 
     // ----------------------------------------
-    // Adding Date to bottom
+    // Adding Date to End of Comment
     // ----------------------------------------
 
     // create an <p> tag with the Date posted inside that will be added to the end of the .comment-text-container div.
@@ -197,32 +201,17 @@ formSubmit.addEventListener('submit', function (event) {
     const dateEvent = new Date();
     const fullDateStamp = dateEvent.toDateString();
     const fullTimeStamp = dateEvent.getHours() + ":" + dateEvent.getMinutes();
-    // const fullTimeStamp = dateEvent.toTimeString(hh:mm:ss);
-
-
+    // Adding the date/time stamp variables in a string to print in my comment.
     commentDateStamp.textContent = `${fullDateStamp} at ${fullTimeStamp}`;
 
+    // Resources to figure this out:
+    // 1. toDateString()
+    // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toDateString
+    // 2. toTimeString()
+    // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toTimeString
+    // 3. Formatting toTimeString()
+    // https://stackoverflow.com/questions/43826821/formatting-the-totimestring-method
 
-    // console.log(dateStamp);
-
-
-    // // setting the submit button back to original state
-    // const submitButton = document.querySelector('.button-submit-comment');
-    // console.log(submitButton);
-    // submitButton.addEventListener('submit', function (event) {
-    //     // when a user clicks on the submit button, it should return to original state
-    //     if (event.target.tagName === 'BUTTON') {
-    //         //tasks to perform
-    //         console.log('We clicked submit!');
-    //         updateToDo(event.target);
-    //     }
-
-    // });
-
-    // function updateToDo(submitButton) {
-    //     submitButton.toggle(' ');
-
-    // }
 
 });
 

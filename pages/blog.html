@@ -244,8 +244,8 @@
                         <!-- Div to create background arrow detail. -->
                         <div class="arrow-left-detail"></div>
                         <div class="name-reply">
-                            <p>Jenifer Loopz</p>
-                            <a class="reply-link" href="#">
+                            <p>Jennifer Loopz</p>
+                            <a class="reply-link" href="#leave-a-comment">
                                 <p>- Reply</p>
                             </a>
                         </div> <!-- End of .name-reply -->
@@ -263,7 +263,7 @@
                         <!-- <div class="arrow-left-detail"></div> -->
                         <div class="name-reply">
                             <p>Daniel Vandaft</p>
-                            <a class="reply-link" href="#">
+                            <a class="reply-link" href="#leave-a-comment">
                                 <p>- Reply</p>
                             </a>
 
@@ -278,10 +278,10 @@
         <!-- SECTION 2 - COMMENTS - ENDS -->
 
         <!-- SECTION 3 - LEAVE A COMMENT - BEGINS -->
-        <section class="section-comment-form wrapper">
-            <h3 class="blog-section-title comment-h3">Leave A Comment</h3>
+        <section class="section-comment-form wrapper" id="leave-a-comment">
+            <h3 class="blog-section-title comment-h3" >Leave A Comment</h3>
             <!-- Form Begins -->
-            <form action="#" method="post" class="comment-form-container" name="comment-form">
+            <form action="#" method="post" class="comment-form-container" name="comment-form" >
                 <!-- User Name Input --------------------------->
                 <label for="comment-user" class="sr-only">User Name</label>
                 <input type="text" id="comment-user" name="comment-user-name" class="comment-name-input"
@@ -297,7 +297,7 @@
                 <!-- User Comment Input-------------------------->
                 <label for="user-comment" class="sr-only">Leave a comment.</label>
                 <textarea class="comment-content-input" name="user-comment" id="user-comment" cols="30" max-length="500"
-                    rows="10" placeholder="Here goes your comment" required></textarea>
+                    rows="10" placeholder="Your comment goes here." required></textarea>
                 <!-- Submit Button ------------------------------>
                 <button name="comment-submission" type="submit" class="button-submit-comment">Submit Comment</button>
             </form> <!-- End of .comment-form-container -->
