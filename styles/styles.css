@@ -1142,8 +1142,7 @@ i {
           justify-content: center;
 }
 
-.comment,
-.new-comment {
+.comment {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1164,8 +1163,7 @@ i {
 }
 
 /* Background container/colour for comment text.*/
-.comment-text-container,
-.new-comment-text-container {
+.comment-text-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1183,8 +1181,7 @@ i {
 }
 
 /* Decorative triangle background on comment container that makes it look like a speech bubble */
-.comment-text-container::before,
-.new-comment-text-container::before {
+.comment-text-container::before {
   content: " ";
   display: inline-block;
   width: 20px;
@@ -1213,25 +1210,17 @@ i {
 }
 
 /* Container for commenter name and reply link */
-.name-reply,
-.new-name-reply {
+.name-reply {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.new-reply-link {
-  -ms-flex-item-align: start;
-      align-self: flex-start;
-}
-
-.name-reply > p,
-.new-name-reply > p {
+.name-reply > p {
   text-transform: uppercase;
 }
 
-.reply-link,
-.new-reply-link {
+.reply-link {
   font-style: italic;
   padding-left: 5px;
   color: #8d8c8c;

@@ -186,8 +186,7 @@
     justify-content: center;
 }
 
-.comment,
-.new-comment {
+.comment{
     display: flex;
     justify-content: space-between;
     padding: 10px 0;
@@ -200,8 +199,7 @@
 }
 
 /* Background container/colour for comment text.*/
-.comment-text-container,
-.new-comment-text-container {
+.comment-text-container {
     display: flex;
     flex-direction: column;
     width: 88%;
@@ -214,8 +212,7 @@
 
 /* Decorative triangle background on comment container that makes it look like a speech bubble */
 // .arrow-left-detail 
-.comment-text-container::before,
-.new-comment-text-container::before{
+.comment-text-container::before{
     content: " ";
     display: inline-block;
     width: 20px;
@@ -243,23 +240,17 @@
 }
 
 /* Container for commenter name and reply link */
-//  classes with "new-" in front relate to javascript additions
-.name-reply,
-.new-name-reply {
+.name-reply {
     display: flex;
 }
 
-.new-reply-link {
-    align-self: flex-start;
-}
 
-.name-reply>p,
-.new-name-reply>p {
+
+.name-reply>p{
     text-transform: uppercase;
 }
 
-.reply-link,
-.new-reply-link {
+.reply-link {
     font-style: italic;
     padding-left: 5px;
     color: $mediumGrey;

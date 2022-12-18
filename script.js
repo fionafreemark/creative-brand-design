@@ -16,12 +16,12 @@ formSubmit.addEventListener('submit', function (event) {
 
 
     // ----------------------------------------
-    // create outermost div with class "comment"
+    // Create Outermost Div with Class "comment"
     // ----------------------------------------
     const commentDiv = document.createElement('div');
 
     // add class name "comment" to the div
-    commentDiv.className = 'new-comment';
+    commentDiv.className = 'comment';
 
     // append div.comment to its parent, "comment-container"
     document.querySelector('.comment-container').appendChild(commentDiv);
@@ -32,7 +32,7 @@ formSubmit.addEventListener('submit', function (event) {
     // ----------------------------------------
     const commentImgContainer = document.createElement('div');
 
-    // add class name "comment" to the div
+    // add class name "comment-img-container" to the div
     commentImgContainer.className = 'comment-img-container';
 
     // append div.comment-img-container to its parent, "comment"
@@ -52,7 +52,7 @@ formSubmit.addEventListener('submit', function (event) {
     const commentTextContainerDiv = document.createElement('div');
 
     // add class name "comment-text-container" to the div
-    commentTextContainerDiv.className = 'new-comment-text-container';
+    commentTextContainerDiv.className = 'comment-text-container';
 
     // insert commentTextContainerDiv adjacent to commentImgContainer, "beforeend" signifies putting it just inside the targetElement, after it's last child. Syntax is .insertAdjacentElement('position', element);
 
@@ -75,7 +75,7 @@ formSubmit.addEventListener('submit', function (event) {
         const nameReplyDiv = document.createElement('div');
 
         // add class name "name-reply" to the div
-        nameReplyDiv.className = 'new-name-reply';
+        nameReplyDiv.className = 'name-reply';
 
         // select the div.name-reply and add it to the .comment-text-container as it's child.
         commentTextContainerDiv.appendChild(nameReplyDiv);
@@ -95,13 +95,13 @@ formSubmit.addEventListener('submit', function (event) {
         nameInput.value = '';
 
         // ----------------------------------------
-        // Adding Reply Button 
+        // Adding Reply Button & Append to nameReplyDiv
         // ----------------------------------------
 
         // create an anchor tag with a Reply <p> tag inside to contain the user's name input
         const replyAnchor = document.createElement('a');
 
-        replyAnchor.classList = 'new-reply-link';
+        replyAnchor.classList = 'reply-link';
         replyAnchor.href = '#leave-a-comment';
         replyAnchor.innerHTML = '<p>- Reply</p>';
 
@@ -113,6 +113,7 @@ formSubmit.addEventListener('submit', function (event) {
         // 1. Adding href link to the <a> tag I created:
         // https://www.w3schools.com/jsref/prop_anchor_href.asp
         // ___________.href = "url goes here";
+        // 2. The replyAnchor has to be inside this if statement to also be added to the nameReplyDiv because that was created in this if statement (exists within it, not outside).
     };
 
 
