@@ -1,11 +1,11 @@
-// PSEUDO CODE FOR ADDING A COMMENT
+// ADDING COMMENTS TO THE BLOG POST PAGE
 
+// Pseudo Code:
 // User fills out comment form and clicks "submit" button
 // Form automatically clears (like to-do-list exercise)
 // JS grabs the values from the fields
 // Use JS to build & append the html elements that create the comment box.
 // Js inserts the values onto the page
-
 // Add listener to the submit button and prevent form from refreshing with "prevent default"
 
 // ---->I don't understand why it says 'form' in the brackets... aren't we trying to specify the submit button? It didn't work when I had the button in there. Is this a "bubbling" situation?
@@ -21,7 +21,7 @@ formSubmit.addEventListener('submit', function (event) {
     const commentDiv = document.createElement('div');
 
     // add class name "comment" to the div
-    commentDiv.className = 'comment';
+    commentDiv.classList.add('comment');
 
     // append div.comment to its parent, "comment-container"
     document.querySelector('.comment-container').appendChild(commentDiv);
@@ -33,7 +33,7 @@ formSubmit.addEventListener('submit', function (event) {
     const commentImgContainer = document.createElement('div');
 
     // add class name "comment-img-container" to the div
-    commentImgContainer.className = 'comment-img-container';
+    commentImgContainer.classList.add('comment-img-container');
 
     // append div.comment-img-container to its parent, "comment"
     commentDiv.appendChild(commentImgContainer);
@@ -52,7 +52,7 @@ formSubmit.addEventListener('submit', function (event) {
     const commentTextContainerDiv = document.createElement('div');
 
     // add class name "comment-text-container" to the div
-    commentTextContainerDiv.className = 'comment-text-container';
+    commentTextContainerDiv.classList.add('comment-text-container');
 
     // insert commentTextContainerDiv adjacent to commentImgContainer, "beforeend" signifies putting it just inside the targetElement, after it's last child. Syntax is .insertAdjacentElement('position', element);
 
@@ -75,7 +75,7 @@ formSubmit.addEventListener('submit', function (event) {
         const nameReplyDiv = document.createElement('div');
 
         // add class name "name-reply" to the div
-        nameReplyDiv.className = 'name-reply';
+        nameReplyDiv.classList.add('name-reply');
 
         // select the div.name-reply and add it to the .comment-text-container as it's child.
         commentTextContainerDiv.appendChild(nameReplyDiv);
@@ -101,7 +101,7 @@ formSubmit.addEventListener('submit', function (event) {
         // create an anchor tag with a Reply <p> tag inside to contain the user's name input
         const replyAnchor = document.createElement('a');
 
-        replyAnchor.classList = 'reply-link';
+        replyAnchor.classList.add('reply-link');
         replyAnchor.href = '#leave-a-comment';
         replyAnchor.innerHTML = '<p>- Reply</p>';
 
@@ -133,7 +133,7 @@ formSubmit.addEventListener('submit', function (event) {
         const subjectParagraph = document.createElement('p');
 
         // add class to subjectParagraph so you can style it in CSS
-        subjectParagraph.classList = 'subject-paragraph';
+        subjectParagraph.classList.add('subject-paragraph') ;
 
         // put the user's input into the task(i.e. logSubject)
         subjectParagraph.textContent = logSubject;
@@ -217,16 +217,15 @@ formSubmit.addEventListener('submit', function (event) {
 });
 
 
-
-/* ------------------------------------------------------- */
+/* -------------------------------------------- */
 /* Part 2: Changing my mobile hamburger menu button to an X when actived by click. */
-/* ------------------------------------------------------- */
+/* --------------------------------------------- */
 // My mentor helped me with this one:
 
 const menuButton = document.querySelector('.menu-button');
 
 menuButton.addEventListener('click', function() {
-    console.log('hello');
+    // console.log('hello');
     menuButton.classList.toggle("active");
 
 });

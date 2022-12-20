@@ -511,8 +511,8 @@ i {
   display: none;
   color: #000;
   position: absolute;
-  width: 28px;
-  height: 22px;
+  width: 32px;
+  height: 32px;
   left: 170px;
   top: 20px;
   -webkit-transition: 500ms;
@@ -1675,8 +1675,8 @@ footer label {
         align-self: flex-start;
   }
   .header-nav .creative-logo {
-    -ms-flex-preferred-size: 100%;
-        flex-basis: 100%;
+    -ms-flex-preferred-size: 22%;
+        flex-basis: 22%;
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
