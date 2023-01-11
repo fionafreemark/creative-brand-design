@@ -23,67 +23,72 @@
             <a class="creative-logo" href="../index.html">
                 <h1>Creative</h1>
             </a>
-            <label class="menu-button soc-med-button" for="toggle"><i class="fa-solid fa-bars hamburger-menu"
-                    title="Open Navigation Menu"></i></label>
-            <input type="checkbox" id="toggle" name="toggle" />
-            <ul class="mobile-menu">
-                <li>
-                    <a href="../index.html">Home</a>
-                </li>
-                <li>
-                    <a class="active-link" href="./blog.html">Blog</a>
-                </li>
-                <li>
-                    <a href="#">Portfolio</a>
-                </li>
-                <li>
-                    <a href="#">Shop</a>
-                </li>
-                <li>
-                    <a href="./contact.html">Contact</a>
-                </li>
-                <li>
-                    <button type="button" class="search-button soc-med-button">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                    </button>
-                </li>
-                <li>
-                    <button type="button" class="shop-bag soc-med-button">
-                        <i class="fa-solid fa-bag-shopping"></i>
-                        <p class="cart-number">2</p>
-                    </button>
-                </li>
-            </ul><!-- End of .mobile-menu -->
-            <ul class="home-menu">
-                <li>
-                    <a href="../index.html">Home</a>
-                </li>
-                <li>
-                    <a class="active-link" href="./blog.html">Blog</a>
-                </li>
-                <li>
-                    <a href="">Portfolio</a>
-                </li>
-            </ul><!-- End of .home-menu -->
-            <ul class="shop-menu">
-                <li>
-                    <a href="#">Shop</a>
-                </li>
-                <li>
-                    <a href="./contact.html">Contact</a>
-                </li>
-                <li>
-                    <button type="button" class="search-button soc-med-button">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                    </button>
-                </li>
-                <li>
-                    <button type="button" class="shop-bag soc-med-button">
-                        <i class="fa-solid fa-bag-shopping"></i>
-                        <p class="cart-number">2</p>
-                    </button>
-                </li>
-            </ul><!-- End of .shop-menu -->
+            <label class="menu-button" for="toggle">
+                <!-- Hiding hamburger icon to replace with three individual lines. -->
+                <!-- <i class="fa-solid fa-bars hamburger-menu" title="Open Navigation Menu"></i> -->
+                <span class="line-1"></span>
+                <span class="line-2"></span>
+                <span class="line-3"></span>
+                </label>
+                <input type="checkbox" id="toggle" name="toggle" />
+                <ul class="mobile-menu">
+                    <li>
+                        <a href="../index.html">Home</a>
+                    </li>
+                    <li>
+                        <a class="active-link" href="./blog.html">Blog</a>
+                    </li>
+                    <li>
+                        <a href="#">Portfolio</a>
+                    </li>
+                    <li>
+                        <a href="#">Shop</a>
+                    </li>
+                    <li>
+                        <a href="./contact.html">Contact</a>
+                    </li>
+                    <li>
+                        <button type="button" class="search-button soc-med-button">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                    </li>
+                    <li>
+                        <button type="button" class="shop-bag soc-med-button">
+                            <i class="fa-solid fa-bag-shopping"></i>
+                            <p class="cart-number">2</p>
+                        </button>
+                    </li>
+                </ul><!-- End of .mobile-menu -->
+                <ul class="home-menu">
+                    <li>
+                        <a href="../index.html">Home</a>
+                    </li>
+                    <li>
+                        <a class="active-link" href="./blog.html">Blog</a>
+                    </li>
+                    <li>
+                        <a href="">Portfolio</a>
+                    </li>
+                </ul><!-- End of .home-menu -->
+                <ul class="shop-menu">
+                    <li>
+                        <a href="#">Shop</a>
+                    </li>
+                    <li>
+                        <a href="./contact.html">Contact</a>
+                    </li>
+                    <li>
+                        <button type="button" class="search-button soc-med-button">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                    </li>
+                    <li>
+                        <button type="button" class="shop-bag soc-med-button">
+                            <i class="fa-solid fa-bag-shopping"></i>
+                            <p class="cart-number">2</p>
+                        </button>
+                    </li>
+                </ul><!-- End of .shop-menu -->
         </nav><!-- End of .header-nav .wrapper -->
         <span class="vertical-line" aria-hidden="true"></span>
     </header>
@@ -244,11 +249,11 @@
                         <!-- Div to create background arrow detail. -->
                         <div class="arrow-left-detail"></div>
                         <div class="name-reply">
-                            <p>Jenifer Loopz</p>
-                            <a class="reply-link" href="#">
+                            <p>Jennifer Loopz</p>
+                            <a class="reply-link" href="#leave-a-comment">
                                 <p>- Reply</p>
                             </a>
-                        </div>
+                        </div> <!-- End of .name-reply -->
                         <p>Ecosystem iPad disruptive social media low hanging fruit stealth launch party handshake
                             market branding.</p>
                         <p>July 17, 2015 at 15 hours ago</p>
@@ -260,10 +265,10 @@
                     </div> <!-- End of .comment-img-container -->
                     <div class="comment-text-container">
                         <!-- Div to create background arrow detail. -->
-                        <div class="arrow-left-detail"></div>
+                        <!-- <div class="arrow-left-detail"></div> -->
                         <div class="name-reply">
                             <p>Daniel Vandaft</p>
-                            <a class="reply-link" href="#">
+                            <a class="reply-link" href="#leave-a-comment">
                                 <p>- Reply</p>
                             </a>
 
@@ -278,7 +283,7 @@
         <!-- SECTION 2 - COMMENTS - ENDS -->
 
         <!-- SECTION 3 - LEAVE A COMMENT - BEGINS -->
-        <section class="section-comment-form wrapper">
+        <section class="section-comment-form wrapper" id="leave-a-comment">
             <h3 class="blog-section-title comment-h3">Leave A Comment</h3>
             <!-- Form Begins -->
             <form action="#" method="post" class="comment-form-container" name="comment-form">
@@ -289,7 +294,7 @@
                 <!--User Email Input  -------------------------->
                 <label for="comment-email" class="sr-only">User Email</label>
                 <input type="email" id="comment-email" name="comment-user-email" class="comment-email-input"
-                    placeholder="youremail@domain.com" required>
+                    placeholder="youremail@domain.com">
                 <!-- Subject Line Input ------------------------>
                 <label for="comment-subject" class="sr-only">Subject(Optional)</label>
                 <input type="text" id="comment-subject" name="comment-subject" class="comment-subject-input"
@@ -297,7 +302,7 @@
                 <!-- User Comment Input-------------------------->
                 <label for="user-comment" class="sr-only">Leave a comment.</label>
                 <textarea class="comment-content-input" name="user-comment" id="user-comment" cols="30" max-length="500"
-                    rows="10" placeholder="Here goes your comment" required></textarea>
+                    rows="10" placeholder="Your comment goes here." required></textarea>
                 <!-- Submit Button ------------------------------>
                 <button name="comment-submission" type="submit" class="button-submit-comment">Submit Comment</button>
             </form> <!-- End of .comment-form-container -->
@@ -368,6 +373,7 @@
         </div><!-- End of .creative-container -->
     </footer>
     <!-- FOOTER ENDS -->
+    <script src="../script.js"></script>
 </body>
 
 </html>

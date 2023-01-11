@@ -186,7 +186,7 @@
     justify-content: center;
 }
 
-.comment {
+.comment{
     display: flex;
     justify-content: space-between;
     padding: 10px 0;
@@ -207,19 +207,36 @@
     background-color: $lightGrey;
     flex-wrap: wrap;
     position: relative;
-    margin-left: 18px;
+    margin-left: 24px;
 }
 
 /* Decorative triangle background on comment container that makes it look like a speech bubble */
-.arrow-left-detail {
+// .arrow-left-detail 
+.comment-text-container::before{
+    content: " ";
+    display: inline-block;
     width: 20px;
     height: 0;
     border-top: 8px solid transparent;
     border-bottom: 8px solid transparent;
     border-right: 24px solid $lightGrey;
     position: absolute;
-    left: -18px;
-    top: 16px;
+    left: -24px;
+    top: 18px;
+    z-index: 10;
+}
+
+// JS SUBJECT PARAGRAPH STYLE
+.subject-paragraph {
+    width: 100%;
+    text-transform: uppercase;
+}
+
+.comment-portraits {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    object-position: center;
 }
 
 /* Container for commenter name and reply link */
@@ -227,7 +244,7 @@
     display: flex;
 }
 
-.name-reply>p {
+.name-reply>p{
     text-transform: uppercase;
 }
 
@@ -235,10 +252,10 @@
     font-style: italic;
     padding-left: 5px;
     color: $mediumGrey;
+
 }
 
 /* SECTION THREE: LEAVE A COMMENT ----------------------------------*/
-
 .section-comment-form {
     padding: 3% 0 8% 0;
     font-size: 1.4rem;

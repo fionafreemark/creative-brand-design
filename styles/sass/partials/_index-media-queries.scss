@@ -67,12 +67,26 @@
         #toggle:checked+.mobile-menu {
             position: absolute;
             top: 60px;
-            display: block;
+            // display: block;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            width: 30%;
+            background-color: #fffffff7;
+            border: 1px solid rgba(0, 0, 0, 0.723);
+
+            li {
+                position: relative;
+                line-height: 3rem;
+                align-self: flex-start;
+            }
         }
 
+
         .creative-logo {
-            flex-basis: 100%;
+            flex-basis: 22%;
             order: 1;
+            
 
 
             h1 {
@@ -81,6 +95,8 @@
             }
         }
     }
+
+
 
     /* Section 1: Branding */
     .branding-text-container {
