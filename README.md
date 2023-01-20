@@ -8,13 +8,13 @@ A multi-page website built out from client's design specs with a focus on respon
 HTML, CSS, SASS, JavaScript, GitHub
 
 ## Project Walk-Through
-## Home Page
+### Home Page
 - Full page hero image
 - Team & icon gallery formatted for flexibility with flexbox
 
-## Blog Page
+### Blog Page
 - Post to the Comments section using the comment form with JavaScript features. 
 - Flexbox allowing for easy transition between mobile, tablet & desktop views.
 
-## Contact Page
+### Contact Page
 - Clean, elegant styles on contact information & form
